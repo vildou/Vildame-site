@@ -1,144 +1,129 @@
-
+!DOCTYPE html>
 <html lang="fr">
 <head>
   <meta charset="UTF-8">
-  <title>Vild'âme - Guidance</title>
+  <title>Vild'âme - Guidance du jour</title>
   <style>
     body {
       font-family: 'Georgia', serif;
       background-color: #fffaf7;
-      color: #3b2f2f;
-      margin: 0;
+      color: #5c4430;
       padding: 2rem;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
+      text-align: center;
     }
-
     .logo {
       width: 250px;
       border-radius: 16px;
-      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-      margin-bottom: 1.5rem;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+      margin: 1rem auto;
+      display: block;
     }
-
     .section-title {
       font-weight: bold;
-      margin-bottom: 0.5rem;
       text-transform: uppercase;
-      letter-spacing: 1px;
-      font-size: 1.6rem;
-      color: #b8936d;
+      font-size: 1.8rem;
+      margin: 1.5rem 0 0.5rem;
+      color: #8b6f4a;
     }
-
     .carte {
       border: 2px dashed #e2d5c3;
       border-radius: 16px;
       padding: 1.5rem;
       background-color: #fdfaf7;
       font-style: italic;
-      font-size: 1.3rem;
+      font-size: 1.7rem;
       text-align: center;
       min-height: 80px;
-      margin: 0.5rem auto;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+      margin: 0.5rem auto 1rem;
+      max-width: 80%;
     }
-
-    .tirer-btn {
-      margin-top: 0.5rem;
-      background-color: #d6c1a3;
+    button {
+      background-color: #cbb191;
+      color: white;
       border: none;
-      padding: 0.5rem 1rem;
+      padding: 0.5rem 1.5rem;
       border-radius: 8px;
-      color: white;
       font-weight: bold;
-      cursor: pointer;
+      margin-bottom: 1rem;
     }
-
     .paypal {
-      margin-top: 2rem;
+      margin-top: 3rem;
     }
-
     .paypal a {
-      background-color: #5c4430;
+      background-color: #e63946; /* rouge corail pour attirer l’oeil */
       color: white;
-      padding: 0.8rem 1.5rem;
+      padding: 1rem 2rem;
       border-radius: 8px;
-      text-decoration: none;
       font-weight: bold;
+      font-size: 1.2rem;
+      text-decoration: none;
       display: inline-block;
+      animation: clignote 1.5s infinite;
     }
-
-    iframe {
-      border-radius: 12px;
-      margin-top: 1rem;
+    @keyframes clignote {
+      0%, 100% { opacity: 1; }
+      50% { opacity: 0.5; }
     }
   </style>
 </head>
 <body>
+  <img src="logo-cle-vildame.png" alt="Logo Vild’âme" class="logo">
 
-  <img src="cle-vildame.jpg" alt="Logo Vild’âme" class="logo">
-
-  <div class="section">
+  <div>
     <div class="section-title">Carte du jour</div>
-    <div id="carte-jour" class="carte"></div>
-    <button class="tirer-btn" onclick="tirerCarte('jour')">Tirer une autre</button>
-  </div>
+    <div class="carte" id="carte-jour"></div>
+    <button onclick="tirerCarte('carte-jour', cartesJour)">Tirer une autre</button>
 
-  <div class="section">
     <div class="section-title">Carte de guérison</div>
-    <div id="carte-guerison" class="carte"></div>
-    <button class="tirer-btn" onclick="tirerCarte('guerison')">Tirer une autre</button>
-  </div>
+    <div class="carte" id="carte-guerison"></div>
+    <button onclick="tirerCarte('carte-guerison', cartesGuerison)">Tirer une autre</button>
 
-  <div class="section">
     <div class="section-title">Carte de guidance</div>
-    <div id="carte-guidance" class="carte"></div>
-    <button class="tirer-btn" onclick="tirerCarte('guidance')">Tirer une autre</button>
-  </div>
+    <div class="carte" id="carte-guidance"></div>
+    <button onclick="tirerCarte('carte-guidance', cartesGuidance)">Tirer une autre</button>
 
-  <div class="section">
-    <div class="section-title">Musique d’ambiance</div>
-    <iframe width="280" height="157" src="https://www.youtube.com/embed/NlprozGcs80?autoplay=1&loop=1" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
-  </div>
+    <div class="section-title">Musique d'ambiance</div>
+    <iframe width="280" height="157" src="https://www.youtube.com/embed/NlprozGcs80" title="Pachelbel - Canon in D" frameborder="0" allowfullscreen></iframe>
 
-  <div class="paypal">
-    <a href="https://paypal.me/votrenom?locale.x=fr_FR" target="_blank">Faire un don (entre amis)</a>
+    <div class="paypal">
+      <a href="https://www.paypal.me/votreLienPerso" target="_blank">Faire un don (entre amis)</a>
+    </div>
   </div>
 
   <script>
     const cartesJour = [
       "Aujourd’hui, je me choisis avec douceur.",
-      "Je suis exactement là où je dois être.",
+      "Respire. Tu es exactement là où tu dois être.",
+      "Je suis en sécurité, ancrée et alignée.",
       "Je mérite l’amour, la lumière et l’abondance.",
       "Je laisse le passé derrière et j’avance en confiance."
     ];
-
     const cartesGuerison = [
+      "Mon souffle m’apaise et me régénère.",
       "Chaque cellule de mon corps reçoit de la lumière.",
       "Je m’autorise à guérir à mon rythme.",
       "La paix est mon refuge intérieur.",
       "Je libère ce qui ne m’appartient plus."
     ];
-
     const cartesGuidance = [
       "Le silence porte tes réponses.",
-      "Ta lumière intérieure éclaire ton chemin.",
-      "Tu es guidé(e) avec amour.",
-      "L’univers conspire en ta faveur."
+      "Tout est déjà en toi.",
+      "Suis l’élan qui vibre dans ton âme.",
+      "L’Univers te murmure par les signes.",
+      "Accueille l’invisible avec confiance."
     ];
 
-    function tirerCarte(type) {
-      const cartes = type === 'jour' ? cartesJour :
-                     type === 'guerison' ? cartesGuerison : cartesGuidance;
-      const carte = cartes[Math.floor(Math.random() * cartes.length)];
-      document.getElementById('carte-' + type).innerText = carte;
+    function tirerCarte(id, tableau) {
+      const index = Math.floor(Math.random() * tableau.length);
+      document.getElementById(id).innerText = tableau[index];
     }
 
-    // Tirage initial
-    tirerCarte('jour');
-    tirerCarte('guerison');
-    tirerCarte('guidance');
+    // Tirage automatique au chargement
+    tirerCarte('carte-jour', cartesJour);
+    tirerCarte('carte-guerison', cartesGuerison);
+    tirerCarte('carte-guidance', cartesGuidance);
   </script>
-
 </body>
 </html>
+
