@@ -1,4 +1,4 @@
-!DOCTYPE html>
+
 <html lang="fr">
 <head>
   <meta charset="UTF-8">
@@ -6,124 +6,153 @@
   <style>
     body {
       font-family: 'Georgia', serif;
-      background-color: #fffaf7;
-      color: #5c4430;
+      background-color: #fdf8f3;
+      color: #4b3f2d;
+      margin: 0;
       padding: 2rem;
-      text-align: center;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 2rem;
     }
+
     .logo {
-      width: 250px;
-      border-radius: 16px;
-      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
-      margin: 1rem auto;
-      display: block;
+      width: 260px;
+      border-radius: 20px;
+      box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
     }
-    .section-title {
-      font-weight: bold;
+
+    h2 {
+      font-size: 1.6rem;
+      color: #8b5e3c;
+      letter-spacing: 1px;
       text-transform: uppercase;
-      font-size: 1.8rem;
-      margin: 1.5rem 0 0.5rem;
-      color: #8b6f4a;
+      margin: 0;
     }
+
     .carte {
-      border: 2px dashed #e2d5c3;
+      border: 2px dashed #e2c6aa;
       border-radius: 16px;
       padding: 1.5rem;
-      background-color: #fdfaf7;
+      background-color: #fffef9;
       font-style: italic;
-      font-size: 1.7rem;
+      font-size: 1.4rem;
       text-align: center;
-      min-height: 80px;
-      box-shadow: 0 2px 8px rgba(0,0,0,0.05);
-      margin: 0.5rem auto 1rem;
-      max-width: 80%;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+      width: 90%;
+      max-width: 500px;
     }
-    button {
-      background-color: #cbb191;
-      color: white;
+
+    .tirer-btn {
+      margin-top: 0.5rem;
+      padding: 0.5rem 1rem;
+      background-color: #d9c2aa;
+      color: #3a2c1e;
       border: none;
-      padding: 0.5rem 1.5rem;
-      border-radius: 8px;
-      font-weight: bold;
-      margin-bottom: 1rem;
+      border-radius: 6px;
+      cursor: pointer;
     }
-    .paypal {
-      margin-top: 3rem;
+
+    .paypal-section {
+      text-align: center;
+      margin-top: 2rem;
     }
-    .paypal a {
-      background-color: #e63946; /* rouge corail pour attirer l’oeil */
+
+    .paypal-button {
+      background-color: #0070ba;
       color: white;
-      padding: 1rem 2rem;
-      border-radius: 8px;
       font-weight: bold;
+      padding: 1rem;
       font-size: 1.2rem;
-      text-decoration: none;
-      display: inline-block;
-      animation: clignote 1.5s infinite;
+      border: none;
+      border-radius: 8px;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+      animation: pulse 2s infinite;
     }
-    @keyframes clignote {
-      0%, 100% { opacity: 1; }
-      50% { opacity: 0.5; }
+
+    @keyframes pulse {
+      0% { transform: scale(1); }
+      50% { transform: scale(1.05); }
+      100% { transform: scale(1); }
+    }
+
+    iframe {
+      border: none;
+      border-radius: 12px;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
     }
   </style>
 </head>
 <body>
-  <img src="logo-cle-vildame.png" alt="Logo Vild’âme" class="logo">
+  <img src="cle-vildame.jpg" alt="Logo Vild'âme" class="logo">
 
   <div>
-    <div class="section-title">Carte du jour</div>
-    <div class="carte" id="carte-jour"></div>
-    <button onclick="tirerCarte('carte-jour', cartesJour)">Tirer une autre</button>
+    <h2>Carte du jour</h2>
+    <div id="carte-jour" class="carte">Texte...</div>
+    <button class="tirer-btn" onclick="tirerCarte('jour')">Tirer une autre</button>
+  </div>
 
-    <div class="section-title">Carte de guérison</div>
-    <div class="carte" id="carte-guerison"></div>
-    <button onclick="tirerCarte('carte-guerison', cartesGuerison)">Tirer une autre</button>
+  <div>
+    <h2>Carte de Guérison</h2>
+    <div id="carte-guerison" class="carte">Texte...</div>
+    <button class="tirer-btn" onclick="tirerCarte('guerison')">Tirer une autre</button>
+  </div>
 
-    <div class="section-title">Carte de guidance</div>
-    <div class="carte" id="carte-guidance"></div>
-    <button onclick="tirerCarte('carte-guidance', cartesGuidance)">Tirer une autre</button>
+  <div>
+    <h2>Carte de Guidance</h2>
+    <div id="carte-guidance" class="carte">Texte...</div>
+    <button class="tirer-btn" onclick="tirerCarte('guidance')">Tirer une autre</button>
+  </div>
 
-    <div class="section-title">Musique d'ambiance</div>
-    <iframe width="280" height="157" src="https://www.youtube.com/embed/NlprozGcs80" title="Pachelbel - Canon in D" frameborder="0" allowfullscreen></iframe>
+  <div>
+    <h2>Musique d'ambiance</h2>
+    <iframe width="300" height="150" src="https://www.youtube.com/embed/NlprozGcs80" allowfullscreen></iframe>
+  </div>
 
-    <div class="paypal">
-      <a href="https://www.paypal.me/votreLienPerso" target="_blank">Faire un don (entre amis)</a>
-    </div>
+  <div class="paypal-section">
+    <a class="paypal-button" href="https://www.paypal.me/vildame" target="_blank">Faire un don (entre amis)</a>
   </div>
 
   <script>
     const cartesJour = [
-      "Aujourd’hui, je me choisis avec douceur.",
+      "Aujourd'hui, je me choisis avec douceur.",
       "Respire. Tu es exactement là où tu dois être.",
       "Je suis en sécurité, ancrée et alignée.",
-      "Je mérite l’amour, la lumière et l’abondance.",
-      "Je laisse le passé derrière et j’avance en confiance."
-    ];
-    const cartesGuerison = [
-      "Mon souffle m’apaise et me régénère.",
-      "Chaque cellule de mon corps reçoit de la lumière.",
-      "Je m’autorise à guérir à mon rythme.",
-      "La paix est mon refuge intérieur.",
-      "Je libère ce qui ne m’appartient plus."
-    ];
-    const cartesGuidance = [
-      "Le silence porte tes réponses.",
-      "Tout est déjà en toi.",
-      "Suis l’élan qui vibre dans ton âme.",
-      "L’Univers te murmure par les signes.",
-      "Accueille l’invisible avec confiance."
+      "Je mérite l'amour, la lumière et l'abondance.",
+      "Je laisse le passé derrière et j'avance en confiance."
     ];
 
-    function tirerCarte(id, tableau) {
-      const index = Math.floor(Math.random() * tableau.length);
-      document.getElementById(id).innerText = tableau[index];
+    const cartesGuerison = [
+      "Je libère ce qui ne m'appartient plus.",
+      "Mon souffle m'apaise et me régénère.",
+      "Chaque cellule de mon corps reçoit de la lumière.",
+      "Je m'autorise à guérir à mon rythme."
+    ];
+
+    const cartesGuidance = [
+      "Le silence porte tes réponses.",
+      "Tu es guidée avec amour.",
+      "L'Univers conspire pour ton bien." 
+    ];
+
+    function tirerCarte(type) {
+      let texte;
+      if (type === 'jour') {
+        texte = cartesJour[Math.floor(Math.random() * cartesJour.length)];
+        document.getElementById('carte-jour').innerText = texte;
+      } else if (type === 'guerison') {
+        texte = cartesGuerison[Math.floor(Math.random() * cartesGuerison.length)];
+        document.getElementById('carte-guerison').innerText = texte;
+      } else if (type === 'guidance') {
+        texte = cartesGuidance[Math.floor(Math.random() * cartesGuidance.length)];
+        document.getElementById('carte-guidance').innerText = texte;
+      }
     }
 
     // Tirage automatique au chargement
-    tirerCarte('carte-jour', cartesJour);
-    tirerCarte('carte-guerison', cartesGuerison);
-    tirerCarte('carte-guidance', cartesGuidance);
+    tirerCarte('jour');
+    tirerCarte('guerison');
+    tirerCarte('guidance');
   </script>
 </body>
 </html>
-
