@@ -56,6 +56,20 @@
       box-shadow: 0 2px 6px rgba(0,0,0,0.1);
       margin-top: 1rem;
     }
+
+    .music-button {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      background-color: #d4bfa3;
+      color: white;
+      border: none;
+      padding: 0.5rem 1rem;
+      border-radius: 12px;
+      font-size: 0.9rem;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+      z-index: 1000;
+    }
   </style>
 </head>
 <body>
@@ -67,26 +81,7 @@
     <button class="button" onclick="nouvelleCarte()">Tirer une autre</button>
   </div>
 
-  <!-- Audio de Pachelbel -->
-  <audio id="audioPachelbel" loop>
-    <source src="pachelbel-vildame.mp3" type="audio/mp3">
-    Votre navigateur ne supporte pas l'audio HTML5.
-  </audio>
-
-  <button onclick="toggleMusique()" style="
-    position: fixed;
-    bottom: 20px;
-    right: 20px;
-    background-color: #d4bfa3;
-    color: white;
-    border: none;
-    padding: 0.5rem 1rem;
-    border-radius: 12px;
-    font-size: 0.9rem;
-    box-shadow: 0 2px 8px rgba(0,0,0,0.2);
-    z-index: 1000;">
-    Activer la musique
-  </button>
+  <button class="music-button" onclick="ouvrirMusique()">Lancer musique</button>
 
   <script>
     const cartesJour = [
@@ -102,24 +97,11 @@
       document.getElementById('carteJour').innerText = cartesJour[alea];
     }
 
-    window.onload = nouvelleCarte;
-
-    let musique = document.getElementById("audioPachelbel");
-    let bouton = document.querySelector("button[onclick='toggleMusique()']");
-    let joue = false;
-
-    function toggleMusique() {
-      if (!joue) {
-        musique.play();
-        bouton.innerText = "Couper la musique";
-        joue = true;
-      } else {
-        musique.pause();
-        bouton.innerText = "Activer la musique";
-        joue = false;
-      }
+    function ouvrirMusique() {
+      window.open("https://www.youtube.com/watch?v=JvNQLJ1_HQ0", '_blank');
     }
+
+    window.onload = nouvelleCarte;
   </script>
 </body>
 </html>
-
