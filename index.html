@@ -1,155 +1,120 @@
-
-<html lang="fr">
+html lang="fr">
 <head>
   <meta charset="UTF-8">
-  <title>Vild'âme - Guidance du jour</title>
+  <title>Oracle Vild'âme</title>
   <style>
     body {
       font-family: 'Georgia', serif;
-      background-color: #fdf8f3;
-      color: #4b3f2d;
+      background-color: #fffaf7;
+      color: #5c4430;
       margin: 0;
       padding: 2rem;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      gap: 2rem;
+      text-align: center;
     }
-
-    .logo {
-      width: 260px;
-      border-radius: 20px;
-      box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+    img.logo {
+      width: 220px;
+      border-radius: 16px;
+      margin-bottom: 1rem;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
     }
-
-    h2 {
-      font-size: 1.6rem;
-      color: #8b5e3c;
-      letter-spacing: 1px;
+    .section-title {
+      font-weight: bold;
+      margin-top: 2rem;
+      font-size: 1.8rem;
       text-transform: uppercase;
-      margin: 0;
+      color: #8b5c3d;
     }
-
     .carte {
-      border: 2px dashed #e2c6aa;
+      border: 2px dashed #e2d5c3;
       border-radius: 16px;
       padding: 1.5rem;
-      background-color: #fffef9;
+      background-color: #fdfaf7;
       font-style: italic;
-      font-size: 1.4rem;
-      text-align: center;
-      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
-      width: 90%;
-      max-width: 500px;
+      font-size: 1.5rem;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+      margin: 0.5rem auto;
+      max-width: 85%;
     }
-
-    .tirer-btn {
-      margin-top: 0.5rem;
-      padding: 0.5rem 1rem;
-      background-color: #d9c2aa;
-      color: #3a2c1e;
-      border: none;
-      border-radius: 6px;
-      cursor: pointer;
-    }
-
-    .paypal-section {
-      text-align: center;
-      margin-top: 2rem;
-    }
-
-    .paypal-button {
-      background-color: #0070ba;
-      color: white;
+    button {
+      background-color: #cbb99b;
+      color: #fff;
       font-weight: bold;
-      padding: 1rem;
-      font-size: 1.2rem;
+      padding: 0.4rem 1rem;
+      margin-top: 0.5rem;
       border: none;
       border-radius: 8px;
-      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-      animation: pulse 2s infinite;
+      cursor: pointer;
     }
-
-    @keyframes pulse {
-      0% { transform: scale(1); }
-      50% { transform: scale(1.05); }
-      100% { transform: scale(1); }
+    .paypal-section {
+      margin-top: 2rem;
     }
-
-    iframe {
-      border: none;
-      border-radius: 12px;
-      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    .paypal-button {
+      background-color: #ffc439;
+      padding: 1rem;
+      font-weight: bold;
+      font-size: 1.2rem;
+      border-radius: 10px;
+      display: inline-block;
+      color: #111;
+      text-decoration: none;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.2);
     }
   </style>
 </head>
 <body>
-  <img src="cle-vildame.jpg" alt="Logo Vild'âme" class="logo">
+  <img class="logo" src="https://raw.githubusercontent.com/vildou/Vildame-site/main/logo-cle-vildame.jpg" alt="Logo Vild’âme">
 
-  <div>
-    <h2>Carte du jour</h2>
-    <div id="carte-jour" class="carte">Texte...</div>
-    <button class="tirer-btn" onclick="tirerCarte('jour')">Tirer une autre</button>
-  </div>
+  <div class="section-title">Carte du jour</div>
+  <div id="carte-jour" class="carte">Tirage en cours...</div>
+  <button onclick="tirerCarte('jour')">Tirer une autre</button>
 
-  <div>
-    <h2>Carte de Guérison</h2>
-    <div id="carte-guerison" class="carte">Texte...</div>
-    <button class="tirer-btn" onclick="tirerCarte('guerison')">Tirer une autre</button>
-  </div>
+  <div class="section-title">Carte de guérison</div>
+  <div id="carte-guerison" class="carte">Tirage en cours...</div>
+  <button onclick="tirerCarte('guerison')">Tirer une autre</button>
 
-  <div>
-    <h2>Carte de Guidance</h2>
-    <div id="carte-guidance" class="carte">Texte...</div>
-    <button class="tirer-btn" onclick="tirerCarte('guidance')">Tirer une autre</button>
-  </div>
+  <div class="section-title">Carte de guidance</div>
+  <div id="carte-guidance" class="carte">Tirage en cours...</div>
+  <button onclick="tirerCarte('guidance')">Tirer une autre</button>
 
-  <div>
-    <h2>Musique d'ambiance</h2>
-    <iframe width="300" height="150" src="https://www.youtube.com/embed/NlprozGcs80" allowfullscreen></iframe>
-  </div>
+  <div class="section-title">Musique d’ambiance</div>
+  <iframe width="300" height="180" src="https://www.youtube.com/embed/NlprozGcs80" title="Pachelbel Canon" frameborder="0" allowfullscreen></iframe>
 
   <div class="paypal-section">
-    <a class="paypal-button" href="https://www.paypal.me/vildame" target="_blank">Faire un don (entre amis)</a>
+    <a class="paypal-button" href="https://www.paypal.me/vildou" target="_blank">
+      <img src="https://www.paypalobjects.com/webstatic/icon/pp258.png" alt="PayPal" style="height: 20px; vertical-align: middle; margin-right: 8px;">
+      Faire un don (entre amis)
+    </a>
   </div>
 
   <script>
     const cartesJour = [
-      "Aujourd'hui, je me choisis avec douceur.",
+      "Aujourd’hui, je me choisis avec douceur.",
       "Respire. Tu es exactement là où tu dois être.",
       "Je suis en sécurité, ancrée et alignée.",
-      "Je mérite l'amour, la lumière et l'abondance.",
-      "Je laisse le passé derrière et j'avance en confiance."
+      "Je mérite l’amour, la lumière et l’abondance.",
+      "Je laisse le passé derrière et j’avance en confiance."
     ];
-
     const cartesGuerison = [
-      "Je libère ce qui ne m'appartient plus.",
-      "Mon souffle m'apaise et me régénère.",
+      "Mon souffle m’apaise et me régénère.",
       "Chaque cellule de mon corps reçoit de la lumière.",
-      "Je m'autorise à guérir à mon rythme."
+      "Je m’autorise à guérir à mon rythme.",
+      "La paix est mon refuge intérieur.",
+      "Je libère ce qui ne m’appartient plus."
     ];
-
     const cartesGuidance = [
       "Le silence porte tes réponses.",
-      "Tu es guidée avec amour.",
-      "L'Univers conspire pour ton bien." 
+      "Fais confiance à ton intuition.",
+      "Tu es guidé·e avec bienveillance.",
+      "Une clé va bientôt se révéler.",
+      "Ton âme sait déjà quoi faire."
     ];
-
     function tirerCarte(type) {
-      let texte;
-      if (type === 'jour') {
-        texte = cartesJour[Math.floor(Math.random() * cartesJour.length)];
-        document.getElementById('carte-jour').innerText = texte;
-      } else if (type === 'guerison') {
-        texte = cartesGuerison[Math.floor(Math.random() * cartesGuerison.length)];
-        document.getElementById('carte-guerison').innerText = texte;
-      } else if (type === 'guidance') {
-        texte = cartesGuidance[Math.floor(Math.random() * cartesGuidance.length)];
-        document.getElementById('carte-guidance').innerText = texte;
-      }
+      const alea = arr => arr[Math.floor(Math.random() * arr.length)];
+      if (type === 'jour') document.getElementById('carte-jour').innerText = alea(cartesJour);
+      if (type === 'guerison') document.getElementById('carte-guerison').innerText = alea(cartesGuerison);
+      if (type === 'guidance') document.getElementById('carte-guidance').innerText = alea(cartesGuidance);
     }
-
-    // Tirage automatique au chargement
+    // Tirage initial
     tirerCarte('jour');
     tirerCarte('guerison');
     tirerCarte('guidance');
