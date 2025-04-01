@@ -2,48 +2,49 @@
 <html lang="fr">
 <head>
   <meta charset="UTF-8">
-  <title>Vild’âme te murmure...</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Carte du jour – Vild’âme</title>
   <style>
     body {
-      background-color: #f5f0e9;
       font-family: 'Georgia', serif;
-      color: #4a3b2d;
-      padding: 40px;
-      line-height: 1.6;
+      background-color: #fffaf7;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      margin: 0;
     }
-    .container {
-      max-width: 800px;
-      margin: auto;
-      background: #fdfaf6;
-      padding: 30px;
-      border-radius: 10px;
-      box-shadow: 0 0 10px rgba(0,0,0,0.1);
-    }
-    h1, h2 {
-      text-align: center;
-    }
-    .don {
-      text-align: center;
-      margin-top: 40px;
-    }
-    .don a {
-      background-color: #f4e2d8;
-      color: #4a3b2d;
-      padding: 12px 24px;
-      border-radius: 8px;
-      text-decoration: none;
-      font-weight: bold;
-      box-shadow: 0 2px 4px rgba(0,0,0,0.1);
-      display: inline-block;
-      margin-top: 10px;
-    }
-    .footer {
-      text-align: center;
-      margin-top: 40px;
+    #carte-du-jour {
+      margin-top: 2rem;
+      padding: 1.5rem;
+      border: 2px dashed #e2d5c3;
+      border-radius: 16px;
+      background-color: #fdfaf7;
       font-style: italic;
-    }
-    ul {
-      padding-left: 20px;
+      font-size: 1.3rem;
+      text-align: center;
+      max-width: 90%;
     }
   </style>
 </head>
+<body>
+  <div id="carte-du-jour">Chargement de ta carte...</div>
+
+  <script>
+    const cartes = [
+      "Aujourd’hui, je me choisis avec douceur.",
+      "Respire. Tu es exactement là où tu dois être.",
+      "La bonne clé est celle qui vibre en toi.",
+      "Je suis en sécurité, ancrée et alignée.",
+      "Chaque souffle m’ouvre un peu plus à la paix.",
+      "Mon intuition me guide avec sagesse.",
+      "Je mérite l’amour, la lumière et l’abondance.",
+      "Je suis reliée à la beauté de la vie.",
+      "Je laisse le passé derrière et j’avance en confiance."
+    ];
+    const carte = cartes[Math.floor(Math.random() * cartes.length)];
+    document.getElementById("carte-du-jour").innerText = carte;
+  </script>
+</body>
+</html>
+
