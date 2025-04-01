@@ -1,9 +1,9 @@
 !DOCTYPE html>
 <html lang="fr">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Vild’âme - Guidance du jour</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Vild'âme - Guidance du jour</title>
   <style>
     body {
       font-family: 'Georgia', serif;
@@ -21,11 +21,6 @@
       width: 250px;
       border-radius: 16px;
       box-shadow: 0 4px 12px rgba(0,0,0,0.1);
-    }
-
-    .section {
-      text-align: center;
-      max-width: 90%;
     }
 
     .section-title {
@@ -50,82 +45,48 @@
       margin-top: 0.5rem;
     }
 
-    button {
-      margin-top: 1rem;
+    .button {
       background-color: #d4bfa3;
       color: white;
       border: none;
-      padding: 0.5rem 1.2rem;
-      border-radius: 10px;
-      font-size: 1rem;
+      padding: 0.7rem 1.2rem;
+      border-radius: 12px;
+      font-size: 0.9rem;
+      font-weight: bold;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+      margin-top: 1rem;
     }
   </style>
 </head>
-  !-- Musique douce Pachelbel -->
-<audio id="audioPachelbel" loop>
-  <source src="pachelbel-vildame.mp3" type="audio/mp3">
-  Votre navigateur ne supporte pas l’audio HTML5.
-</audio>
-
-<button onclick="toggleMusique()" style="
-  position: fixed;
-  bottom: 20px;
-  right: 20px;
-  background-color: #d4bfa3;
-  color: white;
-  border: none;
-  padding: 0.5rem 1rem;
-  border-radius: 12px;
-  font-size: 0.9rem;
-  box-shadow: 0 2px 8px rgba(0,0,0,0.2);
-  z-index: 1000;
-">
-  Activer la musique
-</button>
-
-<script>
-  let musique = document.getElementById("audioPachelbel");
-  let bouton = document.querySelector("button[onclick='toggleMusique()']");
-  let joue = false;
-
-  function toggleMusique() {
-    if (!joue) {
-      musique.play();
-      bouton.innerText = "Couper la musique";
-      joue = true;
-    } else {
-      musique.pause();
-      bouton.innerText = "Activer la musique";
-      joue = false;
-    }
-  }
-</script>
-
 <body>
+  <img src="logo-vildame.jpg" alt="Logo Vild'âme" class="logo">
 
-  <!-- Logo -->
-  <img src="logo-vildame.jpg" alt="Logo Vild'âme" class="logo" />
-
-  <!-- Carte du jour -->
-  <div class="section">
+  <div>
     <div class="section-title">Carte du jour</div>
-    <div class="carte" id="carte-jour">Tirage en cours...</div>
-    <button onclick="tirerCarte('carte-jour', cartesJour)">Tirer une autre</button>
+    <div id="carteJour" class="carte"></div>
+    <button class="button" onclick="nouvelleCarte()">Tirer une autre</button>
   </div>
 
-  <!-- Carte de guérison -->
-  <div class="section">
-    <div class="section-title">Carte de guérison</div>
-    <div class="carte" id="carte-guerison">Tirage en cours...</div>
-    <button onclick="tirerCarte('carte-guerison', cartesGuerison)">Tirer une autre</button>
-  </div>
+  <!-- Audio de Pachelbel -->
+  <audio id="audioPachelbel" loop>
+    <source src="pachelbel-vildame.mp3" type="audio/mp3">
+    Votre navigateur ne supporte pas l'audio HTML5.
+  </audio>
 
-  <!-- Carte de guidance -->
-  <div class="section">
-    <div class="section-title">Carte de guidance</div>
-    <div class="carte" id="carte-guidance">Tirage en cours...</div>
-    <button onclick="tirerCarte('carte-guidance', cartesGuidance)">Tirer une autre</button>
-  </div>
+  <button onclick="toggleMusique()" style="
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: #d4bfa3;
+    color: white;
+    border: none;
+    padding: 0.5rem 1rem;
+    border-radius: 12px;
+    font-size: 0.9rem;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+    z-index: 1000;">
+    Activer la musique
+  </button>
 
   <script>
     const cartesJour = [
@@ -136,36 +97,29 @@
       "Je laisse le passé derrière et j’avance en confiance."
     ];
 
-    const cartesGuerison = [
-      "Mon souffle m’apaise et me régénère.",
-      "Chaque cellule de mon corps reçoit de la lumière.",
-      "Je m’autorise à guérir à mon rythme.",
-      "La paix est mon refuge intérieur.",
-      "Je libère ce qui ne m’appartient plus."
-    ];
-
-    const cartesGuidance = [
-      "La bonne clé est celle qui vibre en toi.",
-      "Ton intuition connaît déjà le chemin.",
-      "Accueille ce qui vient avec foi.",
-      "L’univers conspire en ta faveur.",
-      "Avance avec confiance, chaque pas est guidé."
-    ];
-
-    function tirerCarte(id, cartes) {
-      const zone = document.getElementById(id);
-      zone.innerText = "Tirage en cours...";
-      setTimeout(() => {
-        const tirage = cartes[Math.floor(Math.random() * cartes.length)];
-        zone.innerText = tirage;
-      }, 1000);
+    function nouvelleCarte() {
+      const alea = Math.floor(Math.random() * cartesJour.length);
+      document.getElementById('carteJour').innerText = cartesJour[alea];
     }
 
-    tirerCarte("carte-jour", cartesJour);
-    tirerCarte("carte-guerison", cartesGuerison);
-    tirerCarte("carte-guidance", cartesGuidance);
-  </script>
+    window.onload = nouvelleCarte;
 
+    let musique = document.getElementById("audioPachelbel");
+    let bouton = document.querySelector("button[onclick='toggleMusique()']");
+    let joue = false;
+
+    function toggleMusique() {
+      if (!joue) {
+        musique.play();
+        bouton.innerText = "Couper la musique";
+        joue = true;
+      } else {
+        musique.pause();
+        bouton.innerText = "Activer la musique";
+        joue = false;
+      }
+    }
+  </script>
 </body>
 </html>
 
