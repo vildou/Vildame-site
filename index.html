@@ -1,8 +1,8 @@
 !DOCTYPE html>
 <html lang="fr">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Vild’âme - Guidance du jour</title>
   <style>
     body {
@@ -50,47 +50,41 @@
       margin-top: 0.5rem;
     }
 
-    .paypal {
-      margin-top: 2rem;
-    }
-
-    .paypal a {
+    button {
+      margin-top: 1rem;
       background-color: #d4bfa3;
       color: white;
-      padding: 0.8rem 1.5rem;
-      border-radius: 8px;
-      text-decoration: none;
-      font-weight: bold;
+      border: none;
+      padding: 0.5rem 1.2rem;
+      border-radius: 10px;
+      font-size: 1rem;
     }
   </style>
 </head>
 <body>
 
   <!-- Logo -->
-  <img src="https://raw.githubusercontent.com/vildou/Vildame-site/main/logo-vildame.jpg" alt="Logo Vild'âme" class="logo">
+  <img src="logo-vildame.jpg" alt="Logo Vild'âme" class="logo" />
 
   <!-- Carte du jour -->
   <div class="section">
     <div class="section-title">Carte du jour</div>
     <div class="carte" id="carte-jour">Tirage en cours...</div>
+    <button onclick="tirerCarte('carte-jour', cartesJour)">Tirer une autre</button>
   </div>
 
   <!-- Carte de guérison -->
   <div class="section">
     <div class="section-title">Carte de guérison</div>
     <div class="carte" id="carte-guerison">Tirage en cours...</div>
+    <button onclick="tirerCarte('carte-guerison', cartesGuerison)">Tirer une autre</button>
   </div>
 
   <!-- Carte de guidance -->
   <div class="section">
     <div class="section-title">Carte de guidance</div>
     <div class="carte" id="carte-guidance">Tirage en cours...</div>
-  </div>
-
-  <!-- PayPal -->
-  <div class="paypal">
-    <p>Tu veux soutenir Vild’âme ?</p>
-    <a href="https://www.paypal.com/donate/?hosted_button_id=XXXXXXXXXXX" target="_blank">Faire un don</a>
+    <button onclick="tirerCarte('carte-guidance', cartesGuidance)">Tirer une autre</button>
   </div>
 
   <script>
@@ -120,10 +114,11 @@
 
     function tirerCarte(id, cartes) {
       const zone = document.getElementById(id);
+      zone.innerText = "Tirage en cours...";
       setTimeout(() => {
         const tirage = cartes[Math.floor(Math.random() * cartes.length)];
         zone.innerText = tirage;
-      }, 2000); // délai d’animation
+      }, 1000);
     }
 
     tirerCarte("carte-jour", cartesJour);
@@ -133,3 +128,4 @@
 
 </body>
 </html>
+
