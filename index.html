@@ -2,80 +2,88 @@
 <html lang="fr">
 <head>
   <meta charset="UTF-8">
-  <title>Vild'âme te murmure...</title>
+  <title>Vild'âme - Carte du jour</title>
   <style>
     body {
-      margin: 0;
       font-family: 'Georgia', serif;
+      background: url('Cle-vildame.jpg') no-repeat center top;
+      background-size: cover;
+      background-attachment: fixed;
       background-color: #fffaf7;
-      color: #4b2e1e;
-      text-align: center;
-      padding-bottom: 4rem;
-    }
-    header {
-      background-color: #f3e8da;
-      padding: 1.5rem;
-      box-shadow: 0 2px 8px rgba(0,0,0,0.05);
-    }
-    header h1 {
+      color: #3b2f2f;
       margin: 0;
-      font-size: 1.7rem;
+      padding: 2rem;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 1rem;
     }
-    nav {
-      margin-top: 1rem;
+
+    .logo-section {
+      background-color: rgba(255, 250, 247, 0.85);
+      padding: 2rem;
+      border-radius: 16px;
+      box-shadow: 0 0 15px rgba(0,0,0,0.1);
     }
-    nav a {
-      margin: 0 1rem;
-      text-decoration: none;
-      font-weight: bold;
-      color: #8b5e3c;
+
+    .logo-section img {
+      width: 300px;
+      border-radius: 12px;
     }
-    .main-section {
-      padding: 2rem 1rem;
-    }
-    .card {
-      background: #fffdfb;
+
+    .message {
+      background-color: #fffdf9;
+      border-radius: 16px;
       padding: 1.5rem;
-      border-radius: 1rem;
       box-shadow: 0 4px 12px rgba(0,0,0,0.05);
-      margin: 1rem auto;
-      max-width: 600px;
+      max-width: 500px;
+      text-align: center;
+      font-style: italic;
+      font-size: 1.4rem;
     }
-    .card img {
-      max-width: 100%;
-      border-radius: 1rem;
+
+    button, .paypal a, .facebook a {
+      background-color: #d4af37;
+      color: white;
+      padding: 0.7rem 1.4rem;
+      border-radius: 8px;
+      border: none;
+      cursor: pointer;
+      font-weight: bold;
+      box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+      text-decoration: none;
     }
-    footer {
-      margin-top: 3rem;
-      font-size: 0.9rem;
-      color: #a78c71;
+
+    .footer {
+      margin-top: 2rem;
+      font-size: 1rem;
+      text-align: center;
+      color: #7c6b6b;
     }
   </style>
 </head>
 <body>
-  <header>
-    <h1>Vild'âme te murmure...</h1>
-    <nav>
-      <a href="index.html">Accueil</a>
-      <a href="guidance.html">Carte du jour</a>
-      <a href="oracles.html">Mes oracles</a>
-    </nav>
-  </header>
-
-  <div class="main-section">
-    <div class="card">
-      <img src="Cle-vildame.jpg" alt="Clé Vild'âme">
-      <p>Vild'âme est une expérience de guidance intuitive et spirituelle.
-        Ici, tu peux tirer une carte, explorer des méditations, ou découvrir les oracles créés avec amour.</p>
-    </div>
-    <div class="card">
-      <h2>Scanne le QR Code pour la version mobile</h2>
-      <img src="qr-code.png" alt="QR Code">
-    </div>
+  <div class="logo-section">
+    <img src="Cle-vildame.jpg" alt="Clé Vild’âme">
   </div>
 
-  <footer>
-    Merci pour ta présence lumineuse dans l'univers Vild'âme.
-  </footer>
+  <div class="message">
+    Aujourd’hui, je me choisis avec douceur.
+  </div>
+
+  <button>Tirer une autre</button>
+  <button>Activer la musique</button>
+
+  <div class="paypal">
+    <a href="#">Faire un don (entre amis)</a>
+  </div>
+
+  <div class="facebook">
+    <a href="https://www.facebook.com/share/12KrwnMWqQw/">Rejoindre Vild’âme sur Facebook</a>
+  </div>
+
+  <div class="footer">
+    Merci pour ta présence lumineuse dans l’univers Vild’âme.
+  </div>
 </body>
 </html>
