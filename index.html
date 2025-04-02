@@ -2,95 +2,105 @@
 <html lang="fr">
 <head>
   <meta charset="UTF-8">
-  <title>Vild’âme</title>
+  <title>Vild'âme - Guidance du jour</title>
   <style>
     body {
       font-family: 'Georgia', serif;
       background-color: #fffaf7;
       color: #5c4430;
-      text-align: center;
+      margin: 0;
       padding: 2rem;
+      text-align: center;
     }
 
     img.logo {
-      width: 180px;
-      border-radius: 12px;
-      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
-      margin: 1rem auto;
-      display: block;
+      width: 150px;
+      margin-bottom: 1rem;
+      border-radius: 16px;
+      box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
     }
 
     h2 {
       font-size: 1.8rem;
-      margin: 2rem 0 0.5rem;
+      margin-top: 2rem;
       text-transform: uppercase;
-      color: #804d26;
+      color: #7a4e2b;
     }
 
     .carte {
-      border: 2px dashed #e2d5c3;
-      background-color: #fffefa;
-      padding: 1.5rem;
-      margin: 0 auto 1rem;
-      max-width: 90%;
-      font-size: 1.4rem;
+      border: 2px dashed #d2b48c;
+      background-color: #fcfbf8;
       font-style: italic;
-      border-radius: 12px;
+      padding: 1rem;
+      font-size: 1.4rem;
+      width: 90%;
+      max-width: 400px;
+      margin: 1rem auto;
+      border-radius: 10px;
     }
 
     button {
-      background-color: #c5b69c;
+      background-color: #c4b7a6;
       color: white;
       border: none;
       padding: 0.5rem 1rem;
-      border-radius: 6px;
-      margin-top: 0.5rem;
+      border-radius: 8px;
+      cursor: pointer;
+      font-weight: bold;
+      margin-bottom: 1rem;
     }
 
     .paypal {
-      margin-top: 2.5rem;
-    }
-
-    .paypal a {
-      background-color: #ffc439;
-      color: black;
+      background-color: #f7b731;
+      color: #442900;
       font-weight: bold;
-      padding: 0.8rem 1.5rem;
+      padding: 1rem;
       border-radius: 12px;
-      display: inline-block;
       text-decoration: none;
-      box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+      display: inline-block;
+      margin-top: 2rem;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
     }
 
-    audio {
-      margin-top: 1rem;
+    .paypal::before {
+      content: '✦ ';
+    }
+
+    footer {
+      margin-top: 3rem;
+      font-size: 0.9rem;
+      color: #a58e7a;
     }
   </style>
 </head>
 <body>
-  <img src="Cle-vildame.jpg" alt="Logo Vild'âme" class="logo">
+  <img src="Cle-vildame.jpg" alt="Logo Vild’âme" class="logo">
 
   <h2>Carte du jour</h2>
   <div class="carte" id="carteJour"></div>
-  <button onclick="tirerCarte('jour')">Tirer une autre</button>
+  <button onclick="tirerCarte('carteJour', cartesJour)">Tirer une autre</button>
 
-  <h2>Carte de Guérison</h2>
+  <h2>Carte de guérison</h2>
   <div class="carte" id="carteGuerison"></div>
-  <button onclick="tirerCarte('guerison')">Tirer une autre</button>
+  <button onclick="tirerCarte('carteGuerison', cartesGuerison)">Tirer une autre</button>
 
-  <h2>Carte de Guidance</h2>
+  <h2>Carte de guidance</h2>
   <div class="carte" id="carteGuidance"></div>
-  <button onclick="tirerCarte('guidance')">Tirer une autre</button>
+  <button onclick="tirerCarte('carteGuidance', cartesGuidance)">Tirer une autre</button>
 
-  <h2>Musique d'ambiance</h2>
-  <audio controls autoplay loop>
-    <source src="musique-vildame.mp3" type="audio/mpeg">
-    Votre navigateur ne supporte pas l'audio.
+  <h2>Musique d’ambiance</h2>
+  <audio autoplay loop>
+    <source src="musique-vildame.mp3" type="audio/mp3">
+    Votre navigateur ne prend pas en charge la lecture audio.
   </audio>
 
-  <div class="paypal">
-    <a href="https://www.paypal.me/votrenom" target="_blank">✦ Faire un don (entre amis)</a>
-  </div>
+  <a class="paypal" href="https://www.paypal.me/YelizYanik" target="_blank">
+    Faire un don (entre amis)
+  </a>
+
+  <footer>
+    Merci pour ta présence lumineuse dans l’univers Vild’âme.
+  </footer>
 
   <script>
     const cartesJour = [
@@ -100,34 +110,26 @@
     ];
 
     const cartesGuerison = [
-      "Mon souffle m’apaise et me régénère.",
       "Chaque cellule de mon corps reçoit de la lumière.",
+      "Mon souffle m’apaise et me régénère.",
       "Je libère ce qui ne m’appartient plus."
     ];
 
     const cartesGuidance = [
-      "Tu es guidé•e avec bienveillance.",
       "Le silence porte tes réponses.",
+      "Tu es guidé•e avec bienveillance.",
       "Écoute ce qui vibre en toi."
     ];
 
-    function tirerCarte(type) {
-      const tirages = {
-        jour: cartesJour,
-        guerison: cartesGuerison,
-        guidance: cartesGuidance
-      };
-      const alea = Math.floor(Math.random() * tirages[type].length);
-      document.getElementById("carte" + capitalize(type)).innerText = tirages[type][alea];
+    function tirerCarte(id, tableau) {
+      const index = Math.floor(Math.random() * tableau.length);
+      document.getElementById(id).textContent = tableau[index];
     }
 
-    function capitalize(str) {
-      return str.charAt(0).toUpperCase() + str.slice(1);
-    }
-
-    tirerCarte('jour');
-    tirerCarte('guerison');
-    tirerCarte('guidance');
+    // Initialiser les cartes au chargement
+    tirerCarte('carteJour', cartesJour);
+    tirerCarte('carteGuerison', cartesGuerison);
+    tirerCarte('carteGuidance', cartesGuidance);
   </script>
 </body>
 </html>
