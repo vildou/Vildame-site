@@ -1,4 +1,4 @@
-!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="fr">
 <head>
   <meta charset="UTF-8">
@@ -7,99 +7,117 @@
     body {
       font-family: 'Georgia', serif;
       background-color: #fffaf7;
-      color: #5c4430;
+      color: #3b2f2f;
       margin: 0;
       padding: 2rem;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 2rem;
+    }
+
+    .logo {
+      width: 180px;
+      border-radius: 12px;
+      box-shadow: 0 8px 18px rgba(0,0,0,0.1);
+    }
+
+    .slogan {
+      font-size: 1.2rem;
+      font-style: italic;
+      color: #6d5044;
+      margin-top: -1rem;
       text-align: center;
     }
 
-    img.logo {
-      width: 150px;
-      margin-bottom: 1rem;
-      border-radius: 16px;
-      box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
-    }
-
-    h2 {
-      font-size: 1.8rem;
-      margin-top: 2rem;
-      text-transform: uppercase;
-      color: #7a4e2b;
+    .section-title {
+      font-weight: bold;
+      font-size: 1.7rem;
+      text-align: center;
+      margin-bottom: -0.5rem;
+      color: #814e34;
     }
 
     .carte {
-      border: 2px dashed #d2b48c;
-      background-color: #fcfbf8;
-      font-style: italic;
+      border: 2px dashed #d6c5aa;
       padding: 1rem;
-      font-size: 1.4rem;
+      background-color: #fffdf9;
+      font-style: italic;
+      font-size: 1.3rem;
+      text-align: center;
+      min-height: 80px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+      margin-top: 0.5rem;
       width: 90%;
       max-width: 400px;
-      margin: 1rem auto;
-      border-radius: 10px;
     }
 
     button {
-      background-color: #c4b7a6;
+      background-color: #bda58a;
       color: white;
+      padding: 0.4rem 1rem;
       border: none;
-      padding: 0.5rem 1rem;
-      border-radius: 8px;
+      border-radius: 6px;
       cursor: pointer;
-      font-weight: bold;
-      margin-bottom: 1rem;
+      margin-top: 0.3rem;
     }
 
-    .paypal {
-      background-color: #f7b731;
-      color: #442900;
+    .paypal a {
+      background-color: #f4b400;
+      color: #333;
       font-weight: bold;
-      padding: 1rem;
-      border-radius: 12px;
       text-decoration: none;
+      padding: 0.6rem 1.2rem;
+      border-radius: 8px;
+      margin-top: 1.5rem;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
       display: inline-block;
-      margin-top: 2rem;
-      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-    }
-
-    .paypal::before {
-      content: '✦ ';
     }
 
     footer {
+      font-size: 1.1rem;
+      text-align: center;
       margin-top: 3rem;
-      font-size: 0.9rem;
-      color: #a58e7a;
+      color: #7b6453;
     }
   </style>
 </head>
 <body>
-  <img src="Cle-vildame.jpg" alt="Logo Vild’âme" class="logo">
+  <img src="Cle-vildame.jpg" alt="Logo Vild'âme" class="logo">
+  <div class="slogan">La bonne clé est celle qui vibre en toi.</div>
 
-  <h2>Carte du jour</h2>
-  <div class="carte" id="carteJour"></div>
-  <button onclick="tirerCarte('carteJour', cartesJour)">Tirer une autre</button>
+  <div class="section">
+    <div class="section-title">CARTE DU JOUR</div>
+    <div class="carte" id="carteJour">Aujourd’hui, je me choisis avec douceur.</div>
+    <button onclick="nouvelleCarte('carteJour')">Tirer une autre</button>
+  </div>
 
-  <h2>Carte de guérison</h2>
-  <div class="carte" id="carteGuerison"></div>
-  <button onclick="tirerCarte('carteGuerison', cartesGuerison)">Tirer une autre</button>
+  <div class="section">
+    <div class="section-title">CARTE DE GUÉRISON</div>
+    <div class="carte" id="carteGuerison">Chaque cellule de mon corps reçoit de la lumière.</div>
+    <button onclick="nouvelleCarte('carteGuerison')">Tirer une autre</button>
+  </div>
 
-  <h2>Carte de guidance</h2>
-  <div class="carte" id="carteGuidance"></div>
-  <button onclick="tirerCarte('carteGuidance', cartesGuidance)">Tirer une autre</button>
+  <div class="section">
+    <div class="section-title">CARTE DE GUIDANCE</div>
+    <div class="carte" id="carteGuidance">Écoute ce qui vibre en toi.</div>
+    <button onclick="nouvelleCarte('carteGuidance')">Tirer une autre</button>
+  </div>
 
-  <h2>Musique d’ambiance</h2>
-  <audio autoplay loop>
-    <source src="musique-vildame.mp3" type="audio/mp3">
-    Votre navigateur ne prend pas en charge la lecture audio.
-  </audio>
+  <div class="section">
+    <div class="section-title">MUSIQUE D'AMBIANCE</div>
+    <audio autoplay loop>
+      <source src="musique-vildame.mp3" type="audio/mpeg">
+      Votre navigateur ne supporte pas l'écoute automatique.
+    </audio>
+  </div>
 
-  <a class="paypal" href="https://www.paypal.me/YelizYanik" target="_blank">
-    Faire un don (entre amis)
-  </a>
+  <div class="paypal">
+    <a href="https://www.paypal.me/VOTREID" target="_blank"> ✦ Faire un don (entre amis)</a>
+  </div>
 
   <footer>
-    Merci pour ta présence lumineuse dans l’univers Vild’âme.
+    Merci pour ta présence lumineuse dans l’univers Vild'âme.
   </footer>
 
   <script>
@@ -110,26 +128,26 @@
     ];
 
     const cartesGuerison = [
-      "Chaque cellule de mon corps reçoit de la lumière.",
       "Mon souffle m’apaise et me régénère.",
+      "Chaque cellule de mon corps reçoit de la lumière.",
       "Je libère ce qui ne m’appartient plus."
     ];
 
     const cartesGuidance = [
-      "Le silence porte tes réponses.",
       "Tu es guidé•e avec bienveillance.",
-      "Écoute ce qui vibre en toi."
+      "Écoute ce qui vibre en toi.",
+      "Le silence porte tes réponses."
     ];
 
-    function tirerCarte(id, tableau) {
-      const index = Math.floor(Math.random() * tableau.length);
-      document.getElementById(id).textContent = tableau[index];
-    }
+    function nouvelleCarte(id) {
+      let liste;
+      if (id === 'carteJour') liste = cartesJour;
+      else if (id === 'carteGuerison') liste = cartesGuerison;
+      else if (id === 'carteGuidance') liste = cartesGuidance;
 
-    // Initialiser les cartes au chargement
-    tirerCarte('carteJour', cartesJour);
-    tirerCarte('carteGuerison', cartesGuerison);
-    tirerCarte('carteGuidance', cartesGuidance);
+      const nouvelle = liste[Math.floor(Math.random() * liste.length)];
+      document.getElementById(id).textContent = nouvelle;
+    }
   </script>
 </body>
 </html>
