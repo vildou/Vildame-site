@@ -1,8 +1,8 @@
 
 <html lang="fr">
 <head>
-  <meta charset="UTF-8" />
-  <title>Oracle Vild’âme – Guidance du jour</title>
+  <meta charset="UTF-8">
+  <title>Vild’âme - Guidance du jour</title>
   <style>
     body {
       font-family: 'Georgia', serif;
@@ -13,133 +13,131 @@
     }
 
     .logo {
-      width: 250px;
-      border-radius: 20px;
+      width: 240px;
+      border-radius: 16px;
       box-shadow: 0 4px 12px rgba(0,0,0,0.1);
-      margin-bottom: 1.5rem;
+      margin-bottom: 1rem;
     }
 
     h2 {
-      font-size: 2rem;
-      color: #8b5e3c;
-      margin-top: 2rem;
-      margin-bottom: 0.5rem;
+      font-size: 1.8rem;
+      margin: 1.5rem 0 0.5rem;
+      color: #7a4e28;
       text-transform: uppercase;
       letter-spacing: 1px;
     }
 
     .carte {
-      background-color: #fdfaf7;
-      border: 2px dashed #e2d5c3;
-      border-radius: 16px;
-      padding: 1.5rem;
-      font-style: italic;
+      background-color: #fffdf7;
+      border: 2px dashed #ddb892;
+      border-radius: 12px;
+      padding: 1.2rem;
+      margin: 0.5rem auto 1rem;
+      max-width: 500px;
       font-size: 1.5rem;
-      max-width: 600px;
-      margin: 0 auto 1rem;
-      box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+      font-style: italic;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.05);
     }
 
-    .tirer {
-      margin-bottom: 1.5rem;
-    }
-
-    .tirer button {
-      background-color: #c8b49b;
+    button {
+      background-color: #c1a57b;
       color: white;
-      font-weight: bold;
-      padding: 0.4rem 1rem;
       border: none;
+      padding: 0.5rem 1rem;
       border-radius: 6px;
+      font-weight: bold;
+      margin-bottom: 1rem;
       cursor: pointer;
     }
 
-    .don {
-      background-color: #fcd34d;
+    .paypal {
+      background-color: #ffc439;
+      color: #111;
+      font-weight: bold;
+      padding: 0.8rem 1rem;
       border-radius: 8px;
-      padding: 1rem;
       display: inline-block;
       margin-top: 1.5rem;
-      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-      font-weight: bold;
-      font-size: 1rem;
       text-decoration: none;
-      color: #333;
-      animation: clignote 1.5s infinite;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
     }
 
-    .don::before {
-      content: "🅿️ ";
+    .paypal::before {
+      content: "💛 ";
     }
 
-    @keyframes clignote {
-      0% { opacity: 1; }
-      50% { opacity: 0.5; }
-      100% { opacity: 1; }
+    iframe {
+      margin-top: 1rem;
+      border-radius: 12px;
     }
   </style>
 </head>
-
 <body>
-  <img src="logo-vildame.jpg" alt="Logo Vild’âme" class="logo" />
+
+  <img src="Cle-vildame.jpg" alt="Logo Vild’âme" class="logo" />
 
   <h2>Carte du jour</h2>
-  <div class="carte" id="carte-jour">Tirage en cours…</div>
-  <div class="tirer"><button onclick="tirerCarte('jour')">Tirer une autre</button></div>
+  <div class="carte" id="carteJour"></div>
+  <button onclick="tirerCarte('jour')">Tirer une autre</button>
 
   <h2>Carte de guérison</h2>
-  <div class="carte" id="carte-guerison">Tirage en cours…</div>
-  <div class="tirer"><button onclick="tirerCarte('guerison')">Tirer une autre</button></div>
+  <div class="carte" id="carteGuerison"></div>
+  <button onclick="tirerCarte('guerison')">Tirer une autre</button>
 
   <h2>Carte de guidance</h2>
-  <div class="carte" id="carte-guidance">Tirage en cours…</div>
-  <div class="tirer"><button onclick="tirerCarte('guidance')">Tirer une autre</button></div>
+  <div class="carte" id="carteGuidance"></div>
+  <button onclick="tirerCarte('guidance')">Tirer une autre</button>
 
   <h2>Musique d’ambiance</h2>
-  <iframe width="300" height="180" src="https://www.youtube.com/embed/8Af372EQLck" frameborder="0" allowfullscreen></iframe>
+  <iframe width="300" height="180" src="https://www.youtube.com/embed/NlprozGcs80" frameborder="0" allowfullscreen></iframe>
 
-  <br />
-  <a class="don" href="https://www.paypal.me/VOTRELIEN" target="_blank">Faire un don (entre amis)</a>
+  <br>
+  <a href="https://www.paypal.me/votreLienPerso" class="paypal" target="_blank">Faire un don (entre amis)</a>
 
   <script>
     const cartesJour = [
       "Aujourd’hui, je me choisis avec douceur.",
       "Respire. Tu es exactement là où tu dois être.",
       "Je suis en sécurité, ancrée et alignée.",
-      "Je mérite l’amour, la lumière et l’abondance.",
-      "Je laisse le passé derrière et j’avance en confiance."
+      "Je mérite l’amour, la lumière et l’abondance."
     ];
 
     const cartesGuerison = [
-      "Mon souffle m’apaise et me régénère.",
       "Chaque cellule de mon corps reçoit de la lumière.",
-      "Je m’autorise à guérir à mon rythme.",
-      "La paix est mon refuge intérieur.",
-      "Je libère ce qui ne m’appartient plus."
+      "Je libère ce qui ne m’appartient plus.",
+      "Mon souffle m’apaise et me régénère.",
+      "Je m’autorise à guérir à mon rythme."
     ];
 
     const cartesGuidance = [
       "Le silence porte tes réponses.",
-      "Fais confiance à ton chemin.",
       "Tu es guidé·e avec bienveillance.",
-      "L’univers te montre des signes.",
-      "Tu as déjà la clé en toi."
+      "L’univers t’envoie des signes chaque jour.",
+      "Tu avances sur ton chemin sacré."
     ];
 
     function tirerCarte(type) {
-      const tirage = (list) => list[Math.floor(Math.random() * list.length)];
+      let cartes, element;
       if (type === 'jour') {
-        document.getElementById('carte-jour').innerText = tirage(cartesJour);
+        cartes = cartesJour;
+        element = document.getElementById('carteJour');
       } else if (type === 'guerison') {
-        document.getElementById('carte-guerison').innerText = tirage(cartesGuerison);
-      } else if (type === 'guidance') {
-        document.getElementById('carte-guidance').innerText = tirage(cartesGuidance);
+        cartes = cartesGuerison;
+        element = document.getElementById('carteGuerison');
+      } else {
+        cartes = cartesGuidance;
+        element = document.getElementById('carteGuidance');
       }
+
+      const aleatoire = cartes[Math.floor(Math.random() * cartes.length)];
+      element.textContent = aleatoire;
     }
 
+    // Initial tirage
     tirerCarte('jour');
     tirerCarte('guerison');
     tirerCarte('guidance');
   </script>
+
 </body>
 </html>
