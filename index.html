@@ -1,89 +1,98 @@
-!DOCTYPE html>
 <html lang="fr">
 <head>
   <meta charset="UTF-8">
-  <title>Vild'âme - Carte du jour</title>
+  <title>Vild’âme – Carte du jour</title>
   <style>
     body {
-      font-family: 'Georgia', serif;
-      background: url('Cle-vildame.jpg') no-repeat center top;
-      background-size: cover;
-      background-attachment: fixed;
-      background-color: #fffaf7;
-      color: #3b2f2f;
       margin: 0;
       padding: 2rem;
+      font-family: Georgia, serif;
+      background-image: url('Cle-vildame.jpg');
+      background-size: cover;
+      background-position: center;
+      background-attachment: fixed;
+      color: #3b2f2f;
       display: flex;
       flex-direction: column;
       align-items: center;
-      gap: 1rem;
     }
-
-    .logo-section {
-      background-color: rgba(255, 250, 247, 0.85);
-      padding: 2rem;
-      border-radius: 16px;
-      box-shadow: 0 0 15px rgba(0,0,0,0.1);
-    }
-
-    .logo-section img {
-      width: 300px;
+    .carte {
+      background: white;
       border-radius: 12px;
-    }
-
-    .message {
-      background-color: #fffdf9;
-      border-radius: 16px;
-      padding: 1.5rem;
-      box-shadow: 0 4px 12px rgba(0,0,0,0.05);
-      max-width: 500px;
-      text-align: center;
+      padding: 1rem 1.5rem;
+      margin: 1rem 0;
       font-style: italic;
-      font-size: 1.4rem;
+      font-size: 1.2rem;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+      text-align: center;
+      max-width: 80%;
     }
-
-    button, .paypal a, .facebook a {
-      background-color: #d4af37;
+    .btn {
+      background-color: #c89f2c;
       color: white;
-      padding: 0.7rem 1.4rem;
-      border-radius: 8px;
       border: none;
-      cursor: pointer;
+      border-radius: 8px;
+      padding: 0.6rem 1.2rem;
+      margin: 0.5rem;
       font-weight: bold;
-      box-shadow: 0 4px 6px rgba(0,0,0,0.1);
-      text-decoration: none;
+      cursor: pointer;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
     }
-
+    .btn:hover {
+      background-color: #b88e1f;
+    }
     .footer {
       margin-top: 2rem;
-      font-size: 1rem;
+      font-size: 1.1rem;
+      font-weight: bold;
       text-align: center;
-      color: #7c6b6b;
+    }
+    img.logo {
+      width: 220px;
+      border-radius: 16px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.3);
+      margin-top: 1rem;
     }
   </style>
 </head>
 <body>
-  <div class="logo-section">
-    <img src="Cle-vildame.jpg" alt="Clé Vild’âme">
-  </div>
+  <img src="Cle-vildame.jpg" alt="Clé Vild’âme" class="logo">
+  <p class="carte" id="carte">Aujourd’hui, je me choisis avec douceur.</p>
 
-  <div class="message">
-    Aujourd’hui, je me choisis avec douceur.
-  </div>
+  <button class="btn" onclick="tirerCarte()">Tirer une autre</button>
+  <button class="btn" onclick="document.getElementById('musique').play()">Activer la musique</button>
 
-  <button>Tirer une autre</button>
-  <button>Activer la musique</button>
+  <a href="https://www.paypal.me/vildame" target="_blank" class="btn">
+    <span style="margin-right:6px">&#128179;</span> Faire un don (entre amis)
+  </a>
 
-  <div class="paypal">
-    <a href="#">Faire un don (entre amis)</a>
-  </div>
-
-  <div class="facebook">
-    <a href="https://www.facebook.com/share/12KrwnMWqQw/">Rejoindre Vild’âme sur Facebook</a>
-  </div>
+  <a href="https://www.facebook.com/share/12KrwnMWqQw/" target="_blank" class="btn">
+    &#xf09a; Rejoindre Vild'âme sur Facebook
+  </a>
 
   <div class="footer">
     Merci pour ta présence lumineuse dans l’univers Vild’âme.
   </div>
+
+  <audio id="musique" loop>
+    <source src="musique-vildame.mp3" type="audio/mpeg">
+    Ton navigateur ne supporte pas l'audio.
+  </audio>
+
+  <script>
+    const cartes = [
+      "Aujourd’hui, je me choisis avec douceur.",
+      "Je mérite l’amour, la lumière et l’abondance.",
+      "Mon souffle m’apaise et me régénère.",
+      "Chaque cellule de mon corps reçoit la lumière.",
+      "Je libère ce qui ne m’appartient plus.",
+      "Écoute ce qui vibre en toi.",
+      "Tu es guidé•e avec bienveillance."
+    ];
+    function tirerCarte() {
+      const index = Math.floor(Math.random() * cartes.length);
+      document.getElementById('carte').innerText = cartes[index];
+    }
+  </script>
 </body>
 </html>
