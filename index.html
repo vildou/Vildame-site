@@ -1,8 +1,7 @@
-
-<html lang="fr">
+html lang="fr">
 <head>
   <meta charset="UTF-8">
-  <title>Vild’âme - Guidance du jour</title>
+  <title>Vild'âme - Guidance</title>
   <style>
     body {
       font-family: 'Georgia', serif;
@@ -15,82 +14,80 @@
       align-items: center;
       gap: 2rem;
     }
-    .logo img {
-      width: 200px;
-      border-radius: 20px;
+
+    img.logo {
+      width: 180px;
+      border-radius: 12px;
       box-shadow: 0 4px 12px rgba(0,0,0,0.1);
     }
+
     .section-title {
       font-weight: bold;
       font-size: 1.8rem;
-      color: #7d4b2e;
       text-align: center;
+      color: #8b5e3c;
     }
+
     .carte {
+      border: 2px dashed #caa17a;
       background-color: #fdfaf7;
-      border: 2px dashed #d5c3aa;
       border-radius: 16px;
-      padding: 1rem 2rem;
-      font-size: 1.4rem;
+      padding: 1rem;
       font-style: italic;
+      font-size: 1.3rem;
       text-align: center;
-      max-width: 90%;
+      max-width: 85%;
     }
+
     button {
-      background-color: #bfa88f;
+      background-color: #c8b299;
       color: white;
       font-weight: bold;
       border: none;
+      padding: 0.6rem 1.2rem;
       border-radius: 8px;
-      padding: 0.5rem 1rem;
+      cursor: pointer;
       margin-top: 0.5rem;
     }
+
     .paypal a {
-      display: inline-block;
-      background-color: #ffc439;
-      color: #000;
+      background-color: #f4b400;
+      color: black;
+      padding: 0.8rem 1.5rem;
       font-weight: bold;
-      padding: 0.8rem 1.2rem;
-      border-radius: 8px;
       text-decoration: none;
-      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+      border-radius: 8px;
+      box-shadow: 0 0 10px #f4b400;
     }
   </style>
 </head>
 <body>
 
-  <div class="logo">
-    <img src="Cle-vildame.jpg" alt="Logo Vild’âme">
-  </div>
+  <img src="Cle-vildame.jpg" alt="Logo Vild’âme" class="logo">
 
-  <div class="section">
+  <div>
     <div class="section-title">CARTE DU JOUR</div>
-    <div class="carte" id="carteJour">Tirage...</div>
-    <button onclick="tirerCarte('Jour')">Tirer une autre</button>
+    <div class="carte" id="carteJour"></div>
+    <button onclick="tirerCarte('carteJour', cartesJour)">Tirer une autre</button>
   </div>
 
-  <div class="section">
+  <div>
     <div class="section-title">CARTE DE GUÉRISON</div>
-    <div class="carte" id="carteGuerison">Tirage...</div>
-    <button onclick="tirerCarte('Guerison')">Tirer une autre</button>
+    <div class="carte" id="carteGuerison"></div>
+    <button onclick="tirerCarte('carteGuerison', cartesGuerison)">Tirer une autre</button>
   </div>
 
-  <div class="section">
+  <div>
     <div class="section-title">CARTE DE GUIDANCE</div>
-    <div class="carte" id="carteGuidance">Tirage...</div>
-    <button onclick="tirerCarte('Guidance')">Tirer une autre</button>
+    <div class="carte" id="carteGuidance"></div>
+    <button onclick="tirerCarte('carteGuidance', cartesGuidance)">Tirer une autre</button>
   </div>
 
-  <div class="section">
-    <div class="section-title">MUSIQUE D'AMBIANCE</div>
-    <audio autoplay loop>
-      <source src="musique-vildame.mp3" type="audio/mp3">
-      Votre navigateur ne supporte pas l'audio.
-    </audio>
-  </div>
+  <div class="section-title">MUSIQUE D'AMBIANCE</div>
+  <audio src="musique-vildame.mp3" autoplay loop></audio>
 
   <div class="paypal">
-    <a href="https://www.paypal.me/votreLienIci" target="_blank">💛 Faire un don (entre amis)</a>
+    <a href="https://www.paypal.me/votrenom" target="_blank">✦ Faire un don (entre amis)</a>
   </div>
 
   <script>
@@ -98,41 +95,33 @@
       "Aujourd’hui, je me choisis avec douceur.",
       "Respire. Tu es exactement là où tu dois être.",
       "Je suis en sécurité, ancrée et alignée.",
-      "Je mérite l’amour, la lumière et l’abondance.",
-      "Je laisse le passé derrière et j’avance en confiance."
+      "Je mérite l’amour, la lumière et l’abondance."
     ];
+
     const cartesGuerison = [
-      "Mon souffle m’apaise et me régénère.",
+      "Je libère ce qui ne m’appartient plus.",
       "Chaque cellule de mon corps reçoit de la lumière.",
       "Je m’autorise à guérir à mon rythme.",
-      "La paix est mon repère intérieur.",
-      "Je libère ce qui ne m’appartient plus."
+      "Mon souffle m’apaise et me régénère."
     ];
+
     const cartesGuidance = [
       "Le silence porte tes réponses.",
       "Tu es guidé·e avec bienveillance.",
-      "L’univers conspire pour ton équilibre.",
-      "Sois douce avec toi, le reste suivra.",
-      "Ce que tu cherches te cherche aussi."
+      "Écoute ce qui vibre en toi.",
+      "L’univers conspire pour t’aider."
     ];
-    function tirerCarte(type) {
-      let carte;
-      if (type === 'Jour') {
-        carte = cartesJour[Math.floor(Math.random() * cartesJour.length)];
-        document.getElementById('carteJour').textContent = carte;
-      } else if (type === 'Guerison') {
-        carte = cartesGuerison[Math.floor(Math.random() * cartesGuerison.length)];
-        document.getElementById('carteGuerison').textContent = carte;
-      } else if (type === 'Guidance') {
-        carte = cartesGuidance[Math.floor(Math.random() * cartesGuidance.length)];
-        document.getElementById('carteGuidance').textContent = carte;
-      }
+
+    function tirerCarte(id, liste) {
+      const index = Math.floor(Math.random() * liste.length);
+      document.getElementById(id).innerText = liste[index];
     }
-    // Premier tirage
-    tirerCarte('Jour');
-    tirerCarte('Guerison');
-    tirerCarte('Guidance');
+
+    tirerCarte('carteJour', cartesJour);
+    tirerCarte('carteGuerison', cartesGuerison);
+    tirerCarte('carteGuidance', cartesGuidance);
   </script>
 
 </body>
 </html>
+
