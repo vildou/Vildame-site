@@ -1,142 +1,81 @@
+!DOCTYPE html>
 <html lang="fr">
 <head>
   <meta charset="UTF-8">
-  <title>Carte du jour - Vild'âme</title>
+  <title>Vild'âme te murmure...</title>
   <style>
     body {
-      font-family: 'Georgia', serif;
-      background-color: #fefaf5;
-      color: #3d2e28;
       margin: 0;
-      padding: 2rem;
+      font-family: 'Georgia', serif;
+      background-color: #fffaf7;
+      color: #4b2e1e;
       text-align: center;
+      padding-bottom: 4rem;
     }
-
-    .logo {
-      width: 300px;
-      border-radius: 20px;
-      box-shadow: 0 8px 18px rgba(0,0,0,0.1);
-      margin: 2rem auto 1rem;
-      display: block;
+    header {
+      background-color: #f3e8da;
+      padding: 1.5rem;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.05);
     }
-
-    .slogan {
-      font-size: 1.3rem;
-      font-style: italic;
-      color: #6a4d3b;
-      margin-bottom: 2rem;
+    header h1 {
+      margin: 0;
+      font-size: 1.7rem;
     }
-
-    .carte {
-      border: 2px solid #d6c5aa;
-      background-color: #fffdfa;
-      padding: 2rem;
-      font-size: 1.5rem;
-      font-style: italic;
-      max-width: 90%;
-      margin: 0 auto 1rem;
-      border-radius: 14px;
-      box-shadow: 0 6px 18px rgba(0,0,0,0.08);
-    }
-
-    .bouton {
-      background-color: #c5af97;
-      color: white;
-      border: none;
-      padding: 0.6rem 1.2rem;
-      border-radius: 8px;
-      font-size: 1rem;
-      cursor: pointer;
+    nav {
       margin-top: 1rem;
     }
-
-    .musique {
-      margin-top: 2rem;
-    }
-
-    .musique button {
-      background-color: #d2b48c;
-      color: white;
-      border: none;
-      padding: 0.5rem 1rem;
-      border-radius: 6px;
-      cursor: pointer;
-    }
-
-    .paypal, .facebook {
-      margin-top: 2rem;
-    }
-
-    .paypal a, .facebook a {
-      background-color: #ffc439;
-      color: #111;
-      font-weight: bold;
-      padding: 0.8rem 1.4rem;
-      border-radius: 10px;
+    nav a {
+      margin: 0 1rem;
       text-decoration: none;
-      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
-      display: inline-flex;
-      align-items: center;
-      gap: 0.5rem;
+      font-weight: bold;
+      color: #8b5e3c;
     }
-
-    .paypal img, .facebook img {
-      width: 20px;
-      height: 20px;
+    .main-section {
+      padding: 2rem 1rem;
     }
-
+    .card {
+      background: #fffdfb;
+      padding: 1.5rem;
+      border-radius: 1rem;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+      margin: 1rem auto;
+      max-width: 600px;
+    }
+    .card img {
+      max-width: 100%;
+      border-radius: 1rem;
+    }
     footer {
-      font-size: 1.1rem;
       margin-top: 3rem;
-      color: #7b6453;
+      font-size: 0.9rem;
+      color: #a78c71;
     }
   </style>
 </head>
 <body>
-  <img src="Cle-vildame.jpg" alt="Logo Vild'âme" class="logo">
-  <div class="slogan">La bonne clé est celle qui vibre en toi.</div>
+  <header>
+    <h1>Vild'âme te murmure...</h1>
+    <nav>
+      <a href="index.html">Accueil</a>
+      <a href="guidance.html">Carte du jour</a>
+      <a href="oracles.html">Mes oracles</a>
+    </nav>
+  </header>
 
-  <div class="carte" id="carteJour">Aujourd’hui, je me choisis avec douceur.</div>
-  <button class="bouton" onclick="tirerCarte()">Tirer une autre</button>
-
-  <div class="musique">
-    <button onclick="document.getElementById('musique').play()">Activer la musique</button>
-    <audio id="musique" loop>
-      <source src="musique-vildame.mp3" type="audio/mpeg">
-      Votre navigateur ne supporte pas l'audio.
-    </audio>
-  </div>
-
-  <div class="paypal">
-    <a href="https://www.paypal.me/VOTREID" target="_blank">
-      <img src="https://www.paypalobjects.com/webstatic/icon/pp258.png" alt="PayPal"> Faire un don (entre amis)
-    </a>
-  </div>
-
-  <div class="facebook">
-    <a href="https://www.facebook.com/share/12KrwnMWqQw/" target="_blank">
-      <img src="https://upload.wikimedia.org/wikipedia/commons/1/1b/Facebook_icon.svg" alt="Facebook"> Rejoindre Vild’âme sur Facebook
-    </a>
+  <div class="main-section">
+    <div class="card">
+      <img src="Cle-vildame.jpg" alt="Clé Vild'âme">
+      <p>Vild'âme est une expérience de guidance intuitive et spirituelle.
+        Ici, tu peux tirer une carte, explorer des méditations, ou découvrir les oracles créés avec amour.</p>
+    </div>
+    <div class="card">
+      <h2>Scanne le QR Code pour la version mobile</h2>
+      <img src="qr-code.png" alt="QR Code">
+    </div>
   </div>
 
   <footer>
-    Merci pour ta présence lumineuse dans l’univers Vild’âme.
+    Merci pour ta présence lumineuse dans l'univers Vild'âme.
   </footer>
-
-  <script>
-    const cartes = [
-      "Aujourd’hui, je me choisis avec douceur.",
-      "Respire. Tu es exactement là où tu dois être.",
-      "Je mérite l’amour, la lumière et l’abondance.",
-      "J’avance avec foi, même si je ne vois pas encore le chemin.",
-      "Je suis en sécurité, ancrée et alignée.",
-      "Chaque jour, je suis guidée par mon cœur."
-    ];
-
-    function tirerCarte() {
-      const alea = Math.floor(Math.random() * cartes.length);
-      document.getElementById("carteJour").textContent = cartes[alea];
-    }
-  </script>
 </body>
 </html>
