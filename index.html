@@ -1,13 +1,13 @@
-!DOCTYPE html>
+
 <html lang="fr">
 <head>
   <meta charset="UTF-8">
-  <title>Vild'âme - Guidance du jour</title>
+  <title>Vild’âme - Guidance du jour</title>
   <style>
     body {
       font-family: 'Georgia', serif;
       background-color: #fffaf7;
-      color: #3b2f2f;
+      color: #5c4430;
       margin: 0;
       padding: 2rem;
       display: flex;
@@ -15,102 +15,82 @@
       align-items: center;
       gap: 2rem;
     }
-
-    .logo {
+    .logo img {
       width: 200px;
-      border-radius: 16px;
+      border-radius: 20px;
       box-shadow: 0 4px 12px rgba(0,0,0,0.1);
     }
-
     .section-title {
       font-weight: bold;
-      text-transform: uppercase;
-      font-size: 1.6rem;
-      color: #7b4f2d;
+      font-size: 1.8rem;
+      color: #7d4b2e;
       text-align: center;
     }
-
     .carte {
-      border: 2px dashed #d8b89c;
-      border-radius: 16px;
-      padding: 1.5rem;
       background-color: #fdfaf7;
+      border: 2px dashed #d5c3aa;
+      border-radius: 16px;
+      padding: 1rem 2rem;
       font-size: 1.4rem;
       font-style: italic;
       text-align: center;
-      width: 90%;
-      max-width: 500px;
-      box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+      max-width: 90%;
     }
-
-    .bouton {
-      background-color: #c4af92;
+    button {
+      background-color: #bfa88f;
+      color: white;
+      font-weight: bold;
       border: none;
+      border-radius: 8px;
       padding: 0.5rem 1rem;
-      border-radius: 12px;
       margin-top: 0.5rem;
-      color: #fff;
-      font-weight: bold;
-      cursor: pointer;
     }
-
-    .paypal {
-      margin-top: 2rem;
-    }
-
     .paypal a {
-      background-color: #ffc439;
-      color: #111;
-      padding: 1rem 1.5rem;
-      border-radius: 10px;
-      font-weight: bold;
-      font-size: 1rem;
-      text-decoration: none;
       display: inline-block;
-      box-shadow: 0 4px 6px rgba(0,0,0,0.1);
-    }
-
-    .paypal a::before {
-      content: '🅿️ ';
-    }
-
-    audio {
-      display: none;
+      background-color: #ffc439;
+      color: #000;
+      font-weight: bold;
+      padding: 0.8rem 1.2rem;
+      border-radius: 8px;
+      text-decoration: none;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
     }
   </style>
 </head>
 <body>
 
-  <img src="Cle-vildame.jpg" alt="Logo Vild’âme" class="logo">
-
-  <div>
-    <div class="section-title">Carte du jour</div>
-    <div class="carte" id="carteJour"></div>
-    <button class="bouton" onclick="tirerCarte('Jour')">Tirer une autre</button>
+  <div class="logo">
+    <img src="Cle-vildame.jpg" alt="Logo Vild’âme">
   </div>
 
-  <div>
-    <div class="section-title">Carte de guérison</div>
-    <div class="carte" id="carteGuerison"></div>
-    <button class="bouton" onclick="tirerCarte('Guerison')">Tirer une autre</button>
+  <div class="section">
+    <div class="section-title">CARTE DU JOUR</div>
+    <div class="carte" id="carteJour">Tirage...</div>
+    <button onclick="tirerCarte('Jour')">Tirer une autre</button>
   </div>
 
-  <div>
-    <div class="section-title">Carte de guidance</div>
-    <div class="carte" id="carteGuidance"></div>
-    <button class="bouton" onclick="tirerCarte('Guidance')">Tirer une autre</button>
+  <div class="section">
+    <div class="section-title">CARTE DE GUÉRISON</div>
+    <div class="carte" id="carteGuerison">Tirage...</div>
+    <button onclick="tirerCarte('Guerison')">Tirer une autre</button>
   </div>
 
-  <div class="section-title">Musique d'ambiance</div>
-  <audio autoplay loop>
-    <source src="musique-vildame.mp3" type="audio/mpeg">
-    Votre navigateur ne supporte pas l’audio.
-  </audio>
+  <div class="section">
+    <div class="section-title">CARTE DE GUIDANCE</div>
+    <div class="carte" id="carteGuidance">Tirage...</div>
+    <button onclick="tirerCarte('Guidance')">Tirer une autre</button>
+  </div>
+
+  <div class="section">
+    <div class="section-title">MUSIQUE D'AMBIANCE</div>
+    <audio autoplay loop>
+      <source src="musique-vildame.mp3" type="audio/mp3">
+      Votre navigateur ne supporte pas l'audio.
+    </audio>
+  </div>
 
   <div class="paypal">
-    <a href="https://www.paypal.com/paypalme/tonpseudo" target="_blank">
-      Faire un don (entre amis)
-    </a>
+    <a href="https://www.paypal.me/votreLienIci" target="_blank">💛 Faire un don (entre amis)</a>
   </div>
 
   <script>
@@ -121,32 +101,34 @@
       "Je mérite l’amour, la lumière et l’abondance.",
       "Je laisse le passé derrière et j’avance en confiance."
     ];
-
     const cartesGuerison = [
       "Mon souffle m’apaise et me régénère.",
       "Chaque cellule de mon corps reçoit de la lumière.",
       "Je m’autorise à guérir à mon rythme.",
-      "La paix est mon refuge intérieur.",
+      "La paix est mon repère intérieur.",
       "Je libère ce qui ne m’appartient plus."
     ];
-
     const cartesGuidance = [
       "Le silence porte tes réponses.",
-      "L’univers t’accompagne, fais-lui confiance.",
       "Tu es guidé·e avec bienveillance.",
-      "Ce que tu cherches te cherche aussi.",
-      "Tu es en train d’ouvrir la bonne porte."
+      "L’univers conspire pour ton équilibre.",
+      "Sois douce avec toi, le reste suivra.",
+      "Ce que tu cherches te cherche aussi."
     ];
-
     function tirerCarte(type) {
-      let liste;
-      if (type === 'Jour') liste = cartesJour;
-      if (type === 'Guerison') liste = cartesGuerison;
-      if (type === 'Guidance') liste = cartesGuidance;
-      const index = Math.floor(Math.random() * liste.length);
-      document.getElementById("carte" + type).textContent = liste[index];
+      let carte;
+      if (type === 'Jour') {
+        carte = cartesJour[Math.floor(Math.random() * cartesJour.length)];
+        document.getElementById('carteJour').textContent = carte;
+      } else if (type === 'Guerison') {
+        carte = cartesGuerison[Math.floor(Math.random() * cartesGuerison.length)];
+        document.getElementById('carteGuerison').textContent = carte;
+      } else if (type === 'Guidance') {
+        carte = cartesGuidance[Math.floor(Math.random() * cartesGuidance.length)];
+        document.getElementById('carteGuidance').textContent = carte;
+      }
     }
-
+    // Premier tirage
     tirerCarte('Jour');
     tirerCarte('Guerison');
     tirerCarte('Guidance');
