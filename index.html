@@ -1,84 +1,63 @@
-<!DOCTYPE html>
+!DOCTYPE html>
 <html lang="fr">
 <head>
   <meta charset="UTF-8">
-  <title>Vild'âme - Guidance du jour</title>
+  <title>Carte du jour - Vild'âme</title>
   <style>
     body {
       font-family: 'Georgia', serif;
       background-color: #fffaf7;
-      color: #3b2f2f;
+      color: #3d2e28;
       margin: 0;
       padding: 2rem;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      gap: 2rem;
+      text-align: center;
     }
 
     .logo {
-      width: 180px;
-      border-radius: 12px;
-      box-shadow: 0 8px 18px rgba(0,0,0,0.1);
+      width: 150px;
+      border-radius: 16px;
+      box-shadow: 0 6px 12px rgba(0,0,0,0.1);
+      margin-bottom: 1rem;
     }
 
     .slogan {
-      font-size: 1.2rem;
+      font-size: 1.1rem;
       font-style: italic;
-      color: #6d5044;
-      margin-top: -1rem;
-      text-align: center;
-    }
-
-    .section-title {
-      font-weight: bold;
-      font-size: 1.7rem;
-      text-align: center;
-      margin-bottom: -0.5rem;
-      color: #814e34;
+      color: #6a4d3b;
+      margin-bottom: 2rem;
     }
 
     .carte {
       border: 2px dashed #d6c5aa;
-      padding: 1rem;
-      background-color: #fffdf9;
+      background-color: #fdfaf6;
+      padding: 2rem;
+      font-size: 1.4rem;
       font-style: italic;
-      font-size: 1.3rem;
-      text-align: center;
-      min-height: 80px;
-      box-shadow: 0 2px 8px rgba(0,0,0,0.05);
-      margin-top: 0.5rem;
-      width: 90%;
-      max-width: 400px;
+      max-width: 90%;
+      margin: 0 auto 1rem;
+      border-radius: 12px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.05);
     }
 
-    button {
-      background-color: #bda58a;
+    .bouton {
+      background-color: #c5af97;
       color: white;
-      padding: 0.4rem 1rem;
       border: none;
-      border-radius: 6px;
-      cursor: pointer;
-      margin-top: 0.3rem;
-    }
-
-    .paypal a {
-      background-color: #f4b400;
-      color: #333;
-      font-weight: bold;
-      text-decoration: none;
       padding: 0.6rem 1.2rem;
       border-radius: 8px;
-      margin-top: 1.5rem;
-      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
-      display: inline-block;
+      font-size: 1rem;
+      cursor: pointer;
+      margin-top: 1rem;
+    }
+
+    .musique {
+      margin-top: 2rem;
     }
 
     footer {
-      font-size: 1.1rem;
-      text-align: center;
+      font-size: 0.9rem;
       margin-top: 3rem;
-      color: #7b6453;
+      color: #a0856c;
     }
   </style>
 </head>
@@ -86,67 +65,34 @@
   <img src="Cle-vildame.jpg" alt="Logo Vild'âme" class="logo">
   <div class="slogan">La bonne clé est celle qui vibre en toi.</div>
 
-  <div class="section">
-    <div class="section-title">CARTE DU JOUR</div>
-    <div class="carte" id="carteJour">Aujourd’hui, je me choisis avec douceur.</div>
-    <button onclick="nouvelleCarte('carteJour')">Tirer une autre</button>
-  </div>
+  <div class="carte" id="carteJour">Aujourd’hui, je me choisis avec douceur.</div>
+  <button class="bouton" onclick="tirerCarte()">Tirer une autre</button>
 
-  <div class="section">
-    <div class="section-title">CARTE DE GUÉRISON</div>
-    <div class="carte" id="carteGuerison">Chaque cellule de mon corps reçoit de la lumière.</div>
-    <button onclick="nouvelleCarte('carteGuerison')">Tirer une autre</button>
-  </div>
-
-  <div class="section">
-    <div class="section-title">CARTE DE GUIDANCE</div>
-    <div class="carte" id="carteGuidance">Écoute ce qui vibre en toi.</div>
-    <button onclick="nouvelleCarte('carteGuidance')">Tirer une autre</button>
-  </div>
-
-  <div class="section">
-    <div class="section-title">MUSIQUE D'AMBIANCE</div>
+  <div class="musique">
     <audio autoplay loop>
       <source src="musique-vildame.mp3" type="audio/mpeg">
-      Votre navigateur ne supporte pas l'écoute automatique.
+      Votre navigateur ne supporte pas l'audio.
     </audio>
   </div>
 
-  <div class="paypal">
-    <a href="https://www.paypal.me/VOTREID" target="_blank"> ✦ Faire un don (entre amis)</a>
-  </div>
-
   <footer>
-    Merci pour ta présence lumineuse dans l’univers Vild'âme.
+    Partage cette carte avec amour depuis Vild'âme<br>
+    Merci pour ta présence lumineuse.
   </footer>
 
   <script>
-    const cartesJour = [
+    const cartes = [
       "Aujourd’hui, je me choisis avec douceur.",
+      "Respire. Tu es exactement là où tu dois être.",
       "Je mérite l’amour, la lumière et l’abondance.",
-      "Respire. Tu es exactement là où tu dois être."
+      "J’avance avec foi, même si je ne vois pas encore le chemin.",
+      "Je suis en sécurité, ancrée et alignée.",
+      "Chaque jour, je suis guidée par mon cœur."
     ];
 
-    const cartesGuerison = [
-      "Mon souffle m’apaise et me régénère.",
-      "Chaque cellule de mon corps reçoit de la lumière.",
-      "Je libère ce qui ne m’appartient plus."
-    ];
-
-    const cartesGuidance = [
-      "Tu es guidé•e avec bienveillance.",
-      "Écoute ce qui vibre en toi.",
-      "Le silence porte tes réponses."
-    ];
-
-    function nouvelleCarte(id) {
-      let liste;
-      if (id === 'carteJour') liste = cartesJour;
-      else if (id === 'carteGuerison') liste = cartesGuerison;
-      else if (id === 'carteGuidance') liste = cartesGuidance;
-
-      const nouvelle = liste[Math.floor(Math.random() * liste.length)];
-      document.getElementById(id).textContent = nouvelle;
+    function tirerCarte() {
+      const alea = Math.floor(Math.random() * cartes.length);
+      document.getElementById("carteJour").textContent = cartes[alea];
     }
   </script>
 </body>
