@@ -2,7 +2,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Tirage spécial - Vild’âme</title>
+  <title>Vild’âme - Guidance du jour</title>
   <style>
     body {
       font-family: Georgia, serif;
@@ -13,84 +13,107 @@
       display: flex;
       flex-direction: column;
       align-items: center;
-      gap: 2rem;
+      gap: 1.5rem;
     }
-    h2 {
-      color: #6b503f;
+
+    .logo {
+      width: 250px;
+      border-radius: 16px;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
     }
-    .bloc {
-      background-color: #fdf8f2;
-      border: 1px dashed #e2cdb6;
+
+    .carte {
+      border: 2px dashed #e2d5c3;
       border-radius: 16px;
       padding: 1.5rem;
-      max-width: 90%;
+      background-color: #fdfaf7;
+      font-style: italic;
+      font-size: 1.6rem;
       text-align: center;
-      font-size: 1.2rem;
       box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+      max-width: 90%;
     }
-    button {
-      margin-top: 1rem;
-      padding: 0.8rem 1.2rem;
+
+    .btn {
+      padding: 0.8rem 1.5rem;
+      border-radius: 8px;
       font-weight: bold;
+      border: none;
+      cursor: pointer;
       font-size: 1rem;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    }
+
+    .tirer {
       background-color: #c9a96b;
       color: white;
-      border: none;
-      border-radius: 8px;
-      cursor: pointer;
     }
-    a.retour {
+
+    .paypal {
+      background-color: #0070ba;
+      color: white;
+    }
+
+    .facebook {
+      background-color: #3b5998;
+      color: white;
+    }
+
+    .footer {
       margin-top: 2rem;
-      font-size: 1rem;
+      font-size: 1.2rem;
+      text-align: center;
+      color: #5c4a42;
+    }
+
+    .link-special {
+      margin-top: 1rem;
+      font-style: italic;
       color: #6b503f;
       text-decoration: none;
-      font-style: italic;
     }
   </style>
 </head>
 <body>
-  <h2>Tirage spécial Vild’âme</h2>
+  <img src="Cle-vildame.jpg" alt="Clé Vild’âme" class="logo" />
 
-  <div class="bloc" id="guidance">
-    Je pose une question intérieure... et j’accueille une guidance.
+  <div class="carte" id="message">Aujourd’hui, je me choisis avec douceur.</div>
+
+  <button class="btn tirer" onclick="tirerMessage()">Tirer une autre</button>
+
+  <a class="btn paypal" href="https://www.paypal.me/vildame" target="_blank">
+    Faire un don via PayPal (paiement entre amis pour éviter les frais)
+  </a>
+
+  <a class="btn facebook" href="https://www.facebook.com/share/12KrwnMWqQw/" target="_blank">
+    Rejoindre Vild'âme sur Facebook
+  </a>
+
+  <a class="link-special" href="tirage.html">
+    → Tirage spécial : question intérieure ou guérison
+  </a>
+
+  <div class="footer">
+    Merci pour ta présence lumineuse dans l’univers Vild'âme.
   </div>
-  <button onclick="tirerGuidance()">Recevoir une guidance</button>
-
-  <div class="bloc" id="guerison">
-    Je demande une guérison... et je reçois un rituel doux.
-  </div>
-  <button onclick="tirerGuerison()">Recevoir un rituel</button>
-
-  <a href="index.html" class="retour">← Retour à la carte du jour</a>
 
   <script>
-    const guidances = [
-      "La réponse est déjà en toi. Ferme les yeux et écoute ton souffle.",
-      "Ce que tu cherches te cherche aussi.",
-      "Reste fidèle à ton intuition, même si elle murmure.",
-      "Le silence porte des réponses plus profondes que les mots.",
-      "Ce n’est pas une certitude que tu attends, mais une sensation de paix.",
-      "Tu n’as pas besoin de tout comprendre pour avancer.",
-      "Ton âme connaît le chemin. Fais-lui confiance."
+    const messages = [
+      "Aujourd’hui, je me choisis avec douceur.",
+      "Je mérite l’amour, la lumière et l’abondance.",
+      "Je suis guidé·e avec bienveillance.",
+      "Mon souffle m’apaise et me régénère.",
+      "Je libère ce qui ne m’appartient plus.",
+      "J'accueille ce jour comme un cadeau.",
+      "Je me relie à mon intuition profonde.",
+      "Je suis en sécurité ici et maintenant.",
+      "Chaque souffle me ramène à moi.",
+      "Je suis sur le bon chemin."
     ];
 
-    const rituels = [
-      "Ferme les yeux. Inspire lentement pendant 4 secondes. Retiens 7. Expire 8. Recommence 3 fois.",
-      "Pose une main sur ton cœur, une autre sur ton ventre. Dis à voix haute : Je suis en sécurité.",
-      "Mets-toi pieds nus. Ressens la terre sous toi. Visualise une lumière te traverser doucement.",
-      "Prends un verre d’eau. Bois-le en conscience. Chaque gorgée est une onde de paix.",
-      "Écris sur un papier ce que tu veux libérer. Puis déchire-le. La guérison est en marche.",
-      "Allume une bougie. Regarde sa flamme. Elle te reflète."
-    ];
-
-    function tirerGuidance() {
-      const tirage = guidances[Math.floor(Math.random() * guidances.length)];
-      document.getElementById('guidance').innerText = tirage;
-    }
-
-    function tirerGuerison() {
-      const tirage = rituels[Math.floor(Math.random() * rituels.length)];
-      document.getElementById('guerison').innerText = tirage;
+    function tirerMessage() {
+      const alea = Math.floor(Math.random() * messages.length);
+      document.getElementById("message").innerText = messages[alea];
     }
   </script>
 </body>
