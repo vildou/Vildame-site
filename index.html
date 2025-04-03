@@ -1,4 +1,3 @@
-!DOCTYPE html>
 <html lang="fr">
 <head>
   <meta charset="UTF-8">
@@ -77,26 +76,30 @@
   </style>
 </head>
 <body>
-
   <img src="Cle-vildame.jpg" alt="Logo Vild’âme" class="logo">
 
   <div class="carte" id="carte">Aujourd’hui, je me choisis avec douceur.</div>
+
   <button class="bouton" onclick="tirerCarte()">Tirer une autre</button>
-  <button class="bouton" onclick="activerMusique()">Activer la musique</button>
+
+  <div style="margin-top: 1rem; text-align: center;">
+    <button onclick="document.getElementById('vildameAudio').play()" style="background-color: #d4af37; color: white; padding: 10px 20px; border: none; border-radius: 8px; font-size: 1rem; font-weight: bold; cursor: pointer; box-shadow: 0 4px 6px rgba(0,0,0,0.1);">
+      Écouter la musique d’ambiance
+    </button>
+    <audio id="vildameAudio" src="vildame.mp3" preload="auto"></audio>
+  </div>
 
   <div class="paypal">
-    <a href="https://www.paypal.me/votrepseudo" target="_blank">Faire un don (entre amis)</a>
+    <a href="https://paypal.me/votrepseudo" target="_blank">Faire un don (entre amis)</a>
   </div>
 
   <div class="facebook">
     <a href="https://www.facebook.com/share/12KrwnMWqQw/" target="_blank">Rejoindre Vild’âme sur Facebook</a>
   </div>
 
-  <footer>Merci pour ta présence lumineuse dans l’univers Vild’âme.</footer>
-
-  <audio id="musique" loop>
-    <source src="mp3-vildame.mp3" type="audio/mpeg">
-  </audio>
+  <footer>
+    Merci pour ta présence lumineuse dans l’univers Vild’âme.
+  </footer>
 
   <script>
     const cartes = [
@@ -112,12 +115,6 @@
       const alea = Math.floor(Math.random() * cartes.length);
       document.getElementById("carte").textContent = cartes[alea];
     }
-
-    function activerMusique() {
-      const audio = document.getElementById("musique");
-      audio.play();
-    }
   </script>
-
 </body>
 </html>
