@@ -1,111 +1,77 @@
 
 <html lang="fr">
 <head>
-  <meta charset="UTF-8" />
-  <title>Vild’âme – Carte du jour</title>
+  <meta charset="UTF-8">
+  <title>Vild’âme - Guidance du jour</title>
   <style>
     body {
       font-family: 'Georgia', serif;
-      background-color: #fffaf7;
-      color: #3b2f2f;
       margin: 0;
-      padding: 2rem;
+      padding: 0;
+      background: url('Cle-vildame.jpg') no-repeat center center fixed;
+      background-size: cover;
+      color: #3b2f2f;
       display: flex;
       flex-direction: column;
       align-items: center;
-    }
-
-    .logo {
-      width: 300px;
-      border-radius: 20px;
-      margin-bottom: 1rem;
-      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
-    }
-
-    .message {
-      font-style: italic;
-      font-size: 1.5rem;
       text-align: center;
-      background-color: #fdfaf7;
-      border: 2px dashed #d8c59d;
-      padding: 1.5rem;
-      border-radius: 16px;
-      margin: 1rem 0;
-      box-shadow: 0 2px 8px rgba(0,0,0,0.05);
     }
-
-    button {
-      background-color: #c6a758;
-      color: white;
+    .carte {
+      background: white;
+      margin-top: 1rem;
+      padding: 1rem 2rem;
+      border-radius: 12px;
+      font-size: 1.4rem;
+      font-style: italic;
+      box-shadow: 0 0 12px rgba(0,0,0,0.2);
+      max-width: 90%;
+    }
+    .btn {
+      margin: 0.5rem;
+      padding: 0.7rem 1.2rem;
       border: none;
-      padding: 0.8rem 1.6rem;
-      font-weight: bold;
       border-radius: 8px;
-      margin: 0.5rem;
+      font-weight: bold;
       cursor: pointer;
-    }
-
-    .paypal, .facebook {
-      display: inline-block;
-      margin: 0.5rem;
-      padding: 0.8rem 1.6rem;
-      font-weight: bold;
-      border-radius: 8px;
-      background-color: #f7b733;
+      background-color: #b19330;
       color: white;
-      text-decoration: none;
-      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
     }
-
-    .facebook {
-      background-color: #4267B2;
+    .btn:hover {
+      background-color: #a28224;
     }
-
+    .paypal {
+      background-color: white;
+      color: #00457C;
+      border: 2px solid #00457C;
+    }
     .footer {
       margin-top: 2rem;
       font-size: 1.2rem;
-      font-weight: bold;
-      text-align: center;
-      color: #5c4a3f;
+      background: rgba(255,255,255,0.8);
+      padding: 0.5rem 1rem;
+      border-radius: 10px;
+    }
+    img.carte-cle {
+      width: 200px;
+      margin-top: 1rem;
+      border-radius: 16px;
+      box-shadow: 0 6px 18px rgba(0,0,0,0.3);
     }
   </style>
 </head>
 <body>
-
-  <img src="Cle-vildame.jpg" alt="Clé Vild’âme" class="logo" />
-
-  <div class="message" id="carte-message">
-    Aujourd’hui, je me choisis avec douceur.
-  </div>
-
-  <button onclick="tirerCarte()">Tirer une autre</button>
-
-  <a class="paypal" href="https://www.paypal.com/donate/?hosted_button_id=VOTRE_ID_PAYPAL" target="_blank">
-    Faire un don (entre amis)
-  </a>
-
-  <a class="facebook" href="https://www.facebook.com/share/12KrwnMWqQw/" target="_blank">
-    Rejoindre Vild’âme sur Facebook
-  </a>
-
+  <img class="carte-cle" src="Cle-vildame.jpg" alt="Carte Clé Vild’âme">
+  <div class="carte">Aujourd’hui, je me choisis avec douceur.</div>
+  <button class="btn" onclick="location.reload()">Tirer une autre</button>
+  <button class="btn">Activer la musique</button>
+  <button class="btn paypal" onclick="window.open('https://www.paypal.com/donate?hosted_button_id=XXX','_blank')">
+    💳 Faire un don (entre amis)
+  </button>
+  <button class="btn" onclick="window.open('https://www.facebook.com/share/12KrwnMWqQw/', '_blank')">
+    💖 Rejoindre Vild'âme sur Facebook
+  </button>
   <div class="footer">
     Merci pour ta présence lumineuse dans l’univers Vild’âme.
   </div>
-
-  <script>
-    const messages = [
-      "Aujourd’hui, je me choisis avec douceur.",
-      "Mon souffle m’apaise et me régénère.",
-      "Écoute ce qui vibre en toi.",
-      "Je mérite l’amour, la lumière et l’abondance.",
-      "Chaque cellule de mon corps reçoit de la lumière."
-    ];
-
-    function tirerCarte() {
-      const index = Math.floor(Math.random() * messages.length);
-      document.getElementById("carte-message").innerText = messages[index];
-    }
-  </script>
-
 </body>
 </html>
