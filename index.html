@@ -1,106 +1,123 @@
-
+!DOCTYPE html>
 <html lang="fr">
 <head>
   <meta charset="UTF-8">
-  <title>Vild'âme - Carte du jour</title>
+  <title>Vild’âme - Carte du jour</title>
   <style>
     body {
-      margin: 0;
       font-family: 'Georgia', serif;
-      background: url('Cle-vildame.jpg') no-repeat center center fixed;
+      background-image: url('Cle-vildame.jpg');
       background-size: cover;
-      text-align: center;
-      color: #4b2e1f;
-      font-size: 20px;
-    }
-    .carte {
-      background-color: rgba(255, 255, 255, 0.92);
-      display: inline-block;
+      background-position: center;
+      margin: 0;
       padding: 2rem;
-      margin: 2rem auto;
-      border-radius: 16px;
-      font-style: italic;
-      box-shadow: 0 4px 12px rgba(0,0,0,0.2);
-      font-size: 24px;
-    }
-    .btn {
-      display: inline-block;
-      margin: 1rem;
-      padding: 1rem 2rem;
-      background-color: #caa83d;
-      color: white;
-      font-weight: bold;
-      border: none;
-      border-radius: 12px;
-      cursor: pointer;
-      font-size: 20px;
-      box-shadow: 0 4px 8px rgba(0,0,0,0.15);
-    }
-    .btn:hover {
-      background-color: #b3902f;
-    }
-    .paypal-btn {
-      background-color: #ffc439;
-      color: #111;
       display: flex;
+      flex-direction: column;
       align-items: center;
-      justify-content: center;
-      gap: 0.6rem;
+      color: #3b2f2f;
     }
-    .paypal-btn img {
-      height: 24px;
+
+    .logo {
+      max-width: 200px;
+      margin-bottom: 1rem;
+      border-radius: 16px;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
     }
-    footer {
-      margin-top: 4rem;
-      background-color: rgba(255, 255, 255, 0.8);
+
+    .carte {
+      background: #ffffffcc;
+      border: 2px dashed #d8a85f;
       padding: 1.5rem;
-      font-size: 22px;
+      border-radius: 12px;
+      font-size: 1.4rem;
+      font-style: italic;
+      text-align: center;
+      max-width: 80%;
+      margin-bottom: 1rem;
+    }
+
+    .bouton {
+      background-color: #b89645;
+      color: white;
+      border: none;
+      padding: 0.6rem 1.2rem;
+      border-radius: 8px;
       font-weight: bold;
+      margin: 0.3rem;
+      cursor: pointer;
+    }
+
+    .paypal a {
+      background-color: #0070ba;
+      color: white;
+      padding: 0.8rem 1.5rem;
+      border-radius: 8px;
+      text-decoration: none;
+      font-weight: bold;
+      display: inline-block;
+      margin-top: 1rem;
+    }
+
+    .facebook a {
+      background-color: #3b5998;
+      color: white;
+      padding: 0.8rem 1.5rem;
+      border-radius: 8px;
+      text-decoration: none;
+      font-weight: bold;
+      display: inline-block;
+      margin-top: 0.5rem;
+    }
+
+    footer {
+      margin-top: 2rem;
+      font-size: 1.1rem;
+      color: #5c4430;
     }
   </style>
 </head>
 <body>
-  <img src="Cle-vildame.jpg" alt="Carte Vild’âme" style="width:240px; border-radius: 14px; margin-top: 2rem;">
-  <p style="font-size: 22px;"><em>La bonne clé est celle qui vibre en toi.</em></p>
 
-  <div class="carte" id="carteTexte">Aujourd’hui, je me choisis avec douceur.</div>
+  <img src="Cle-vildame.jpg" alt="Logo Vild’âme" class="logo">
 
-  <div>
-    <button class="btn" onclick="tirerCarte()">Tirer une autre</button>
-    <button class="btn" onclick="document.getElementById('musique').play()">Activer la musique</button>
+  <div class="carte" id="carte">Aujourd’hui, je me choisis avec douceur.</div>
+  <button class="bouton" onclick="tirerCarte()">Tirer une autre</button>
+  <button class="bouton" onclick="activerMusique()">Activer la musique</button>
+
+  <div class="paypal">
+    <a href="https://www.paypal.me/votrepseudo" target="_blank">Faire un don (entre amis)</a>
   </div>
 
-  <div>
-    <a class="btn paypal-btn" href="https://paypal.me/tonlien" target="_blank">
-      <img src="https://www.paypalobjects.com/webstatic/icon/pp258.png" alt="PayPal"> Faire un don (entre amis)
-    </a>
+  <div class="facebook">
+    <a href="https://www.facebook.com/share/12KrwnMWqQw/" target="_blank">Rejoindre Vild’âme sur Facebook</a>
   </div>
 
-  <div>
-    <a class="btn" href="https://www.facebook.com/share/12KrwnMWqQw/" target="_blank">Rejoindre Vild'âme sur Facebook</a>
-  </div>
+  <footer>Merci pour ta présence lumineuse dans l’univers Vild’âme.</footer>
 
   <audio id="musique" loop>
-    <source src="musique-vildame.mp3" type="audio/mpeg">
-    Ton navigateur ne supporte pas l'audio.
+    <source src="mp3-vildame.mp3" type="audio/mpeg">
   </audio>
-
-  <footer>
-    Merci pour ta présence lumineuse dans l'univers Vild'âme.
-  </footer>
 
   <script>
     const cartes = [
       "Aujourd’hui, je me choisis avec douceur.",
+      "Je mérite l’amour, la lumière et l’abondance.",
+      "Je suis en sécurité, ancrée et alignée.",
       "Mon souffle m’apaise et me régénère.",
-      "Tu es guidé•e avec bienveillance.",
-      "J’accueille ce que la vie m’offre, avec confiance.",
-      "Je mérite l’amour, la lumière et l’abondance."
+      "Écoute ce qui vibre en toi.",
+      "Je laisse le passé derrière et j’avance en confiance."
     ];
+
     function tirerCarte() {
       const alea = Math.floor(Math.random() * cartes.length);
-      document.getElementById('carteTexte').textContent = cartes[alea];
+      document.getElementById("carte").textContent = cartes[alea];
+    }
+
+    function activerMusique() {
+      const audio = document.getElementById("musique");
+      audio.play();
     }
   </script>
+
 </body>
 </html>
