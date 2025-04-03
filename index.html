@@ -1,8 +1,8 @@
 
 <html lang="fr">
 <head>
-  <meta charset="UTF-8" />
-  <title>Vild’âme – Guidance du jour</title>
+  <meta charset="UTF-8">
+  <title>Vild’âme - Guidance du jour</title>
   <style>
     body {
       font-family: 'Georgia', serif;
@@ -13,117 +13,86 @@
       display: flex;
       flex-direction: column;
       align-items: center;
-      gap: 1.5rem;
+      gap: 2rem;
     }
-
-    .logo {
-      width: 200px;
+    img.logo {
+      width: 250px;
       border-radius: 16px;
-      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
     }
-
-    .carte {
-      font-size: 1.5rem;
-      font-style: italic;
+    .section {
       text-align: center;
-      padding: 1rem 2rem;
+      max-width: 90%;
+    }
+    .section-title {
+      font-weight: bold;
+      margin-bottom: 0.5rem;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      font-size: 1.7rem;
+      color: #8b5c7d;
+    }
+    .carte {
       border: 2px dashed #e2d5c3;
+      border-radius: 16px;
+      padding: 1.5rem;
       background-color: #fdfaf7;
-      border-radius: 12px;
+      font-style: italic;
+      font-size: 1.3rem;
+      text-align: center;
+      min-height: 80px;
       box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+      margin-top: 0.5rem;
     }
-
-    .btn {
-      background-color: #b89c4d;
-      color: white;
-      font-weight: bold;
-      padding: 0.8rem 1.5rem;
-      margin-top: 0.3rem;
-      border: none;
-      border-radius: 8px;
-      cursor: pointer;
-      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    .paypal {
+      margin-top: 2rem;
     }
-
-    .btn:hover {
-      background-color: #a68a3a;
-    }
-
     .paypal a {
-      background-color: #0070ba;
+      background-color: #d4af37;
       color: white;
       padding: 0.8rem 1.5rem;
       border-radius: 8px;
-      font-weight: bold;
       text-decoration: none;
-      display: inline-block;
-      margin-top: 0.8rem;
+      font-weight: bold;
     }
-
     .facebook a {
-      background-color: #4267B2;
+      background-color: #3b5998;
       color: white;
       padding: 0.8rem 1.5rem;
       border-radius: 8px;
-      font-weight: bold;
       text-decoration: none;
+      font-weight: bold;
       display: inline-block;
       margin-top: 0.5rem;
     }
-
-    .footer {
-      margin-top: 2rem;
-      font-size: 1.2rem;
-      text-align: center;
-      color: #5c4a3c;
+    .music-button {
+      background-color: #d4af37;
+      color: white;
+      padding: 10px 20px;
+      border: none;
+      border-radius: 8px;
+      font-size: 1rem;
+      font-weight: bold;
+      cursor: pointer;
+      box-shadow: 0 4px 6px rgba(0,0,0,0.1);
     }
   </style>
 </head>
 <body>
+  <img src="Cle-vildame.jpg" alt="Logo Vild’âme" class="logo">
 
-  <img src="Cle-vildame.jpg" alt="Logo Vild’âme" class="logo" />
-
-  <div class="carte" id="carte-message">Aujourd’hui, je me choisis avec douceur.</div>
-
-  <button class="btn" onclick="tirerUneCarte()">Tirer une autre</button>
-  <button class="btn" onclick="document.getElementById('musique').play()">Activer la musique</button>
+  <div class="carte">Aujourd’hui, je me choisis avec douceur.</div>
+  <button onclick="document.getElementById('vildameAudio').play()" class="music-button">Écouter la musique d’ambiance</button>
+  <audio id="vildameAudio" src="pachelbel-vildame.mp3" preload="auto"></audio>
 
   <div class="paypal">
-    <a href="https://www.paypal.me/vildame" target="_blank">
-      &#128176; Faire un don (entre amis)
-    </a>
+    <a href="https://www.paypal.com/paypalme/vildame" target="_blank">Faire un don (entre amis)</a>
   </div>
 
   <div class="facebook">
-    <a href="https://www.facebook.com/share/12KrwnMWqQw/" target="_blank">
-      &#128104;&#8205;&#128187; Rejoindre Vild’âme sur Facebook
-    </a>
+    <a href="https://www.facebook.com/share/12KrwnMWqQw/" target="_blank">Rejoindre Vild’âme sur Facebook</a>
   </div>
 
-  <div class="footer">
-    Merci pour ta présence lumineuse dans l’univers Vild’âme.
-  </div>
-
-  <audio id="musique" src="pachelbel-vildame.mp3"></audio>
-
-  <script>
-    const messages = [
-      "Aujourd’hui, je me choisis avec douceur.",
-      "Je mérite l’amour, la lumière et l’abondance.",
-      "Chaque cellule de mon corps reçoit la lumière.",
-      "Mon souffle m’apaise et me régénère.",
-      "Écoute ce qui vibre en toi.",
-      "Tu es guidé•e avec bienveillance.",
-      "Je laisse le passé et j’ouvre un chemin neuf.",
-      "Je suis en sécurité, ancrée et alignée."
-    ];
-
-    function tirerUneCarte() {
-      const carte = document.getElementById("carte-message");
-      const tirage = messages[Math.floor(Math.random() * messages.length)];
-      carte.textContent = tirage;
-    }
-  </script>
-
+  <p style="text-align:center; font-size: 1.1rem; margin-top: 2rem;">Merci pour ta présence lumineuse dans l’univers Vild’âme.</p>
 </body>
 </html>
