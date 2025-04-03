@@ -1,110 +1,87 @@
-<html lang="fr">
+html lang="fr">
 <head>
   <meta charset="UTF-8" />
-  <title>Vild’âme - Carte du jour</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Vild’âme – Carte du jour</title>
   <style>
     body {
-      font-family: 'Georgia', serif;
-      background-color: #fffaf7;
-      color: #3b2f2f;
       margin: 0;
       padding: 2rem;
+      font-family: 'Georgia', serif;
+      background-image: url('GMEk1d2jJZn2SAcPt71zAt.jpg');
+      background-size: cover;
+      background-position: center;
+      background-attachment: fixed;
+      background-repeat: no-repeat;
+      color: #fff;
       display: flex;
       flex-direction: column;
       align-items: center;
       gap: 2rem;
     }
 
-    img.logo {
-      width: 250px;
-      border-radius: 16px;
-      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
-    }
-
     .carte {
-      border: 2px dashed #e2d5c3;
+      background-color: rgba(255, 255, 255, 0.9);
+      color: #3b2f2f;
       border-radius: 16px;
       padding: 1.5rem;
-      background-color: #fdfaf7;
-      font-style: italic;
-      font-size: 1.4rem;
-      text-align: center;
       max-width: 80%;
+      text-align: center;
+      font-style: italic;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
     }
 
-    button {
-      background-color: #c9aa67;
-      color: white;
+    button, a.btn {
+      background-color: #d9b86c;
+      color: #000;
       border: none;
       padding: 0.8rem 1.5rem;
-      font-size: 1rem;
+      margin-top: 1rem;
       font-weight: bold;
       border-radius: 8px;
       cursor: pointer;
-      margin-top: 1rem;
+      text-decoration: none;
+      box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
     }
 
-    .paypal, .facebook {
-      margin-top: 1rem;
-      font-size: 1rem;
-      text-align: center;
-    }
-
-    .paypal a, .facebook a {
-      display: inline-flex;
-      align-items: center;
-      justify-content: center;
+    .paypal {
       background-color: #0070ba;
       color: white;
-      padding: 0.8rem 1.5rem;
-      border-radius: 8px;
-      text-decoration: none;
       font-weight: bold;
     }
 
-    .paypal svg {
-      height: 20px;
-      margin-right: 10px;
+    .footer {
+      font-size: 1rem;
+      margin-top: 2rem;
+      text-align: center;
+      background-color: rgba(255,255,255,0.2);
+      padding: 1rem;
+      border-radius: 12px;
     }
 
-    .footer {
-      margin-top: 2rem;
-      font-size: 1.1rem;
-      color: #3b2f2f;
-      text-align: center;
-      max-width: 90%;
+    img.logo {
+      width: 250px;
+      border-radius: 12px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.3);
     }
   </style>
 </head>
 <body>
-  <img src="Cle-vildame.jpg" alt="Carte Vild’âme" class="logo" />
+  <img src="Cle-vildame.jpg" alt="Logo Vild’âme" class="logo" />
 
   <div class="carte" id="message">
     Aujourd’hui, je me choisis avec douceur.
   </div>
 
-  <button onclick="tirerUneAutre()">Tirer une autre carte</button>
+  <button onclick="tirerCarte()">Tirer une autre</button>
 
-  <div class="carte" id="affirmation">
-    Je suis en paix avec moi-même et le monde.
-  </div>
+  <a href="https://www.paypal.me/vildame" class="btn paypal" target="_blank">
+    Soutenir le projet Vild’âme (paiement entre amis)
+  </a>
 
-  <button onclick="tirerAffirmation()">Tirer une affirmation</button>
-
-  <div class="paypal">
-    <a href="https://www.paypal.me/vildame" target="_blank">
-      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" width="20" height="20" fill="white">
-        <path d="M11.3 28.4c-.3 0-.5-.2-.5-.5l1.5-9.5c0-.3.3-.5.5-.5h2.3c5.5 0 8.4-3.2 8.4-8.6 0-1.8-.5-3.3-1.6-4.4-1.1-1.1-2.6-1.7-4.6-1.7H8.8c-.3 0-.5.2-.5.5l-4 25c0 .3.2.5.5.5h3.7c.3 0 .5-.2.5-.5l.9-5.6c0-.3.3-.5.5-.5h2.2c1.6 0 3-.2 4.1-.7.2-.1.3-.3.3-.5v-2.1c0-.3-.3-.5-.6-.4-1 .3-2.1.4-3.4.4h-1.4l.7-4.5h1.2c2.1 0 3.9-.6 5.1-1.7 1.2-1.2 1.9-2.8 1.9-4.7 0-1.5-.5-2.6-1.4-3.4-.9-.8-2.1-1.2-3.6-1.2h-3.5c-.3 0-.5.2-.5.5l-2.3 14.8c0 .3.2.5.5.5h1.4l-.9 5.6c0 .3.2.5.5.5h2.4z"/>
-      </svg>
-      Soutenir le projet Vild’âme (paiement entre amis pour éviter les frais)
-    </a>
-  </div>
-
-  <div class="facebook">
-    <a href="https://www.facebook.com/share/12KrwnMWqQw/" target="_blank">
-      Rejoindre Vild’âme sur Facebook
-    </a>
-  </div>
+  <a href="https://www.facebook.com/share/12KrwnMWqQw/" class="btn" target="_blank">
+    Rejoindre Vild’âme sur Facebook
+  </a>
 
   <div class="footer">
     Merci pour ta présence lumineuse dans l’univers Vild’âme.
@@ -113,48 +90,20 @@
   <script>
     const messages = [
       "Aujourd’hui, je me choisis avec douceur.",
-      "Je suis en sécurité dans l’instant présent.",
-      "Je libère ce qui ne m’appartient plus.",
+      "Je mérite l’amour, la lumière et l’abondance.",
       "Mon souffle m’apaise et me régénère.",
-      "J’avance avec confiance et clarté.",
-      "Je suis guidé(e) avec bienveillance.",
-      "Chaque jour m’offre une nouvelle clé.",
-      "Je respire et je me recentre.",
-      "La bonne clé est celle qui vibre en toi.",
-      "Je suis digne d’amour et de lumière.",
-      "Je m’ouvre aux synchronicités de l’univers.",
-      "Je mérite l’abondance dans tous les domaines.",
-      "Je me laisse porter par la douceur du moment.",
-      "Je fais confiance à mon intuition.",
-      "Je suis libre de créer ma propre voie.",
-      "Mon énergie attire le positif.",
-      "Je suis aligné(e) avec mes valeurs profondes.",
-      "Je suis en paix avec mon histoire.",
-      "Je choisis la compassion plutôt que la peur.",
-      "Je suis un canal de lumière et de guérison."
+      "Chaque cellule de mon corps reçoit de la lumière.",
+      "Je suis guidé·e avec bienveillance.",
+      "Je m’accorde un moment de paix.",
+      "Je laisse la magie agir dans ma vie.",
+      "Je suis en sécurité et aligné·e.",
+      "Je rayonne avec confiance.",
+      "Je m’ouvre à la sagesse intérieure."
     ];
 
-    const affirmations = [
-      "Je mérite ce qu’il y a de plus beau.",
-      "Je suis exactement là où je dois être.",
-      "Je me donne de l’amour chaque jour.",
-      "Je laisse la lumière m’envelopper.",
-      "Je suis capable d’accueillir la magie.",
-      "Je suis une source de paix et de lumière.",
-      "Mon cœur sait ce qui est juste pour moi.",
-      "Je me reconnecte à mon énergie sacrée.",
-      "Je suis en sécurité ici et maintenant.",
-      "Je rayonne l’amour et la confiance."
-    ];
-
-    function tirerUneAutre() {
-      const aleatoire = Math.floor(Math.random() * messages.length);
-      document.getElementById("message").innerText = messages[aleatoire];
-    }
-
-    function tirerAffirmation() {
-      const alea = Math.floor(Math.random() * affirmations.length);
-      document.getElementById("affirmation").innerText = affirmations[alea];
+    function tirerCarte() {
+      const message = messages[Math.floor(Math.random() * messages.length)];
+      document.getElementById("message").innerText = message;
     }
   </script>
 </body>
