@@ -2,7 +2,7 @@
 <html lang="fr">
 <head>
   <meta charset="UTF-8">
-  <title>Vild’âme - Guidance du jour</title>
+  <title>Vild’âme - Carte du jour</title>
   <style>
     body {
       font-family: 'Georgia', serif;
@@ -20,18 +20,6 @@
       border-radius: 16px;
       box-shadow: 0 4px 12px rgba(0,0,0,0.1);
     }
-    .section {
-      text-align: center;
-      max-width: 90%;
-    }
-    .section-title {
-      font-weight: bold;
-      margin-bottom: 0.5rem;
-      text-transform: uppercase;
-      letter-spacing: 1px;
-      font-size: 1.7rem;
-      color: #8b5c7d;
-    }
     .carte {
       border: 2px dashed #e2d5c3;
       border-radius: 16px;
@@ -44,55 +32,15 @@
       box-shadow: 0 2px 8px rgba(0,0,0,0.05);
       margin-top: 0.5rem;
     }
-    .paypal {
-      margin-top: 2rem;
-    }
-    .paypal a {
-      background-color: #d4af37;
-      color: white;
-      padding: 0.8rem 1.5rem;
-      border-radius: 8px;
-      text-decoration: none;
-      font-weight: bold;
-    }
-    .facebook a {
-      background-color: #3b5998;
-      color: white;
-      padding: 0.8rem 1.5rem;
-      border-radius: 8px;
-      text-decoration: none;
-      font-weight: bold;
-      display: inline-block;
-      margin-top: 0.5rem;
-    }
-    .music-button {
-      background-color: #d4af37;
-      color: white;
-      padding: 10px 20px;
-      border: none;
-      border-radius: 8px;
-      font-size: 1rem;
-      font-weight: bold;
-      cursor: pointer;
-      box-shadow: 0 4px 6px rgba(0,0,0,0.1);
-    }
-  </style>
-</head>
-<body>
-  <img src="Cle-vildame.jpg" alt="Logo Vild’âme" class="logo">
+    .btn {
+      background-color: #b89c
 
-  <div class="carte">Aujourd’hui, je me choisis avec douceur.</div>
-  <button onclick="document.getElementById('vildameAudio').play()" class="music-button">Écouter la musique d’ambiance</button>
-  <audio id="vildameAudio" src="pachelbel-vildame.mp3" preload="auto"></audio>
+from pathlib import Path
 
-  <div class="paypal">
-    <a href="https://www.paypal.com/paypalme/vildame" target="_blank">Faire un don (entre amis)</a>
-  </div>
+Path to the uploaded file
 
-  <div class="facebook">
-    <a href="https://www.facebook.com/share/12KrwnMWqQw/" target="_blank">Rejoindre Vild’âme sur Facebook</a>
-  </div>
+file_path = Path("/mnt/data/file-MJo5mcsHHp6jNocuDo7EAQ")
 
-  <p style="text-align:center; font-size: 1.1rem; margin-top: 2rem;">Merci pour ta présence lumineuse dans l’univers Vild’âme.</p>
-</body>
-</html>
+Display the file name for user confirmation
+
+file_path.name
