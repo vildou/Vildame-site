@@ -2,76 +2,104 @@
 <html lang="fr">
 <head>
   <meta charset="UTF-8">
-  <title>Vild’âme - Guidance du jour</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Vild'âme - Guidance du jour</title>
   <style>
     body {
       font-family: 'Georgia', serif;
-      margin: 0;
-      padding: 0;
-      background: url('Cle-vildame.jpg') no-repeat center center fixed;
-      background-size: cover;
+      background-color: #fffaf7;
       color: #3b2f2f;
+      margin: 0;
+      padding: 2rem;
       display: flex;
       flex-direction: column;
       align-items: center;
-      text-align: center;
+      gap: 1.5rem;
     }
+
+    img.logo {
+      width: 250px;
+      border-radius: 16px;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    }
+
     .carte {
-      background: white;
-      margin-top: 1rem;
-      padding: 1rem 2rem;
-      border-radius: 12px;
-      font-size: 1.4rem;
+      border: 2px dashed #d2c5a3;
+      border-radius: 16px;
+      padding: 1.5rem;
+      background-color: #fdfaf7;
       font-style: italic;
-      box-shadow: 0 0 12px rgba(0,0,0,0.2);
-      max-width: 90%;
+      font-size: 1.3rem;
+      text-align: center;
+      min-height: 80px;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+      margin-top: 0.5rem;
     }
-    .btn {
-      margin: 0.5rem;
-      padding: 0.7rem 1.2rem;
+
+    button {
+      padding: 0.6rem 1.5rem;
+      margin: 0.3rem;
       border: none;
       border-radius: 8px;
       font-weight: bold;
       cursor: pointer;
-      background-color: #b19330;
+    }
+
+    .tirer {
+      background-color: #d2b673;
       color: white;
     }
-    .btn:hover {
-      background-color: #a28224;
-    }
+
     .paypal {
-      background-color: white;
-      color: #00457C;
-      border: 2px solid #00457C;
+      background-color: #0070ba;
+      color: white;
     }
+
+    .facebook {
+      background-color: #4267B2;
+      color: white;
+    }
+
     .footer {
       margin-top: 2rem;
-      font-size: 1.2rem;
-      background: rgba(255,255,255,0.8);
-      padding: 0.5rem 1rem;
-      border-radius: 10px;
-    }
-    img.carte-cle {
-      width: 200px;
-      margin-top: 1rem;
-      border-radius: 16px;
-      box-shadow: 0 6px 18px rgba(0,0,0,0.3);
+      font-size: 1rem;
+      text-align: center;
+      color: #5c4b3b;
     }
   </style>
 </head>
 <body>
-  <img class="carte-cle" src="Cle-vildame.jpg" alt="Carte Clé Vild’âme">
-  <div class="carte">Aujourd’hui, je me choisis avec douceur.</div>
-  <button class="btn" onclick="location.reload()">Tirer une autre</button>
-  <button class="btn">Activer la musique</button>
-  <button class="btn paypal" onclick="window.open('https://www.paypal.com/donate?hosted_button_id=XXX','_blank')">
-    💳 Faire un don (entre amis)
-  </button>
-  <button class="btn" onclick="window.open('https://www.facebook.com/share/12KrwnMWqQw/', '_blank')">
-    💖 Rejoindre Vild'âme sur Facebook
-  </button>
+  <img src="Cle-vildame.jpg" alt="Clé Vild'âme" class="logo">
+
+  <div class="carte" id="message">Aujourd’hui, je me choisis avec douceur.</div>
+
+  <button class="tirer" onclick="tirerCarte()">Tirer une autre</button>
+
+  <a href="https://www.paypal.com/donate" target="_blank">
+    <button class="paypal">Faire un don (entre amis)</button>
+  </a>
+
+  <a href="https://www.facebook.com/share/12KrwnMWqQw/" target="_blank">
+    <button class="facebook">Rejoindre Vild’âme sur Facebook</button>
+  </a>
+
   <div class="footer">
     Merci pour ta présence lumineuse dans l’univers Vild’âme.
   </div>
+
+  <script>
+    const messages = [
+      "Aujourd’hui, je me choisis avec douceur.",
+      "Mon souffle m’apaise et me régénère.",
+      "Écoute ce qui vibre en toi.",
+      "Je mérite l’amour, la lumière et l’abondance.",
+      "Chaque cellule de mon corps reçoit de la lumière."
+    ];
+
+    function tirerCarte() {
+      const index = Math.floor(Math.random() * messages.length);
+      document.getElementById("message").innerText = messages[index];
+    }
+  </script>
 </body>
 </html>
