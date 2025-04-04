@@ -1,1 +1,87 @@
+html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <title>Tirage spécial – Vild'âme</title>
+  <style>
+    body {
+      font-family: Georgia, serif;
+      background-color: #fffaf7;
+      color: #3b2f2f;
+      margin: 0;
+      padding: 2rem;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 2rem;
+    }
+    .carte {
+      border: 2px dashed #e2d5c3;
+      border-radius: 16px;
+      padding: 1.5rem;
+      background-color: #fdfaf7;
+      font-style: italic;
+      font-size: 1.6rem;
+      text-align: center;
+      min-height: 80px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+    }
+    button {
+      background-color: #ccb178;
+      color: white;
+      padding: 0.8rem 1.5rem;
+      border-radius: 8px;
+      font-weight: bold;
+      border: none;
+      cursor: pointer;
+      font-size: 1.1rem;
+    }
+  </style>
+</head>
+<body>
+  <h2>Tirage spécial – Guidance intérieure</h2>
+  <div class="carte" id="message">
+    Clique ci-dessous pour recevoir ton message spécial.
+  </div>
+  <button onclick="tirerMessage()">Tirer un message</button>
 
+  <script>
+    const messages = [
+      "Aujourd’hui, je me connecte à la lumière en moi.",
+      "Je me laisse guider par la sagesse de mon cœur.",
+      "Je suis en sécurité dans l’instant présent.",
+      "Ma lumière intérieure rayonne dans tout mon être.",
+      "J’accueille les messages de mon âme avec confiance.",
+      "Je suis guidé·e avec douceur vers ma guérison.",
+      "Aujourd’hui, je m’aligne avec mon intuition.",
+      "Je libère ce qui ne me sert plus avec gratitude.",
+      "Mon souffle m’ancre dans l’instant présent.",
+      "Je me reconnecte à mon centre avec bienveillance.",
+      "Je suis l’espace sacré dans lequel tout peut fleurir.",
+      "Chaque respiration m’ouvre à plus de paix.",
+      "Je fais confiance au chemin qui se dévoile pas à pas.",
+      "Mon corps est un temple que j’honore avec respect.",
+      "Je suis capable de me transformer avec amour.",
+      "J'accueille ma vérité avec douceur.",
+      "Aujourd'hui, je choisis la lumière de la guérison.",
+      "Je suis la clé de ma propre libération.",
+      "Je suis soutenu·e par l'univers dans ce que je traverse.",
+      "Je retrouve la clarté en moi.",
+      "Je suis digne d'amour et d'harmonie.",
+      "Chaque instant est une chance de renaître.",
+      "Je suis en lien avec mon essence profonde.",
+      "Mon énergie se purifie dans la paix.",
+      "Je choisis d’incarner ma pleine puissance.",
+      "Aujourd’hui, je m’écoute avec tendresse.",
+      "Je suis une étincelle de vie, précieuse et libre.",
+      "Je suis aligné·e avec le flux naturel de l'univers.",
+      "Je respire la paix, j’expire la tension.",
+      "Je suis en paix avec mes émotions."
+    ];
+
+    function tirerMessage() {
+      const index = Math.floor(Math.random() * messages.length);
+      document.getElementById("message").innerText = messages[index];
+    }
+  </script>
+</body>
+</html>
