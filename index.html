@@ -1,11 +1,11 @@
+
 <html lang="fr">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta charset="UTF-8">
   <title>Vild’âme - Guidance du jour</title>
   <style>
     body {
-      font-family: Georgia, serif;
+      font-family: 'Georgia', serif;
       background-color: #fffaf7;
       color: #3b2f2f;
       margin: 0;
@@ -13,107 +13,106 @@
       display: flex;
       flex-direction: column;
       align-items: center;
-      gap: 1.5rem;
+      gap: 2rem;
     }
-
     .logo {
-      width: 250px;
+      width: 260px;
       border-radius: 16px;
       box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
     }
-
     .carte {
       border: 2px dashed #e2d5c3;
       border-radius: 16px;
       padding: 1.5rem;
-      background-color: #fdfaf7;
+      background-color: #fffaf7;
       font-style: italic;
-      font-size: 1.6rem;
+      font-size: 1.3rem;
       text-align: center;
+      min-height: 80px;
       box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
-      max-width: 90%;
     }
-
-    .btn {
-      padding: 0.8rem 1.5rem;
-      border-radius: 8px;
-      font-weight: bold;
-      border: none;
-      cursor: pointer;
-      font-size: 1rem;
-      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    }
-
-    .tirer {
-      background-color: #c9a96b;
+    button {
+      background-color: #cbb278;
       color: white;
+      border: none;
+      border-radius: 8px;
+      padding: 0.8rem 1.5rem;
+      font-size: 1rem;
+      cursor: pointer;
+      box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
     }
-
     .paypal {
       background-color: #0070ba;
       color: white;
-    }
-
-    .facebook {
-      background-color: #3b5998;
-      color: white;
-    }
-
-    .footer {
-      margin-top: 2rem;
-      font-size: 1.2rem;
-      text-align: center;
-      color: #5c4a42;
-    }
-
-    .link-special {
-      margin-top: 1rem;
-      font-style: italic;
-      color: #6b503f;
       text-decoration: none;
+      padding: 0.8rem 1.5rem;
+      border-radius: 8px;
+      display: inline-block;
+      font-weight: bold;
+    }
+    .facebook {
+      background-color: #4267B2;
+      color: white;
+      text-decoration: none;
+      padding: 0.8rem 1.5rem;
+      border-radius: 8px;
+      display: inline-block;
+      font-weight: bold;
+    }
+    .section-title {
+      font-weight: bold;
+      font-size: 1.2rem;
+      margin-top: 2rem;
+      text-align: center;
     }
   </style>
 </head>
 <body>
-  <img src="Cle-vildame.jpg" alt="Clé Vild’âme" class="logo" />
+
+  <img src="Cle-vildame.jpg" alt="Logo Vild’âme" class="logo">
 
   <div class="carte" id="message">Aujourd’hui, je me choisis avec douceur.</div>
+  <button onclick="tirerMessage()">Tirer une autre</button>
 
-  <button class="btn tirer" onclick="tirerMessage()">Tirer une autre</button>
-
-  <a class="btn paypal" href="https://www.paypal.me/vildame" target="_blank">
+  <a class="paypal" href="https://www.paypal.me/vildame" target="_blank">
     Faire un don via PayPal (paiement entre amis pour éviter les frais)
+  </a><br><br>
+
+  <a class="facebook" href="https://www.facebook.com/share/12KrwnMWqQw/" target="_blank">
+    Rejoindre Vild’âme sur Facebook
   </a>
 
-  <a class="btn facebook" href="https://www.facebook.com/share/12KrwnMWqQw/" target="_blank">
-    Rejoindre Vild'âme sur Facebook
-  </a>
+  <p class="section-title">
+    → <a href="tirage.html">Tirage spécial : question intérieure ou guérison</a>
+  </p>
 
-  <a class="link-special" href="tirage.html">
-    → Tirage spécial : question intérieure ou guérison
-  </a>
-
-  <div class="footer">
-    Merci pour ta présence lumineuse dans l’univers Vild'âme.
+  <!-- AJOUT DE L’IMAGE PORTE -->
+  <div style="margin-top: 2rem; text-align: center;">
+    <img src="image_porte_avec_cle_tres_transparente.jpg" alt="Création Vild’âme – Porte & Clé" width="260" style="border-radius: 12px; box-shadow: 0 4px 12px rgba(0,0,0,0.15);">
+    <p style="margin-top: 0.5rem; font-size: 1rem;">Porte & Clé – Création Vild’âme</p>
   </div>
+
+  <p style="margin-top: 3rem; font-size: 1.1rem; text-align: center;">
+    Merci pour ta présence lumineuse dans l’univers Vild’âme.
+  </p>
 
   <script>
     const messages = [
       "Aujourd’hui, je me choisis avec douceur.",
-      "Je mérite l’amour, la lumière et l’abondance.",
-      "Je suis guidé·e avec bienveillance.",
-      "Mon souffle m’apaise et me régénère.",
-      "Je libère ce qui ne m’appartient plus.",
-      "J'accueille ce jour comme un cadeau.",
-      "Je me relie à mon intuition profonde.",
-      "Je suis en sécurité ici et maintenant.",
-      "Chaque souffle me ramène à moi.",
-      "Je suis sur le bon chemin."
+      "Tu es guidé·e avec bienveillance.",
+      "Je suis en paix ici et maintenant.",
+      "Je me reconnecte à mon espace sacré.",
+      "J’accueille la lumière en moi.",
+      "Je suis sur le bon chemin.",
+      "Je fais confiance à ma voix intérieure.",
+      "Je suis entouré·e de bonnes énergies.",
+      "Je respire profondément et je m’ancre.",
+      "Je rayonne depuis mon cœur."
     ];
 
     function tirerMessage() {
       const alea = Math.floor(Math.random() * messages.length);
-      document.getElementById("message").innerText = messages[alea];
+      document.getElementById("message").textContent = messages[alea];
     }
   </script>
 </body>
