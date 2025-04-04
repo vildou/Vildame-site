@@ -2,6 +2,7 @@
 <html lang="fr">
 <head>
   <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Tirage spécial – Vild’âme</title>
   <style>
     body {
@@ -15,60 +16,66 @@
       align-items: center;
       gap: 2rem;
     }
-    .carte {
+    h1 {
+      font-size: 1.3rem;
+      color: #3b2f2f;
+    }
+    .message-box {
       border: 2px dashed #e2d5c3;
       border-radius: 16px;
       padding: 1.5rem;
-      background-color: #fdfaf7;
+      background-color: #fffaf7;
       font-style: italic;
       font-size: 1.3rem;
       text-align: center;
       min-height: 80px;
-      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+      box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+      max-width: 400px;
     }
     button {
-      background-color: #c8a86a;
+      background-color: #c8ab72;
       color: white;
       padding: 0.8rem 1.5rem;
-      border: none;
       border-radius: 8px;
-      font-weight: bold;
+      border: none;
       font-size: 1rem;
-      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+      cursor: pointer;
+      box-shadow: 0 4px 6px rgba(0,0,0,0.1);
     }
-    h1 {
-      font-size: 1.5rem;
-      text-align: center;
+    .illustration {
+      margin-top: 2rem;
+      max-width: 300px;
+      border-radius: 16px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
     }
   </style>
 </head>
 <body>
   <h1>Tirage spécial – Guidance intérieure</h1>
-  <div class="carte" id="carte">Clique ci-dessous pour recevoir ton message spécial.</div>
-  <button onclick="tirerCarte()">Tirer un message</button>
+  <div class="message-box" id="message">Clique ci-dessous pour recevoir ton message spécial.</div>
+  <button onclick="tirerMessage()">Tirer un message</button>
+
+  <img src="image_porte_avec_cle_tres_transparente.jpg" alt="Porte avec lumière" class="illustration">
 
   <script>
     const messages = [
       "Aujourd’hui, je me connecte à la lumière en moi.",
-      "Je me laisse guider par la sagesse de mon cœur.",
+      "Je laisse guider par la sagesse de mon cœur.",
       "Je suis en sécurité dans l’instant présent.",
       "Ma lumière intérieure rayonne dans tout mon être.",
-      "J’accueille les messages de mon âme avec confiance.",
-      "Je suis guidé•e avec douceur vers ma guérison.",
+      "Je cueille les messages de mon âme avec confiance.",
+      "Je suis guidé·e avec douceur vers ma guérison.",
       "Aujourd’hui, je m’aligne avec mon intuition.",
-      "Je m’ouvre et me remplis de gratitude.",
-      "Mon souffle m’ancre dans l’instant présent.",
+      "Je m’ouvre et je me remplis de gratitude.",
+      "Je souffle mes ancrages dans l’instant présent.",
       "Je me reconnecte à mon centre avec bienveillance.",
-      "Je bénis l’espace sacré dans lequel tout peut fleurir.",
-      "J’envoie mes respirations d’amour vers ma guérison.",
-      "Je fais confiance au chemin qui se dévoile pas à pas.",
-      "Je suis en paix avec le passé et confiant•e pour demain.",
-      "Je suis lumière et j’éclaire chaque recoin de mon être."
+      "J’entre dans l’espace sacré dans lequel tout peut fleurir.",
+      "Je fais confiance au chemin qui se dévoile pas à pas."
     ];
 
-    function tirerCarte() {
+    function tirerMessage() {
       const index = Math.floor(Math.random() * messages.length);
-      document.getElementById("carte").innerText = messages[index];
+      document.getElementById("message").innerText = messages[index];
     }
   </script>
 </body>
