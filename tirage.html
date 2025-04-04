@@ -1,61 +1,52 @@
-
-<html lang="fr">
+html lang="fr">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
   <title>Tirage spécial – Vild’âme</title>
   <style>
     body {
-      font-family: Georgia, serif;
+      font-family: 'Georgia', serif;
       background-color: #fffaf7;
       color: #3b2f2f;
-      margin: 0;
+      text-align: center;
       padding: 2rem;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      gap: 2rem;
     }
-    h1 {
-      font-size: 1.3rem;
-      color: #3b2f2f;
-    }
-    .message-box {
+    .carte {
       border: 2px dashed #e2d5c3;
       border-radius: 16px;
       padding: 1.5rem;
       background-color: #fffaf7;
       font-style: italic;
       font-size: 1.3rem;
-      text-align: center;
-      min-height: 80px;
+      margin: 1rem auto;
+      width: 80%;
+      max-width: 500px;
       box-shadow: 0 2px 8px rgba(0,0,0,0.05);
-      max-width: 400px;
     }
     button {
-      background-color: #c8ab72;
+      background-color: #c2a668;
       color: white;
+      border: none;
       padding: 0.8rem 1.5rem;
       border-radius: 8px;
-      border: none;
       font-size: 1rem;
+      margin: 1rem;
       cursor: pointer;
       box-shadow: 0 4px 6px rgba(0,0,0,0.1);
     }
-    .illustration {
+    .image-fond {
       margin-top: 2rem;
-      max-width: 300px;
-      border-radius: 16px;
+      max-width: 100%;
+      border-radius: 12px;
       box-shadow: 0 4px 12px rgba(0,0,0,0.1);
     }
   </style>
 </head>
 <body>
-  <h1>Tirage spécial – Guidance intérieure</h1>
-  <div class="message-box" id="message">Clique ci-dessous pour recevoir ton message spécial.</div>
+  <h2>Tirage spécial – Guidance intérieure</h2>
+  <div class="carte" id="message">Clique ci-dessous pour recevoir ton message spécial.</div>
   <button onclick="tirerMessage()">Tirer un message</button>
 
-  <img src="image_porte_avec_cle_tres_transparente.jpg" alt="Porte avec lumière" class="illustration">
+  <img src="image_porte_avec_cle_tres_transparente.jpg" class="image-fond" alt="Image spirituelle Vildâme" />
 
   <script>
     const messages = [
@@ -63,14 +54,13 @@
       "Je laisse guider par la sagesse de mon cœur.",
       "Je suis en sécurité dans l’instant présent.",
       "Ma lumière intérieure rayonne dans tout mon être.",
-      "Je cueille les messages de mon âme avec confiance.",
+      "Je reçois les messages de mon âme avec confiance.",
       "Je suis guidé·e avec douceur vers ma guérison.",
       "Aujourd’hui, je m’aligne avec mon intuition.",
-      "Je m’ouvre et je me remplis de gratitude.",
-      "Je souffle mes ancrages dans l’instant présent.",
-      "Je me reconnecte à mon centre avec bienveillance.",
-      "J’entre dans l’espace sacré dans lequel tout peut fleurir.",
-      "Je fais confiance au chemin qui se dévoile pas à pas."
+      "Je choisis de me remplir de gratitude.",
+      "Je me sens entouré·e de bienveillance.",
+      "Je m’ancre à mon centre avec clarté.",
+      "J’ouvre l’espace sacré dans lequel tout peut fleurir."
     ];
 
     function tirerMessage() {
