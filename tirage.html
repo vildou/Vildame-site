@@ -1,15 +1,27 @@
 
+<html lang="fr">
 <head>
-  <meta charset="UTF-8" />
+  <meta charset="UTF-8">
   <title>Tirage spécial – Vild’âme</title>
   <style>
     body {
       font-family: 'Georgia', serif;
       background-color: #fffaf7;
       color: #3b2f2f;
-      text-align: center;
+      margin: 0;
       padding: 2rem;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 2rem;
     }
+
+    .titre {
+      font-size: 1.5rem;
+      font-weight: bold;
+      text-align: center;
+    }
+
     .carte {
       border: 2px dashed #e2d5c3;
       border-radius: 16px;
@@ -17,56 +29,70 @@
       background-color: #fffaf7;
       font-style: italic;
       font-size: 1.3rem;
-      margin: 1rem auto;
-      width: 80%;
-      max-width: 500px;
+      text-align: center;
+      min-height: 80px;
       box-shadow: 0 2px 8px rgba(0,0,0,0.05);
     }
+
     button {
-      background-color: #c2a668;
+      background-color: #c5a76d;
       color: white;
-      border: none;
-      padding: 0.8rem 1.5rem;
+      padding: 0.7rem 1.5rem;
       border-radius: 8px;
+      border: none;
+      font-weight: bold;
       font-size: 1rem;
-      margin: 1rem;
       cursor: pointer;
-      box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
     }
-    .image-fond {
+
+    button:hover {
+      background-color: #b89655;
+    }
+
+    .image {
       margin-top: 2rem;
-      max-width: 100%;
+      text-align: center;
+    }
+
+    .image img {
+      max-width: 90%;
       border-radius: 12px;
-      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
     }
   </style>
 </head>
 <body>
-  <h2>Tirage spécial – Guidance intérieure</h2>
+
+  <div class="titre">Tirage spécial – Guidance intérieure</div>
+
   <div class="carte" id="message">Clique ci-dessous pour recevoir ton message spécial.</div>
+
   <button onclick="tirerMessage()">Tirer un message</button>
 
-  <img src="image_porte_avec_cle_tres_transparente.jpg" class="image-fond" alt="Image spirituelle Vildâme" />
+  <div class="image">
+    <img src="image_porte_avec_cle_tres_transparente.jpg" alt="Image spirituelle Vild’âme">
+  </div>
 
   <script>
     const messages = [
       "Aujourd’hui, je me connecte à la lumière en moi.",
-      "Je laisse guider par la sagesse de mon cœur.",
+      "Je me laisse guider par la sagesse de mon cœur.",
       "Je suis en sécurité dans l’instant présent.",
       "Ma lumière intérieure rayonne dans tout mon être.",
-      "Je reçois les messages de mon âme avec confiance.",
+      "J’accueille les messages de mon âme avec confiance.",
       "Je suis guidé·e avec douceur vers ma guérison.",
       "Aujourd’hui, je m’aligne avec mon intuition.",
       "Je choisis de me remplir de gratitude.",
-      "Je me sens entouré·e de bienveillance.",
-      "Je m’ancre à mon centre avec clarté.",
-      "J’ouvre l’espace sacré dans lequel tout peut fleurir."
+      "Je suis entouré·e de bienveillance.",
+      "J’avance avec foi, un pas à la fois."
     ];
 
     function tirerMessage() {
       const index = Math.floor(Math.random() * messages.length);
-      document.getElementById("message").innerText = messages[index];
+      document.getElementById('message').textContent = messages[index];
     }
   </script>
+
 </body>
 </html>
