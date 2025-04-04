@@ -13,83 +13,87 @@
       display: flex;
       flex-direction: column;
       align-items: center;
-      gap: 1.5rem;
+      text-align: center;
     }
 
-    .sous-titre {
+    .intro {
       font-style: italic;
-      color: #6e5c5c;
+      color: #7b6a58;
       font-size: 1rem;
+      margin-bottom: 1rem;
     }
 
-    .message {
+    .carte {
       border: 2px dashed #e2d5c3;
       border-radius: 16px;
-      padding: 1rem 2rem;
+      padding: 1.5rem;
+      background-color: #fffaf7;
       font-style: italic;
       font-size: 1.3rem;
-      background-color: #fffdf9;
-      box-shadow: 0 2px 8px rgba(0,0,0,0.05);
-      text-align: center;
+      margin: 1rem auto;
+      max-width: 90%;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
     }
 
     button {
-      background-color: #c6a86b;
+      background-color: #ccb174;
       color: white;
+      padding: 0.6rem 1.5rem;
       border: none;
-      padding: 0.7rem 1.5rem;
-      font-size: 1rem;
       border-radius: 8px;
-      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+      font-weight: bold;
       cursor: pointer;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+      margin: 1rem 0;
     }
 
-    .image-vildame {
-      width: 220px;
+    img {
+      max-width: 250px;
+      height: auto;
       border-radius: 12px;
-      box-shadow: 0 6px 12px rgba(0,0,0,0.1);
+      margin: 1.5rem 0;
+      box-shadow: 0 2px 12px rgba(0,0,0,0.08);
     }
 
-    footer {
-      margin-top: 2rem;
+    .footer {
       font-size: 0.9rem;
-      color: #5c4a4a;
-      text-align: center;
+      color: #7b6a58;
+      margin-top: 1.5rem;
     }
   </style>
 </head>
 <body>
-  <h2>Tirage spécial – <strong>Guidance intérieure</strong></h2>
-  <p class="sous-titre">Reviens ici chaque jour pour recevoir un message doux de ton âme.</p>
 
-  <div class="message" id="message">Je reçois les messages de mon âme avec confiance.</div>
+  <h2>Tirage spécial – Guidance intérieure</h2>
+  <p class="intro">Reviens ici chaque jour pour recevoir un message doux de ton âme.</p>
+
+  <div id="message" class="carte">Je reçois les messages de mon âme avec confiance.</div>
 
   <button onclick="tirerMessage()">Tirer un message</button>
 
-  <img src="image_porte_avec_cle_tres_transparente.jpg" alt="Image spirituelle Vild’âme" class="image-vildame" />
+  <img src="image_porte_avec_cle_tres_transparente.jpg" alt="Image spirituelle Vild’âme" />
 
-  <footer>
-    Merci pour ta présence lumineuse dans l’univers Vild’âme.
-  </footer>
+  <p class="footer">Merci pour ta présence lumineuse dans l’univers Vild’âme.</p>
 
   <script>
     const messages = [
-      "Je me connecte à la lumière en moi.",
-      "Je laisse guider par la sagesse de mon cœur.",
-      "Je suis en sécurité dans l'instant présent.",
+      "Aujourd’hui, je me connecte à la lumière en moi.",
+      "Je me laisse guider par la sagesse de mon cœur.",
+      "Je suis en sécurité dans l’instant présent.",
       "Ma lumière intérieure rayonne dans tout mon être.",
-      "J'accueille les messages de mon âme avec confiance.",
-      "Je suis guidé•e avec douceur vers ma guérison.",
+      "J’accueille les messages de mon âme avec confiance.",
+      "Je suis guidé·e avec douceur vers ma guérison.",
       "Aujourd’hui, je m’aligne avec mon intuition.",
       "Je choisis de me remplir de gratitude.",
-      "Je suis entouré•e de bienveillance.",
-      "Je crée un espace sacré pour mon âme."
+      "Je suis entouré·e de bienveillance.",
+      "Je m’ancre dans mon centre avec sérénité."
     ];
 
     function tirerMessage() {
-      const alea = Math.floor(Math.random() * messages.length);
-      document.getElementById("message").innerText = messages[alea];
+      const aleatoire = Math.floor(Math.random() * messages.length);
+      document.getElementById("message").textContent = messages[aleatoire];
     }
   </script>
+
 </body>
 </html>
