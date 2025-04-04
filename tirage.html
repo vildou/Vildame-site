@@ -2,10 +2,10 @@
 <html lang="fr">
 <head>
   <meta charset="UTF-8">
-  <title>Tirage spécial - Guidance intérieure</title>
+  <title>Tirage spécial – Guidance intérieure</title>
   <style>
     body {
-      font-family: Georgia, serif;
+      font-family: 'Georgia', serif;
       background-color: #fffaf7;
       color: #3b2f2f;
       margin: 0;
@@ -15,79 +15,80 @@
       align-items: center;
       gap: 1.5rem;
     }
-    .message-box {
+
+    .sous-titre {
+      font-style: italic;
+      color: #6e5c5c;
+      font-size: 1rem;
+    }
+
+    .message {
       border: 2px dashed #e2d5c3;
       border-radius: 16px;
-      padding: 1rem;
-      background-color: #fffaf7;
+      padding: 1rem 2rem;
       font-style: italic;
       font-size: 1.3rem;
+      background-color: #fffdf9;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.05);
       text-align: center;
-      max-width: 600px;
-      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
     }
+
     button {
-      background-color: #d6b46a;
+      background-color: #c6a86b;
       color: white;
       border: none;
-      padding: 0.8rem 1.5rem;
-      border-radius: 8px;
-      cursor: pointer;
-      font-weight: bold;
-      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-    }
-    .image-container img {
-      width: 250px;
-      margin-top: 1.5rem;
-      border-radius: 12px;
-      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
-    }
-    .phrase-inspiration {
-      font-style: italic;
+      padding: 0.7rem 1.5rem;
       font-size: 1rem;
-      margin-top: 0.5rem;
-      text-align: center;
-      color: #5a4a3c;
+      border-radius: 8px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+      cursor: pointer;
     }
-    .footer {
-      font-size: 0.9rem;
-      color: #7b6b5c;
+
+    .image-vildame {
+      width: 220px;
+      border-radius: 12px;
+      box-shadow: 0 6px 12px rgba(0,0,0,0.1);
+    }
+
+    footer {
       margin-top: 2rem;
+      font-size: 0.9rem;
+      color: #5c4a4a;
+      text-align: center;
     }
   </style>
 </head>
 <body>
-  <h2>Tirage spécial – Guidance intérieure</h2>
+  <h2>Tirage spécial – <strong>Guidance intérieure</strong></h2>
+  <p class="sous-titre">Reviens ici chaque jour pour recevoir un message doux de ton âme.</p>
 
-  <div class="phrase-inspiration">Reviens ici chaque jour pour recevoir un message doux de ton âme.</div>
-
-  <div class="message-box" id="message">Je reçois les messages de mon âme avec confiance.</div>
+  <div class="message" id="message">Je reçois les messages de mon âme avec confiance.</div>
 
   <button onclick="tirerMessage()">Tirer un message</button>
 
-  <div class="image-container">
-    <img src="image_porte_avec_cle_tres_transparente.jpg" alt="Image spirituelle Vild’âme">
-  </div>
+  <img src="image_porte_avec_cle_tres_transparente.jpg" alt="Image spirituelle Vild’âme" class="image-vildame" />
 
-  <div class="footer">Merci pour ta présence lumineuse dans l’univers Vild’âme.</div>
+  <footer>
+    Merci pour ta présence lumineuse dans l’univers Vild’âme.
+  </footer>
 
   <script>
     const messages = [
-      "Aujourd’hui, je me connecte à la lumière en moi.",
-      "Je me laisse guider par la sagesse de mon cœur.",
+      "Je me connecte à la lumière en moi.",
+      "Je laisse guider par la sagesse de mon cœur.",
       "Je suis en sécurité dans l'instant présent.",
       "Ma lumière intérieure rayonne dans tout mon être.",
-      "Je reçois les messages de mon âme avec confiance.",
+      "J'accueille les messages de mon âme avec confiance.",
       "Je suis guidé•e avec douceur vers ma guérison.",
       "Aujourd’hui, je m’aligne avec mon intuition.",
       "Je choisis de me remplir de gratitude.",
       "Je suis entouré•e de bienveillance.",
-      "Je me dépose dans l’espace sacré où tout peut fleurir."
+      "Je crée un espace sacré pour mon âme."
     ];
 
     function tirerMessage() {
-      const index = Math.floor(Math.random() * messages.length);
-      document.getElementById("message").innerText = messages[index];
+      const alea = Math.floor(Math.random() * messages.length);
+      document.getElementById("message").innerText = messages[alea];
     }
   </script>
 </body>
