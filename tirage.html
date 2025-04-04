@@ -5,7 +5,7 @@
   <title>Tirage spécial - Guidance intérieure</title>
   <style>
     body {
-      font-family: 'Georgia', serif;
+      font-family: Georgia, serif;
       background-color: #fffaf7;
       color: #3b2f2f;
       margin: 0;
@@ -13,86 +13,81 @@
       display: flex;
       flex-direction: column;
       align-items: center;
-      gap: 2rem;
+      gap: 1.5rem;
     }
-    .titre {
-      font-size: 1.5rem;
-      font-weight: bold;
-      text-align: center;
-    }
-    .carte {
+    .message-box {
       border: 2px dashed #e2d5c3;
       border-radius: 16px;
-      padding: 1.5rem;
+      padding: 1rem;
       background-color: #fffaf7;
       font-style: italic;
       font-size: 1.3rem;
       text-align: center;
-      min-height: 80px;
-      box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+      max-width: 600px;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
     }
     button {
-      background-color: #ccb06c;
+      background-color: #d6b46a;
       color: white;
+      border: none;
       padding: 0.8rem 1.5rem;
       border-radius: 8px;
-      border: none;
-      font-weight: bold;
-      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
       cursor: pointer;
-    }
-    button:hover {
-      background-color: #b89c5e;
-    }
-    .image-container {
-      text-align: center;
-      margin-top: 2rem;
+      font-weight: bold;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
     }
     .image-container img {
-      max-width: 300px;
+      width: 250px;
+      margin-top: 1.5rem;
       border-radius: 12px;
-      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+    }
+    .phrase-inspiration {
+      font-style: italic;
+      font-size: 1rem;
+      margin-top: 0.5rem;
+      text-align: center;
+      color: #5a4a3c;
     }
     .footer {
-      margin-top: 2rem;
       font-size: 0.9rem;
-      color: #7a6e5f;
-      text-align: center;
+      color: #7b6b5c;
+      margin-top: 2rem;
     }
   </style>
 </head>
 <body>
-  <div class="titre">Tirage spécial – Guidance intérieure</div>
+  <h2>Tirage spécial – Guidance intérieure</h2>
 
-  <div id="message" class="carte">Je reçois les messages de mon âme avec confiance.</div>
+  <div class="phrase-inspiration">Reviens ici chaque jour pour recevoir un message doux de ton âme.</div>
+
+  <div class="message-box" id="message">Je reçois les messages de mon âme avec confiance.</div>
 
   <button onclick="tirerMessage()">Tirer un message</button>
 
   <div class="image-container">
-    <img src="image_porte_avec_cle_tres_transparente.jpg" alt="Image spirituelle Vild'âme">
+    <img src="image_porte_avec_cle_tres_transparente.jpg" alt="Image spirituelle Vild’âme">
   </div>
 
-  <div class="footer">
-    Merci pour ta présence lumineuse dans l'univers Vild'âme.
-  </div>
+  <div class="footer">Merci pour ta présence lumineuse dans l’univers Vild’âme.</div>
 
   <script>
     const messages = [
-      "Aujourd'hui, je me connecte à la lumière en moi.",
+      "Aujourd’hui, je me connecte à la lumière en moi.",
       "Je me laisse guider par la sagesse de mon cœur.",
       "Je suis en sécurité dans l'instant présent.",
       "Ma lumière intérieure rayonne dans tout mon être.",
       "Je reçois les messages de mon âme avec confiance.",
-      "Je suis guidé·e avec douceur vers ma guérison.",
-      "Aujourd'hui, je m'aligne avec mon intuition.",
+      "Je suis guidé•e avec douceur vers ma guérison.",
+      "Aujourd’hui, je m’aligne avec mon intuition.",
       "Je choisis de me remplir de gratitude.",
-      "Je me sens entouré·e de bienveillance.",
-      "J'avance avec confiance sur mon chemin de vérité."
+      "Je suis entouré•e de bienveillance.",
+      "Je me dépose dans l’espace sacré où tout peut fleurir."
     ];
 
     function tirerMessage() {
-      const aleatoire = Math.floor(Math.random() * messages.length);
-      document.getElementById("message").textContent = messages[aleatoire];
+      const index = Math.floor(Math.random() * messages.length);
+      document.getElementById("message").innerText = messages[index];
     }
   </script>
 </body>
