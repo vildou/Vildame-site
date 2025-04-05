@@ -1,7 +1,8 @@
 
 <html lang="fr">
 <head>
-  <meta charset="UTF-8">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Tirage spécial – Guidance intérieure</title>
   <style>
     body {
@@ -13,74 +14,76 @@
     }
     h1 {
       font-size: 1.6rem;
-      margin-bottom: 0.2rem;
+      font-weight: bold;
+      margin-bottom: 0.3rem;
     }
-    .sous-titre {
+    .slogan {
       font-style: italic;
-      color: #7a6e6e;
-      font-size: 0.95rem;
-      margin-bottom: 1.2rem;
+      font-size: 0.9rem;
+      color: #7e6d63;
+      margin-bottom: 1.5rem;
     }
     .carte {
       border: 2px dashed #e2d5c3;
-      border-radius: 16px;
-      padding: 1.5rem;
-      background-color: #fffaf7;
+      background-color: #fffdf8;
+      border-radius: 12px;
+      padding: 1rem;
       font-style: italic;
       font-size: 1.2rem;
-      margin: 1rem auto;
-      max-width: 320px;
+      margin: 0 auto 1rem;
+      width: fit-content;
+      max-width: 90%;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.05);
     }
     button {
-      background-color: #d4bf91;
+      background-color: #ccb278;
       color: white;
+      padding: 0.6rem 1.5rem;
       border: none;
-      padding: 0.8rem 1.5rem;
       border-radius: 8px;
-      cursor: pointer;
       font-size: 1rem;
-      margin-bottom: 1.5rem;
-      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+      cursor: pointer;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+      margin-top: 1rem;
     }
     .image-fond {
-      width: 300px;
-      border-radius: 12px;
-      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
-      margin-bottom: 1rem;
+      margin-top: 2rem;
+      max-width: 300px;
+      border-radius: 16px;
+      box-shadow: 0 0 12px rgba(0,0,0,0.1);
     }
-    footer {
-      margin-top: 1.5rem;
+    .footer {
+      margin-top: 2rem;
       font-size: 0.85rem;
-      color: #7e7e7e;
+      color: #8a7e78;
     }
   </style>
 </head>
 <body>
 
   <h1>Tirage spécial – Guidance intérieure</h1>
-  <p class="sous-titre">Reviens ici chaque jour pour recevoir un message doux de ton âme.</p>
+  <div class="slogan">Reviens ici chaque jour pour recevoir un message doux de ton âme.</div>
 
   <div class="carte" id="message">Je reçois les messages de mon âme avec confiance.</div>
   <button onclick="tirerMessage()">Tirer un message</button>
 
-  <!-- Image spirituelle Vild'âme juste en dessous du bouton -->
-  <img src="image_porte_avec_cle.jpg" alt="Image spirituelle Vild’âme" class="image-fond">
+  <img src="image_porte_avec_cle_filigrane.jpg" alt="Image spirituelle Vild’âme" class="image-fond" />
 
-  <footer>Merci pour ta présence lumineuse dans l’univers Vild’âme.</footer>
+  <div class="footer">Merci pour ta présence lumineuse dans l’univers Vild’âme.</div>
 
   <script>
     const messages = [
+      "Aujourd’hui, je me choisis avec douceur.",
       "Je me connecte à la lumière en moi.",
-      "Je me laisse guider par la sagesse de mon cœur.",
-      "Je suis en sécurité dans l’instant présent.",
-      "Ma lumière intérieure rayonne dans tout mon être.",
-      "Je reçois les messages de mon âme avec confiance.",
-      "Je suis guidé·e avec douceur vers ma guérison.",
-      "Aujourd’hui, je m’aligne avec mon intuition.",
-      "Je choisis de me remplir de gratitude.",
-      "Je suis entouré·e de bienveillance.",
+      "Je laisse mon cœur me guider.",
+      "Je suis en sécurité ici et maintenant.",
+      "Ma lumière intérieure rayonne.",
+      "Je suis guidé(e) vers ma guérison.",
+      "Je fais confiance à l’invisible.",
+      "Je m’aligne avec mon intuition.",
+      "Je suis entouré(e) de bienveillance.",
+      "Je mérite de recevoir le meilleur."
     ];
-
     function tirerMessage() {
       const index = Math.floor(Math.random() * messages.length);
       document.getElementById("message").innerText = messages[index];
