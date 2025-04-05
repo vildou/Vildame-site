@@ -5,77 +5,68 @@
   <title>Tirage spécial – Guidance intérieure</title>
   <style>
     body {
-      font-family: Georgia, serif;
+      font-family: 'Georgia', serif;
       background-color: #fffaf7;
       color: #3b2f2f;
-      margin: 0;
-      padding: 2rem;
       text-align: center;
+      padding: 2rem;
     }
-
     h1 {
       font-size: 1.6rem;
-      margin-bottom: 0.3rem;
+      margin-bottom: 0.2rem;
     }
-
     .sous-titre {
-      font-size: 1rem;
       font-style: italic;
-      color: #7b6c6c;
+      color: #7a6e6e;
+      font-size: 0.95rem;
       margin-bottom: 1.2rem;
     }
-
     .carte {
       border: 2px dashed #e2d5c3;
       border-radius: 16px;
+      padding: 1.5rem;
       background-color: #fffaf7;
-      font-size: 1.3rem;
       font-style: italic;
-      padding: 1rem;
-      margin: auto;
-      margin-bottom: 1.5rem;
-      width: fit-content;
-      max-width: 90%;
-      box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+      font-size: 1.2rem;
+      margin: 1rem auto;
+      max-width: 320px;
     }
-
     button {
-      background-color: #caae72;
+      background-color: #d4bf91;
       color: white;
+      border: none;
       padding: 0.8rem 1.5rem;
       border-radius: 8px;
-      border: none;
-      font-size: 1rem;
       cursor: pointer;
+      font-size: 1rem;
       margin-bottom: 1.5rem;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
     }
-
-    img.image-fond {
-      width: 250px;
+    .image-fond {
+      width: 300px;
       border-radius: 12px;
-      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
       margin-bottom: 1rem;
     }
-
-    .footer {
-      margin-top: 2rem;
+    footer {
+      margin-top: 1.5rem;
       font-size: 0.85rem;
-      color: #7b6c6c;
+      color: #7e7e7e;
     }
   </style>
 </head>
 <body>
+
   <h1>Tirage spécial – Guidance intérieure</h1>
   <p class="sous-titre">Reviens ici chaque jour pour recevoir un message doux de ton âme.</p>
 
-  <div id="message" class="carte">Je reçois les messages de mon âme avec confiance.</div>
-
+  <div class="carte" id="message">Je reçois les messages de mon âme avec confiance.</div>
   <button onclick="tirerMessage()">Tirer un message</button>
 
-  <br>
-  <img src="image_porte_avec_cle_filigrane.jpg" alt="Image spirituelle Vild’âme" class="image-fond">
+  <!-- Image spirituelle Vild'âme juste en dessous du bouton -->
+  <img src="image_porte_avec_cle.jpg" alt="Image spirituelle Vild’âme" class="image-fond">
 
-  <p class="footer">Merci pour ta présence lumineuse dans l’univers Vild’âme.</p>
+  <footer>Merci pour ta présence lumineuse dans l’univers Vild’âme.</footer>
 
   <script>
     const messages = [
@@ -87,7 +78,7 @@
       "Je suis guidé·e avec douceur vers ma guérison.",
       "Aujourd’hui, je m’aligne avec mon intuition.",
       "Je choisis de me remplir de gratitude.",
-      "Je m’entoure de bienveillance."
+      "Je suis entouré·e de bienveillance.",
     ];
 
     function tirerMessage() {
@@ -95,5 +86,6 @@
       document.getElementById("message").innerText = messages[index];
     }
   </script>
+
 </body>
 </html>
