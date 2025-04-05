@@ -1,100 +1,105 @@
 
 <html lang="fr">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Tirage spécial – Guidance intérieure</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Vild’âme – Tirage spécial</title>
   <style>
     body {
       font-family: 'Georgia', serif;
       background-color: #fffaf7;
       color: #3b2f2f;
+      margin: 0;
+      padding: 2rem;
       display: flex;
       flex-direction: column;
       align-items: center;
-      padding: 2rem;
+      gap: 2rem;
     }
 
-    h1 {
-      font-size: 1.8rem;
-      margin-bottom: 0.5rem;
+    .section-title {
+      font-size: 1.5rem;
+      font-weight: bold;
+      text-align: center;
     }
 
-    p {
+    .sous-titre {
       font-style: italic;
-      font-size: 0.95rem;
-      color: #7a6c5f;
-      margin-bottom: 1.5rem;
+      font-size: 1rem;
+      color: #a0876b;
+      text-align: center;
     }
 
     .carte {
       border: 2px dashed #e2d5c3;
       border-radius: 16px;
       padding: 1.5rem;
-      background-color: #fffaf7;
+      background-color: #fdfaf7;
       font-style: italic;
-      font-size: 1.3rem;
+      font-size: 1.5rem;
       text-align: center;
-      box-shadow: 0 2px 8px rgba(0,0,0,0.05);
-      margin-bottom: 1.5rem;
+      min-height: 80px;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+      margin-top: 0.5rem;
     }
 
-    button {
-      background-color: #c7a96d;
+    .bouton {
+      background-color: #c8aa6e;
       color: white;
-      padding: 0.6rem 1.2rem;
-      border: none;
-      border-radius: 8px;
-      cursor: pointer;
-      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
       font-size: 1rem;
-      margin-bottom: 2rem;
+      padding: 0.8rem 1.5rem;
+      border: none;
+      border-radius: 12px;
+      box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+      cursor: pointer;
     }
 
-    .image-fond {
-      width: 250px;
-      border-radius: 16px;
-      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-      margin-bottom: 1.5rem;
+    .image {
+      width: 280px;
+      border-radius: 20px;
+      box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
     }
 
-    .footer {
-      font-size: 0.9rem;
-      color: #7a6c5f;
+    footer {
       margin-top: 2rem;
+      font-size: 0.9rem;
+      color: #87796b;
+      text-align: center;
     }
   </style>
 </head>
 <body>
-  <h1>Tirage spécial – Guidance intérieure</h1>
-  <p>Reviens ici chaque jour pour recevoir un message doux de ton âme.</p>
+  <div class="section-title">Tirage spécial – Guidance intérieure</div>
+  <div class="sous-titre">Reviens ici chaque jour pour recevoir un message doux de ton âme.</div>
 
-  <div class="carte" id="message">Je reçois les messages de mon âme avec confiance.</div>
-  <button onclick="tirerMessage()">Tirer un message</button>
-
-  <img src="image_porte_avec_cle_filigrane.png" alt="Image spirituelle Vild’âme" class="image-fond">
-
-  <div class="footer">
-    Merci pour ta présence lumineuse dans l’univers Vild’âme.
+  <div class="carte" id="message">
+    Je reçois les messages de mon âme avec confiance.
   </div>
+
+  <button class="bouton" onclick="tirerMessage()">Tirer un message</button>
+
+  <img src="image_porte_avec_cle_filigrane.png" alt="Image spirituelle Vild’âme" class="image" />
+
+  <footer>
+    Merci pour ta présence lumineuse dans l’univers Vild’âme.
+  </footer>
 
   <script>
     const messages = [
       "Je me connecte à la lumière en moi.",
       "Je me laisse guider par la sagesse de mon cœur.",
-      "Je trouve la sécurité dans l’instant présent.",
+      "Je trouve sécurité dans l’instant présent.",
       "Ma paix intérieure rayonne dans tout mon être.",
       "Je reçois les messages de mon âme avec confiance.",
-      "Je suis guidé(e) avec douceur vers ma guérison.",
-      "En ce jour, je m’aligne avec mon intuition.",
+      "Je suis guidée avec douceur vers ma guérison.",
+      "Aujourd’hui, je m’aligne avec mon intuition.",
       "Je choisis de me remplir de gratitude.",
-      "Je suis entouré(e) de bienveillance.",
-      "Aujourd’hui, je me choisis avec douceur."
+      "Je suis entouré(e) de bienveillance."
     ];
 
     function tirerMessage() {
       const index = Math.floor(Math.random() * messages.length);
-      document.getElementById('message').textContent = messages[index];
+      document.getElementById("message").textContent = messages[index];
     }
   </script>
 </body>
