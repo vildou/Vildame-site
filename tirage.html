@@ -1,7 +1,9 @@
 
+<html lang="fr">
 <head>
   <meta charset="UTF-8" />
-  <title>Tirage spécial – Vild'âme</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Tirage spécial – Guidance intérieure</title>
   <style>
     body {
       font-family: 'Georgia', serif;
@@ -16,14 +18,15 @@
     }
 
     h1 {
-      font-size: 1.6rem;
+      font-size: 1.4rem;
       text-align: center;
+      color: #3b2f2f;
     }
 
-    .sous-texte {
+    .intro {
       font-style: italic;
       font-size: 0.95rem;
-      color: #666;
+      color: #8b7d7d;
       margin-top: -1rem;
       text-align: center;
     }
@@ -33,76 +36,79 @@
       border-radius: 16px;
       background-color: #fffaf7;
       font-style: italic;
-      font-size: 1.3rem;
-      padding: 1rem;
+      font-size: 1.2rem;
       text-align: center;
-      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
-      max-width: 90%;
+      padding: 1.2rem;
+      width: 90%;
+      max-width: 500px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.05);
     }
 
     button {
-      background-color: #d3b574;
+      background-color: #ccb174;
       color: white;
       border: none;
-      padding: 0.8rem 1.5rem;
+      padding: 0.8rem 1.4rem;
       border-radius: 8px;
-      font-weight: bold;
-      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+      font-size: 1rem;
       cursor: pointer;
+      box-shadow: 0 4px 6px rgba(0,0,0,0.1);
     }
 
     button:hover {
-      background-color: #c4a65f;
+      background-color: #b99d64;
     }
 
-    img {
-      margin-top: 1.5rem;
+    .image-container img {
       width: 220px;
-      max-width: 90%;
+      margin-top: 1.2rem;
       border-radius: 12px;
-      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+      box-shadow: 0 2px 12px rgba(0,0,0,0.08);
     }
 
-    .footer {
-      margin-top: 1.2rem;
-      font-size: 0.9rem;
-      color: #7b6d6d;
+    .signature {
+      font-size: 0.8rem;
+      margin-top: 1rem;
+      color: #8b7d7d;
       text-align: center;
     }
   </style>
 </head>
 <body>
-
   <h1>Tirage spécial – Guidance intérieure</h1>
-  <div class="sous-texte">Reviens ici chaque jour pour recevoir un message doux de ton âme.</div>
+  <p class="intro">Reviens ici chaque jour pour recevoir un message doux de ton âme.</p>
 
   <div class="carte" id="message">Je reçois les messages de mon âme avec confiance.</div>
 
   <button onclick="tirerMessage()">Tirer un message</button>
 
-  <img src="image_porte_avec_cle_tres_transparente.jpg" alt="Image spirituelle Vild'âme" />
+  <div class="image-container">
+    <img src="image_porte_avec_cle_tres_transparente.jpg" alt="Image spirituelle Vild’âme" />
+  </div>
 
-  <div class="footer">Merci pour ta présence lumineuse dans l’univers Vild’âme.</div>
+  <div class="signature">
+    Merci pour ta présence lumineuse dans l’univers Vild’âme.
+  </div>
 
   <script>
     const messages = [
-      "Aujourd’hui, je me connecte à la lumière en moi.",
+      "Je me connecte à la lumière en moi.",
       "Je me laisse guider par la sagesse de mon cœur.",
       "Je suis en sécurité dans l’instant présent.",
       "Ma lumière intérieure rayonne dans tout mon être.",
-      "Je recueille les messages de mon âme avec confiance.",
+      "Je reçois les messages de mon âme avec confiance.",
       "Je suis guidé·e avec douceur vers ma guérison.",
       "Aujourd’hui, je m’aligne avec mon intuition.",
       "Je choisis de me remplir de gratitude.",
       "Je suis entouré·e de bienveillance.",
-      "Je m’ouvre à l’espace sacré dans lequel tout peut fleurir."
+      "Je fais confiance au chemin qui se dévoile pas à pas."
     ];
 
     function tirerMessage() {
-      const aleatoire = Math.floor(Math.random() * messages.length);
-      document.getElementById("message").textContent = messages[aleatoire];
+      const index = Math.floor(Math.random() * messages.length);
+      document.getElementById("message").textContent = messages[index];
     }
   </script>
-
 </body>
 </html>
+
