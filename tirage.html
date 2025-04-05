@@ -1,8 +1,7 @@
 
-<html lang="fr">
 <head>
-  <meta charset="UTF-8">
-  <title>Tirage spécial – Guidance intérieure</title>
+  <meta charset="UTF-8" />
+  <title>Tirage spécial – Vild'âme</title>
   <style>
     body {
       font-family: 'Georgia', serif;
@@ -13,67 +12,77 @@
       display: flex;
       flex-direction: column;
       align-items: center;
+      gap: 1.5rem;
+    }
+
+    h1 {
+      font-size: 1.6rem;
       text-align: center;
     }
 
-    .intro {
+    .sous-texte {
       font-style: italic;
-      color: #7b6a58;
-      font-size: 1rem;
-      margin-bottom: 1rem;
+      font-size: 0.95rem;
+      color: #666;
+      margin-top: -1rem;
+      text-align: center;
     }
 
     .carte {
       border: 2px dashed #e2d5c3;
       border-radius: 16px;
-      padding: 1.5rem;
       background-color: #fffaf7;
       font-style: italic;
       font-size: 1.3rem;
-      margin: 1rem auto;
-      max-width: 90%;
+      padding: 1rem;
+      text-align: center;
       box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+      max-width: 90%;
     }
 
     button {
-      background-color: #ccb174;
+      background-color: #d3b574;
       color: white;
-      padding: 0.6rem 1.5rem;
       border: none;
+      padding: 0.8rem 1.5rem;
       border-radius: 8px;
       font-weight: bold;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
       cursor: pointer;
-      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
-      margin: 1rem 0;
+    }
+
+    button:hover {
+      background-color: #c4a65f;
     }
 
     img {
-      max-width: 250px;
-      height: auto;
+      margin-top: 1.5rem;
+      width: 220px;
+      max-width: 90%;
       border-radius: 12px;
-      margin: 1.5rem 0;
-      box-shadow: 0 2px 12px rgba(0,0,0,0.08);
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
     }
 
     .footer {
+      margin-top: 1.2rem;
       font-size: 0.9rem;
-      color: #7b6a58;
-      margin-top: 1.5rem;
+      color: #7b6d6d;
+      text-align: center;
     }
   </style>
 </head>
 <body>
 
-  <h2>Tirage spécial – Guidance intérieure</h2>
-  <p class="intro">Reviens ici chaque jour pour recevoir un message doux de ton âme.</p>
+  <h1>Tirage spécial – Guidance intérieure</h1>
+  <div class="sous-texte">Reviens ici chaque jour pour recevoir un message doux de ton âme.</div>
 
-  <div id="message" class="carte">Je reçois les messages de mon âme avec confiance.</div>
+  <div class="carte" id="message">Je reçois les messages de mon âme avec confiance.</div>
 
   <button onclick="tirerMessage()">Tirer un message</button>
 
-  <img src="image_porte_avec_cle_tres_transparente.jpg" alt="Image spirituelle Vild’âme" />
+  <img src="image_porte_avec_cle_tres_transparente.jpg" alt="Image spirituelle Vild'âme" />
 
-  <p class="footer">Merci pour ta présence lumineuse dans l’univers Vild’âme.</p>
+  <div class="footer">Merci pour ta présence lumineuse dans l’univers Vild’âme.</div>
 
   <script>
     const messages = [
@@ -81,12 +90,12 @@
       "Je me laisse guider par la sagesse de mon cœur.",
       "Je suis en sécurité dans l’instant présent.",
       "Ma lumière intérieure rayonne dans tout mon être.",
-      "J’accueille les messages de mon âme avec confiance.",
+      "Je recueille les messages de mon âme avec confiance.",
       "Je suis guidé·e avec douceur vers ma guérison.",
       "Aujourd’hui, je m’aligne avec mon intuition.",
       "Je choisis de me remplir de gratitude.",
       "Je suis entouré·e de bienveillance.",
-      "Je m’ancre dans mon centre avec sérénité."
+      "Je m’ouvre à l’espace sacré dans lequel tout peut fleurir."
     ];
 
     function tirerMessage() {
