@@ -1,8 +1,8 @@
 
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Don Vild'âme</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Un rituel offert par Vild’âme</title>
   <style>
     body {
       font-family: 'Georgia', serif;
@@ -10,50 +10,49 @@
       color: #3b2f2f;
       margin: 0;
       padding: 2rem;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
       text-align: center;
     }
-    .container {
-      max-width: 480px;
-      margin: auto;
-      background: white;
+    .card {
+      max-width: 400px;
+      background: #fff;
       padding: 2rem;
-      border-radius: 1rem;
-      box-shadow: 0 0 20px rgba(0,0,0,0.05);
+      border-radius: 24px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+      margin-top: 2rem;
     }
-    h1 {
-      font-size: 1.8rem;
+    .card img {
+      width: 100%;
+      border-radius: 12px;
       margin-bottom: 1rem;
     }
-    p {
-      font-size: 1rem;
-      line-height: 1.6;
-    }
-    .don-btn {
-      display: inline-block;
-      margin-top: 1.5rem;
-      padding: 0.8rem 1.5rem;
-      background-color: #c7a774;
+    .button {
+      background-color: #0070ba;
       color: white;
-      font-weight: bold;
-      border: none;
-      border-radius: 8px;
+      padding: 1rem 1.5rem;
       text-decoration: none;
-      font-size: 1.1rem;
-      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+      border-radius: 12px;
+      font-weight: bold;
+      margin-top: 1.5rem;
+      display: inline-block;
     }
-    .don-btn:hover {
-      background-color: #b29260;
+    .button:hover {
+      background-color: #005b9e;
     }
   </style>
 </head>
 <body>
-  <div class="container">
-    <h1>Un rituel spécial t'attend</h1>
-    <p>Fais un don de 1,50€ (ou plus si tu le souhaites) pour soutenir la création artisanale et recevoir une carte de guidance exclusive.</p>
-    <p>Ce don est un geste de soutien, sans obligation. Il permet de faire vivre les créations Vild'âme.</p>
-    <a class="don-btn" href="https://www.paypal.com/donate/?hosted_button_id=YOUR_ID" target="_blank">
-      Faire un don et recevoir ma carte
+  <div class="card">
+    <img src="https://raw.githubusercontent.com/vildou/Vildame-site/main/images/cle-vildame.jpg" alt="Carte Vild’âme" />
+    <h1>Un rituel offert par Vild’âme</h1>
+    <p>Si ton cœur t’appelle à soutenir ce projet, un don libre peut être effectué.</p>
+    <a href="https://www.paypal.com/donate/?hosted_button_id=YOUR_BUTTON_ID" class="button" target="_blank">
+      Faire un don via PayPal
     </a>
+    <p style="margin-top: 2rem; font-size: 0.95rem;">Après ton don, clique ci-dessous pour télécharger ton rituel en PDF.</p>
+    <a href="rituel-offert.pdf" class="button" download>Télécharger le rituel PDF</a>
   </div>
 </body>
 </html>
