@@ -1,4 +1,5 @@
 
+<html lang="fr">
 <head>
   <meta charset="UTF-8">
   <title>Carte exclusive – Vild’âme</title>
@@ -58,8 +59,8 @@
   <div class="exclusive">
     <h2>Carte exclusive – Merci de ton geste</h2>
     <div class="carte">
-      <img src="https://vildame.netlify.app/images/carte-exclusive-vildame.jpg" alt="Carte exclusive Vild’âme">
-      <a class="download" href="https://vildame.netlify.app/pdf/carte-exclusive-vildame.pdf" download>
+      <img src="carte-exclusive-vildame.jpg" alt="Carte exclusive Vild’âme">
+      <a class="download" href="Carte_exclusive_Vildame.pdf" download>
         Télécharger cette carte en PDF
       </a>
     </div>
@@ -67,4 +68,3 @@
 
 </body>
 </html>
-
