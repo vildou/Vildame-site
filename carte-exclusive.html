@@ -5,56 +5,66 @@
   <style>
     body {
       font-family: 'Georgia', serif;
-      background-color: #fffbf7;
+      background-color: #fdfaf5;
       color: #3b2f2f;
       margin: 0;
       padding: 2rem;
       display: flex;
       flex-direction: column;
       align-items: center;
-      gap: 2rem;
     }
-    .carte-container {
-      background-color: #fffdf8;
-      padding: 2rem;
-      border-radius: 20px;
-      box-shadow: 0 8px 24px rgba(0,0,0,0.1);
-      text-align: center;
-      max-width: 400px;
-    }
-    .carte-container img {
-      max-width: 100%;
+    .container {
+      background-color: #fffdf7;
       border-radius: 12px;
-      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+      padding: 2rem;
+      max-width: 420px;
+      text-align: center;
     }
-    .texte {
+    h1 {
+      font-size: 1.5rem;
+      margin-bottom: 1rem;
+      color: #3b2f2f;
+    }
+    img.card {
+      width: 100%;
+      border-radius: 8px;
+      margin-bottom: 1.5rem;
+    }
+    p {
       font-size: 1rem;
-      margin: 1.5rem 0;
+      margin-bottom: 1rem;
     }
-    .btn-pdf {
+    .rituel {
+      font-style: italic;
+      color: #6b4e3d;
+      margin-top: 1rem;
+    }
+    a.download-button {
       background-color: #d4af37;
       color: white;
-      padding: 0.8rem 1.5rem;
-      border: none;
-      border-radius: 8px;
       text-decoration: none;
+      padding: 0.75rem 1.5rem;
+      border-radius: 8px;
       font-weight: bold;
+      display: inline-block;
+      margin-top: 1rem;
     }
-    .logo {
+    img.logo {
       margin-top: 2rem;
-      opacity: 0.7;
       width: 120px;
+      opacity: 0.8;
     }
   </style>
 </head>
 <body>
-  <div class="carte-container">
-    <h2>Carte exclusive – Merci de ton geste</h2>
-    <img src="image_porte_avec_cle_filigrane.jpg" alt="Carte Vild’âme">
-    <p class="texte">Je m’ouvre à ma lumière intérieure<br>
-    Dépose tes mains sur ton cœur, respire profondément et écoute une méditation douce.</p>
-    <a class="btn-pdf" href="carte-exclusive-Vildame.pdf" download>Télécharger le PDF</a>
+  <div class="container">
+    <h1>Carte exclusive – Merci de ton geste</h1>
+    <img src="A_digital_illustration_displays_an_exclusive_thank.png" alt="Carte Vild’âme" class="card" />
+    <p>Je m’ouvre à ma lumière intérieure.</p>
+    <p class="rituel">Ferme les yeux, pose une main sur ton cœur, respire doucement... et accueille ta clarté.</p>
+    <a href="carte-exclusive-Vildame.pdf" class="download-button" download>Télécharger le PDF</a>
+    <img src="logo-vildame.png" alt="Logo Vild’âme" class="logo" />
   </div>
-  <img src="logo-vildame.png" alt="Logo Vild’âme" class="logo">
 </body>
 </html>
