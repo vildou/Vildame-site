@@ -1,72 +1,58 @@
 
-<head>
   <meta charset="UTF-8">
   <title>Carte exclusive – Vild’âme</title>
   <style>
     body {
-      font-family: Georgia, serif;
+      font-family: 'Georgia', serif;
       background-color: #fffaf7;
       color: #3b2f2f;
-      margin: 0;
+      text-align: center;
       padding: 2rem;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      gap: 2rem;
     }
-
     .carte {
-      max-width: 90%;
-      margin: auto;
-      border: 1px solid #d8cfc0;
-      border-radius: 12px;
-      padding: 1rem;
       background-color: #fdfaf5;
-      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+      padding: 2rem;
+      border-radius: 12px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+      max-width: 600px;
+      margin: auto;
     }
-
-    .btn-don {
+    img.carte-visuel {
+      width: 80%;
+      border-radius: 8px;
+      margin-bottom: 1.5rem;
+    }
+    a.bouton {
       display: inline-block;
-      margin: 2rem 0;
+      margin-top: 2rem;
       padding: 1rem 2rem;
       background-color: #d4af37;
-      color: #fff;
-      border-radius: 8px;
+      color: white;
       text-decoration: none;
+      border-radius: 8px;
       font-weight: bold;
     }
-
-    .exclusif {
+    .logo-vildame {
       margin-top: 3rem;
-      text-align: center;
+      opacity: 0.9;
     }
-
-    .exclusif img {
-      max-width: 100%;
-      border-radius: 12px;
-      margin-bottom: 1rem;
-    }
-
-    .telecharger {
-      display: block;
-      margin-top: 1rem;
-      color: #3b2f2f;
-      font-weight: bold;
+    .logo-vildame img {
+      width: 150px;
+      opacity: 0.8;
     }
   </style>
 </head>
 <body>
 
-  <h1>Carte de guidance du jour</h1>
   <div class="carte">
-    <p>Aujourd’hui, je choisis la lumière qui m’habite.</p>
+    <h1>Carte exclusive – Merci de ton geste</h1>
+    <img class="carte-visuel" src="Cle-vildame.jpg" alt="Carte tirée Vild’âme">
+    <p><strong>Rituel :</strong> Dépose tes mains sur ton cœur, respire profondément, et accueille la lumière qui t’habite.</p>
+    <a class="bouton" href="carte-exclusive-Vildame.pdf" download>Télécharger le PDF</a>
   </div>
 
-  <a class="btn-don" href="https://www.paypal.me/vildame" target="_blank">Faire un don pour recevoir une carte exclusive</a>
-
-  <div class="exclusif">
-    <img src="Cle-vildame.jpg" alt="Clé Vild’âme">
-    <a class="telecharger" href="carte-exclusive-Vildame.pdf" download>Télécharger le PDF</a>
+  <div class="logo-vildame">
+    <img src="logo-vildame.png" alt="Logo Vild’âme">
   </div>
 
 </body>
