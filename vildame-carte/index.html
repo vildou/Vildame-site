@@ -1,67 +1,76 @@
 
 <head>
   <meta charset="UTF-8">
-  <title>Accueil Vild’âme</title>
+  <title>Vild’âme – Carte de guidance</title>
   <style>
     body {
-      background: #fefaf5;
-      font-family: 'Georgia', serif;
-      color: #3b2f2f;
       margin: 0;
       padding: 2rem;
+      font-family: 'Georgia', serif;
+      background-color: #fffdf6;
+      color: #3b2f2f;
       display: flex;
       flex-direction: column;
       align-items: center;
       text-align: center;
     }
 
-    .container {
-      background: #fffdf8;
+    .carte {
+      background: #fdfaf4;
+      border-radius: 12px;
       padding: 2rem;
-      border-radius: 16px;
-      box-shadow: 0 0 30px rgba(0,0,0,0.05);
-      max-width: 500px;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.07);
+      max-width: 400px;
+      margin-top: 2rem;
     }
 
     h1 {
-      font-size: 2rem;
+      font-size: 1.8rem;
       margin-bottom: 1rem;
     }
 
     p {
-      font-size: 1.1rem;
-      margin-bottom: 2rem;
+      font-size: 1rem;
+      line-height: 1.5;
     }
 
     .btn {
-      background-color: #d4af37;
-      color: white;
+      display: inline-block;
+      margin-top: 1.5rem;
       padding: 0.8rem 1.5rem;
-      font-weight: bold;
-      border: none;
-      border-radius: 8px;
-      font-size: 1.1rem;
+      font-size: 1rem;
+      background-color: #d2ae4a;
+      color: white;
       text-decoration: none;
-      transition: background-color 0.3s ease;
+      border-radius: 8px;
+      font-weight: bold;
+      transition: background-color 0.3s;
     }
 
     .btn:hover {
-      background-color: #c49c28;
+      background-color: #b8963d;
     }
 
-    .footer {
-      margin-top: 2rem;
-      font-size: 0.8rem;
-      color: #888;
+    .signature {
+      margin-top: 3rem;
+      font-style: italic;
+      font-size: 1.2rem;
+      color: #6a5740;
     }
   </style>
 </head>
 <body>
-  <div class="container">
-    <h1>Bienvenue dans l’univers Vild’âme</h1>
+
+  <div class="carte">
+    <h1>Bienvenue dans l’univers <br> Vild’âme</h1>
     <p>Un espace de guidance sacrée pour recevoir ta carte exclusive de l’âme.</p>
     <a href="don.html" class="btn">Soutenir & Recevoir une carte</a>
-    <div class="footer">Vild’âme – Guidance énergétique intuitive</div>
+    <p class="signature">Vild’âme – Guidance énergétique intuitive</p>
   </div>
+
+  <div class="signature">
+    Vild’âme te murmure :<br><strong>la bonne clé est celle qui vibre en toi.</strong>
+  </div>
+
 </body>
 </html>
