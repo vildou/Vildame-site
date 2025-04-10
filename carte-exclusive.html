@@ -1,63 +1,69 @@
 
 <head>
-  <meta charset="UTF-8">
+  <meta charset="UTF-8" />
   <title>Carte exclusive – Vild’âme</title>
   <style>
     body {
+      font-family: 'Georgia', serif;
       background-color: #fffaf7;
       color: #3b2f2f;
-      font-family: 'Georgia', serif;
+      margin: 0;
+      padding: 2rem;
       display: flex;
       flex-direction: column;
       align-items: center;
-      padding: 2rem;
     }
+
     .carte {
-      background-color: #fdfaf5;
-      border: 1px solid #d8cfc0;
-      border-radius: 12px;
-      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
-      max-width: 360px;
-      padding: 1.5rem;
+      background: #fffdf9;
+      padding: 2rem;
+      border-radius: 16px;
+      box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+      max-width: 480px;
       text-align: center;
     }
+
     .carte img {
       width: 100%;
       border-radius: 8px;
-      margin: 1rem 0;
+      margin-bottom: 1rem;
     }
-    .btn {
-      display: inline-block;
-      margin-top: 1rem;
-      padding: 1rem 2rem;
+
+    .texte {
+      margin: 1.2rem 0;
+      font-size: 1.1rem;
+    }
+
+    .bouton {
       background-color: #d4af37;
       color: white;
-      text-decoration: none;
+      padding: 0.8rem 1.5rem;
       font-weight: bold;
+      border: none;
       border-radius: 8px;
+      text-decoration: none;
+      display: inline-block;
+      margin-top: 1rem;
     }
+
     .signature {
       margin-top: 2rem;
       opacity: 0.9;
-    }
-    .signature img {
-      width: 120px;
+      width: 160px;
     }
   </style>
 </head>
 <body>
-
   <div class="carte">
     <h2>Carte exclusive – Merci de ton geste</h2>
-    <img src="carte-exclusive-Vildame.jpg" alt="Carte Vild'âme">
-    <p>Je m’ouvre à ma lumière intérieure<br>
-    Dépose tes mains sur ton cœur, respire profondément et écoute une méditation douce.</p>
-    <a href="carte-exclusive-Vildame.pdf" class="btn" download>Télécharger le PDF</a>
+    <img src="carte-exclusive-Vildame.pdf" alt="Carte Vild’âme" />
+    <p class="texte">
+      Je m’ouvre à ma lumière intérieure<br />
+      Dépose tes mains sur ton cœur, respire profondément<br />
+      et écoute une méditation douce.
+    </p>
+    <a href="carte-exclusive-Vildame.pdf" class="bouton" download>Télécharger le PDF</a>
   </div>
-
-  <div class="signature">
-    <img src="signature-vildame.png" alt="Vild’âme">
-  </div>
-
+  <img src="signature-vildame.png" alt="Signature Vild’âme" class="signature" />
 </body>
 </html>
