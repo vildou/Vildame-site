@@ -12,36 +12,24 @@
       display: flex;
       flex-direction: column;
       align-items: center;
-      justify-content: start;
       padding: 5rem 2rem 2rem;
       text-align: center;
-      animation: fadeIn 1.5s ease-out;
     }
 
     .logo {
       width: 60px;
       margin-bottom: 1.5rem;
-      opacity: 0;
-      transform: translateY(-10px);
-      animation: slideIn 1.2s ease-out forwards;
-    }
-
-    h1, p, .btn {
-      opacity: 0;
-      transform: translateY(10px);
-      animation: slideIn 1.2s ease-out forwards;
     }
 
     h1 {
       font-size: 1.8rem;
       margin-bottom: 1rem;
-      animation-delay: 0.3s;
     }
 
     p {
       font-size: 1.1rem;
       margin-bottom: 2rem;
-      animation-delay: 0.6s;
+      max-width: 400px;
     }
 
     .btn {
@@ -54,35 +42,30 @@
       text-decoration: none;
       box-shadow: 0 4px 10px rgba(0,0,0,0.1);
       transition: background 0.3s ease;
-      animation-delay: 0.9s;
     }
 
     .btn:hover {
       background-color: #c49d2e;
     }
 
-    @keyframes fadeIn {
-      from { opacity: 0; }
-      to { opacity: 1; }
-    }
-
-    @keyframes slideIn {
-      to {
-        opacity: 1;
-        transform: translateY(0);
-      }
+    .retour {
+      margin-top: 2rem;
+      color: #3b2f2f;
+      font-size: 0.95rem;
+      text-decoration: underline;
     }
   </style>
 </head>
 <body>
 
-  <img src="signature-vildame.png" alt="Symbole Vild’âme" class="logo">
+  <img src="signature-vildame.png" alt="Vild’âme" class="logo">
 
   <h1>Merci pour ton soutien !</h1>
-  <p>Tu peux maintenant télécharger ta carte exclusive avec rituel :</p>
+  <p>Voici ta carte exclusive avec rituel. Télécharge-la et prends un moment pour toi :</p>
 
   <a href="carte-exclusive-Vildame.pdf" class="btn" download>Télécharger ma carte PDF</a>
 
+  <a href="tirage.html" class="retour">Retour au tirage</a>
+
 </body>
 </html>
-
