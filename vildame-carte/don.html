@@ -1,79 +1,67 @@
 
-<html lang="fr">
 <head>
-  <meta charset="UTF-8">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Faire un don – Vild’âme</title>
   <style>
     body {
       font-family: 'Georgia', serif;
       background-color: #fffaf7;
       color: #3b2f2f;
-      margin: 0;
-      padding: 2rem;
       display: flex;
-      justify-content: center;
+      flex-direction: column;
       align-items: center;
-      min-height: 100vh;
-    }
-
-    .container {
-      background-color: #fefaf4;
-      border-radius: 15px;
+      justify-content: center;
       padding: 2rem;
-      box-shadow: 0 0 10px rgba(0, 0, 0, 0.08);
-      text-align: center;
-      max-width: 400px;
     }
 
     h1 {
       font-size: 2rem;
       margin-bottom: 1rem;
+      text-align: center;
     }
 
     p {
       font-size: 1.1rem;
-      margin-bottom: 1.5rem;
+      margin-bottom: 2rem;
+      text-align: center;
     }
 
-    .btn {
-      display: block;
+    .paypal-btn {
+      display: flex;
+      justify-content: center;
+      margin-bottom: 2rem;
+    }
+
+    .btn-retour {
       background-color: #d4af37;
       color: white;
+      padding: 1rem 2rem;
+      border: none;
+      border-radius: 10px;
+      font-size: 1rem;
       text-decoration: none;
-      font-size: 1.1rem;
-      padding: 0.8rem 1.5rem;
-      border-radius: 8px;
-      margin: 1rem 0;
-      transition: background-color 0.3s;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
     }
 
-    .btn:hover {
-      background-color: #c29d2f;
-    }
-
-    .note {
-      font-size: 0.9rem;
-      color: #777;
+    .btn-retour:hover {
+      background-color: #c39e30;
     }
   </style>
 </head>
 <body>
-  <div class="container">
-    <h1>Tirage de carte Vild’âme</h1>
-    <p>
-      Pour recevoir une carte exclusive de guidance avec rituel,<br>
-      fais un don symbolique de 2€.
-    </p>
 
-    <a href="https://www.paypal.me/vildame/2" class="btn" target="_blank">
-      Faire un don de 2€
-    </a>
+  <h1>Tirage de carte Vild’âme</h1>
+  <p>Pour recevoir une carte exclusive de guidance avec rituel,<br> fais un don symbolique de 2€.</p>
 
-    <p class="note">(Don entre amis recommandé)</p>
-
-    <a href="https://vildou.github.io/Vildame-site/vildame-carte/guidance-clesdelame27.html" class="btn">
-      J’ai fait un don : voir ma carte
-    </a>
+  <div class="paypal-btn">
+    <form action="https://www.paypal.me/vildame/2" method="post" target="_blank">
+      <input type="image" src="https://www.paypalobjects.com/fr_FR/FR/i/btn/btn_donateCC_LG.gif" name="submit" alt="PayPal, le réflexe sécurité pour payer en ligne">
+      <img alt="" src="https://www.paypal.com/fr_FR/i/scr/pixel.gif" width="1" height="1">
+    </form>
   </div>
+
+  <a href="guidance-lumiere18.html" class="btn-retour">J’ai fait un don : voir ma carte</a>
+
 </body>
 </html>
