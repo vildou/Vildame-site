@@ -1,5 +1,4 @@
-
-<html lang="fr">
+html lang="fr">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
@@ -15,52 +14,66 @@
       flex-direction: column;
       align-items: center;
       justify-content: center;
-      gap: 2rem;
+      gap: 1.5rem;
     }
 
     h1 {
       font-size: 2rem;
-      margin-bottom: 1rem;
       text-align: center;
+      color: #b89c7d;
     }
 
     p {
       font-size: 1.1rem;
-      margin-bottom: 2rem;
       text-align: center;
+      max-width: 600px;
     }
 
-    .paypal-btn {
-      background-color: transparent;
+    .paypal-logo {
+      width: 200px;
+      cursor: pointer;
+    }
+
+    .bouton-secondaire {
+      padding: 0.8rem 1.5rem;
+      font-size: 1rem;
+      background-color: #b89c7d;
+      color: white;
       border: none;
+      border-radius: 8px;
+      cursor: pointer;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
     }
 
-    .paypal-btn img {
-      height: 50px;
-    }
-
-    .retour {
-      margin-top: 2rem;
-      text-align: center;
-    }
-
-    .retour a {
-      color: #3b2f2f;
-      text-decoration: underline;
+    .hidden {
+      display: none;
     }
   </style>
 </head>
 <body>
-  <h1>Tirage de carte Vild’âme</h1>
-  <p>Pour recevoir une carte exclusive de guidance avec rituel, fais un don symbolique de 2 € :</p>
 
-  <a class="paypal-btn" href="https://www.paypal.com/donate/?hosted_button_id=FJK89F5LJ6YCN" target="_blank">
-    <img src="https://www.paypalobjects.com/webstatic/mktg/logo/pp_cc_mark_111x69.jpg" alt="Faire un don avec PayPal" />
+  <h1>Recevoir ta carte de guidance Vild’âme</h1>
+
+  <p>Fais un don symbolique de 2 € pour recevoir une carte exclusive à imprimer :</p>
+
+  <a href="https://www.paypal.com/donate/?hosted_button_id=FJK89F5LJ6YCN" target="_blank">
+    <img src="https://www.paypalobjects.com/webstatic/mktg/logo/pp_cc_mark_111x69.jpg" alt="Faire un don avec PayPal" class="paypal-logo" />
   </a>
 
-  <div class="retour">
-    <p><a href="tirage.html">Retour au tirage</a></p>
+  <p>Une fois ton don effectué, clique ici :</p>
+
+  <button onclick="afficherLien()" class="bouton-secondaire">J’ai fait un don</button>
+
+  <div id="lienPDF" class="hidden">
+    <p>Merci pour ton soutien ! Tu peux maintenant télécharger ta carte :</p>
+    <a href="carte-exclusive-Vildame.pdf" class="bouton-secondaire" download>Télécharger ma carte PDF</a>
   </div>
+
+  <script>
+    function afficherLien() {
+      document.getElementById("lienPDF").classList.remove("hidden");
+    }
+  </script>
+
 </body>
 </html>
-
