@@ -3,69 +3,56 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Merci pour ton don – Vild’âme</title>
+  <title>Merci pour ton soutien – Vild’âme</title>
   <style>
     body {
       font-family: 'Georgia', serif;
       background-color: #fffaf7;
       color: #3b2f2f;
+      margin: 0;
+      padding: 2rem;
       display: flex;
       flex-direction: column;
       align-items: center;
-      padding: 5rem 2rem 2rem;
       text-align: center;
     }
-
-    .logo {
-      width: 60px;
-      margin-bottom: 1.5rem;
+    .carte-preview {
+      width: 220px;
+      border-radius: 12px;
+      margin-bottom: 2rem;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
     }
-
     h1 {
-      font-size: 1.8rem;
+      font-size: 2rem;
       margin-bottom: 1rem;
     }
-
     p {
       font-size: 1.1rem;
       margin-bottom: 2rem;
       max-width: 400px;
     }
-
-    .btn {
+    .btn-pdf {
       background-color: #d4af37;
       color: white;
-      padding: 1rem 2rem;
-      border: none;
-      border-radius: 8px;
       font-weight: bold;
+      border: none;
+      padding: 1rem 2rem;
+      border-radius: 10px;
       text-decoration: none;
+      font-size: 1rem;
       box-shadow: 0 4px 10px rgba(0,0,0,0.1);
-      transition: background 0.3s ease;
+      transition: background 0.3s;
     }
-
-    .btn:hover {
-      background-color: #c49d2e;
-    }
-
-    .retour {
-      margin-top: 2rem;
-      color: #3b2f2f;
-      font-size: 0.95rem;
-      text-decoration: underline;
+    .btn-pdf:hover {
+      background-color: #c39c2e;
     }
   </style>
 </head>
 <body>
-
-  <img src="signature-vildame.png" alt="Vild’âme" class="logo">
-
+  <img src="carte-vildame27.png" alt="Carte exclusive Vild’âme" class="carte-preview">
   <h1>Merci pour ton soutien !</h1>
   <p>Voici ta carte exclusive avec rituel. Télécharge-la et prends un moment pour toi :</p>
-
-  <a href="carte-exclusive-Vildame.pdf" class="btn" download>Télécharger ma carte PDF</a>
-
-  <a href="tirage.html" class="retour">Retour au tirage</a>
-
+  <a class="btn-pdf" href="carte-exclusive-Vildame.pdf" download>Télécharger ma carte PDF</a>
 </body>
 </html>
+
