@@ -1,25 +1,28 @@
 
 <html lang="fr">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Faire un don – Carte Vild’âme</title>
+  <meta charset="UTF-8">
+  <title>Faire un don – Vild’âme</title>
   <style>
     body {
       font-family: 'Georgia', serif;
-      background-color: #fffaf4;
+      background-color: #fffaf7;
       color: #3b2f2f;
-      text-align: center;
+      margin: 0;
       padding: 2rem;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
     }
 
     .container {
-      background-color: #fdf8ef;
+      background-color: #fefaf4;
+      border-radius: 15px;
       padding: 2rem;
-      max-width: 500px;
-      margin: auto;
-      border-radius: 20px;
-      box-shadow: 0 8px 15px rgba(0, 0, 0, 0.08);
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.08);
+      text-align: center;
+      max-width: 400px;
     }
 
     h1 {
@@ -28,18 +31,18 @@
     }
 
     p {
-      font-size: 1.2rem;
+      font-size: 1.1rem;
       margin-bottom: 1.5rem;
     }
 
     .btn {
-      display: inline-block;
+      display: block;
       background-color: #d4af37;
       color: white;
-      padding: 0.8rem 1.5rem;
-      font-size: 1.1rem;
-      border-radius: 8px;
       text-decoration: none;
+      font-size: 1.1rem;
+      padding: 0.8rem 1.5rem;
+      border-radius: 8px;
       margin: 1rem 0;
       transition: background-color 0.3s;
     }
@@ -49,28 +52,27 @@
     }
 
     .note {
-      font-size: 0.95rem;
-      color: #7a6f67;
-      margin-top: 1rem;
+      font-size: 0.9rem;
+      color: #777;
     }
   </style>
 </head>
 <body>
   <div class="container">
-    <h1>Tirage de carte<br>Vild’âme</h1>
-    <p>Pour recevoir une carte exclusive de guidance avec rituel,<br>
-    fais un don symbolique de 2€</p>
+    <h1>Tirage de carte Vild’âme</h1>
+    <p>
+      Pour recevoir une carte exclusive de guidance avec rituel,<br>
+      fais un don symbolique de 2€.
+    </p>
 
-    <!-- Bouton PayPal -->
-    <a href="https://www.paypal.me/vildame/2" target="_blank" class="btn">
+    <a href="https://www.paypal.me/vildame/2" class="btn" target="_blank">
       Faire un don de 2€
     </a>
 
     <p class="note">(Don entre amis recommandé)</p>
 
-    <!-- Lien vers la page secrète -->
-    <a href="guidance-lumiere18.html" class="btn">
-      J’ai fait un don : accéder à ma carte
+    <a href="https://vildou.github.io/Vildame-site/vildame-carte/guidance-clesdelame27.html" class="btn">
+      J’ai fait un don : voir ma carte
     </a>
   </div>
 </body>
