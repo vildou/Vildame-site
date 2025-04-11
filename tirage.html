@@ -1,106 +1,70 @@
 
 <html lang="fr">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Vild’âme – Tirage spécial</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tirage de carte Vild’âme</title>
   <style>
     body {
       font-family: 'Georgia', serif;
-      background-color: #fffaf7;
+      background-color: #fdf9f4;
       color: #3b2f2f;
-      margin: 0;
-      padding: 2rem;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      gap: 2rem;
-    }
-
-    .section-title {
-      font-size: 1.5rem;
-      font-weight: bold;
       text-align: center;
+      padding: 40px 20px;
     }
-
-    .sous-titre {
-      font-style: italic;
-      font-size: 1rem;
-      color: #a0876b;
-      text-align: center;
+    h1 {
+      font-size: 2.2rem;
+      margin-bottom: 10px;
     }
-
-    .carte {
-      border: 2px dashed #e2d5c3;
-      border-radius: 16px;
-      padding: 1.5rem;
-      background-color: #fdfaf7;
-      font-style: italic;
-      font-size: 1.5rem;
-      text-align: center;
-      min-height: 80px;
-      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
-      margin-top: 0.5rem;
+    h2 {
+      font-size: 1.8rem;
+      margin-top: 20px;
+      margin-bottom: 10px;
     }
-
-    .bouton {
-      background-color: #c8aa6e;
-      color: white;
-      font-size: 1rem;
-      padding: 0.8rem 1.5rem;
-      border: none;
+    p {
+      font-size: 1.2rem;
+      max-width: 600px;
+      margin: auto;
+      line-height: 1.6;
+    }
+    img {
+      margin: 30px 0;
+      max-width: 280px;
+      width: 80%;
       border-radius: 12px;
-      box-shadow: 0 4px 6px rgba(0,0,0,0.1);
-      cursor: pointer;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
     }
-
-    .image {
-      width: 280px;
-      border-radius: 20px;
-      box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
+    .paypal-logo {
+      width: 80px;
+      margin: 30px auto;
     }
-
-    footer {
-      margin-top: 2rem;
-      font-size: 0.9rem;
-      color: #87796b;
-      text-align: center;
+    .note {
+      font-size: 0.95rem;
+      margin-top: 30px;
     }
   </style>
 </head>
 <body>
-  <div class="section-title">Tirage spécial – Guidance intérieure</div>
-  <div class="sous-titre">Reviens ici chaque jour pour recevoir un message doux de ton âme.</div>
 
-  <div class="carte" id="message">
-    Je reçois les messages de mon âme avec confiance.
-  </div>
+  <h1>Tirage de carte<br>Vild’âme</h1>
 
-  <button class="bouton" onclick="tirerMessage()">Tirer un message</button>
+  <h2>Une guidance sacrée t’attend…</h2>
+  <p>
+    Tu ressens un appel intérieur ?<br>
+    Offre un <strong>don symbolique de 2 €</strong> et reçois immédiatement ta <strong>carte exclusive Vild’âme</strong>, accompagnée d’un <strong>rituel sacré à télécharger</strong>.<br><br>
+    <em>Laisse la clé te guider vers ta lumière intérieure.</em>
+  </p>
 
-  <img src="image_porte_avec_cle_filigrane.png" alt="Image spirituelle Vild’âme" class="image" />
+  <img src="visuel-vildame-don.png" alt="Visuel Vild'âme avec clef et papillon mystique">
 
-  <footer>
-    Merci pour ta présence lumineuse dans l’univers Vild’âme.
-  </footer>
+  <a href="https://www.paypal.com/paypalme/vildame/2" target="_blank">
+    <img src="https://www.paypalobjects.com/webstatic/mktg/logo/pp_cc_mark_111x69.jpg" alt="PayPal" class="paypal-logo">
+  </a>
 
-  <script>
-    const messages = [
-      "Je me connecte à la lumière en moi.",
-      "Je me laisse guider par la sagesse de mon cœur.",
-      "Je trouve sécurité dans l’instant présent.",
-      "Ma paix intérieure rayonne dans tout mon être.",
-      "Je reçois les messages de mon âme avec confiance.",
-      "Je suis guidée avec douceur vers ma guérison.",
-      "Aujourd’hui, je m’aligne avec mon intuition.",
-      "Je choisis de me remplir de gratitude.",
-      "Je suis entouré(e) de bienveillance."
-    ];
+  <p class="note">
+    Une fois ton don validé, tu seras redirigé(e) automatiquement vers ta carte exclusive.<br>
+    Merci de soutenir l’univers Vild’âme.
+  </p>
 
-    function tirerMessage() {
-      const index = Math.floor(Math.random() * messages.length);
-      document.getElementById("message").textContent = messages[index];
-    }
-  </script>
 </body>
 </html>
