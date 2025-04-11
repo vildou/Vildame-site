@@ -1,88 +1,73 @@
 
-<html lang="fr">
+
+html lang="fr">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Tirage de carte Vild’âme</title>
   <style>
     body {
       font-family: 'Georgia', serif;
-      background-color: #fdf9f4;
-      color: #3b2f2f;
+      background-color: #fdfaf4;
+      color: #2c1e16;
       text-align: center;
-      padding: 40px 20px;
+      padding: 20px;
     }
-    h1 {
-      font-size: 2.2rem;
-      margin-bottom: 10px;
-    }
-    h2 {
-      font-size: 1.8rem;
-      margin-top: 20px;
-      margin-bottom: 10px;
-    }
-    p {
-      font-size: 1.2rem;
-      max-width: 600px;
-      margin: auto;
-      line-height: 1.6;
-    }
-    img {
-      margin: 30px 0;
-      max-width: 280px;
-      width: 80%;
+
+    .visuel {
+      max-width: 100%;
       border-radius: 12px;
-      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+      box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+      margin-bottom: 30px;
     }
-    .paypal-logo {
-      width: 80px;
-      margin: 30px auto;
+
+    h1 {
+      font-size: 2rem;
+      margin-bottom: 0.5rem;
     }
+
+    h2 {
+      font-size: 1.4rem;
+      font-weight: normal;
+      margin-bottom: 2rem;
+    }
+
     .paypal-button {
+      display: inline-block;
+      margin-top: 20px;
+      padding: 1rem 2rem;
       background-color: #c59f2f;
       color: white;
-      padding: 1rem 2rem;
-      font-size: 1.1rem;
-      border: none;
+      font-size: 1.2rem;
       border-radius: 8px;
       text-decoration: none;
-      cursor: pointer;
-      display: inline-block;
-      margin-top: 1rem;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.2);
     }
+
     .paypal-button:hover {
       background-color: #b78f28;
     }
+
     .note {
+      margin-top: 20px;
       font-size: 0.95rem;
-      margin-top: 30px;
+      color: #5b4a3e;
     }
   </style>
 </head>
 <body>
 
-  <img src="visuel-vildame-don.png" alt="Visuel Vild'âme mystique avec porte et papillon" />
+  <img src="visuel-tirage-vildame.jpg" alt="Visuel Vild’âme mystique avec porte et papillon" class="visuel"/>
 
   <h1>Tirage de carte<br>Vild’âme</h1>
-
   <h2>Une guidance sacrée t’attend…</h2>
-  <p>
-    Tu ressens un appel intérieur ?<br>
-    Offre un <strong>don symbolique de 2 €</strong> et reçois immédiatement ta <strong>carte exclusive Vild’âme</strong>, accompagnée d’un <strong>rituel sacré à télécharger</strong>.<br><br>
-    <em>Laisse la clé te guider vers ta lumière intérieure.</em>
-  </p>
 
-  <a href="https://www.paypal.me/vildame/2?locale.x=fr_FR" target="_blank">
-    <img src="https://www.paypalobjects.com/webstatic/mktg/logo/pp_cc_mark_111x69.jpg" alt="PayPal" class="paypal-logo">
-  </a>
-
-  <a href="https://www.paypal.me/vildame/2?locale.x=fr_FR" class="paypal-button" target="_blank">Je fais un don & je découvre ma carte</a>
+  <a class="paypal-button" href="https://www.paypal.me/vildame/2" target="_blank">Je fais un don & je découvre ma carte</a>
 
   <p class="note">
-    Une fois ton don validé, tu seras redirigé(e) automatiquement vers ta carte exclusive.<br>
-    Merci de soutenir l’univers Vild’âme.
+    Une fois ton don validé, tu seras redirigé(e) vers une carte exclusive<br>
+    avec rituel à télécharger pour ton bien-être intérieur.
   </p>
 
 </body>
 </html>
-
