@@ -2,57 +2,81 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Carte exclusive Vild’âme</title>
+  <title>Carte de Guidance – Vild’âme</title>
   <style>
     body {
-      background-color: #fefaf4;
       font-family: 'Georgia', serif;
+      background-color: #fffbf5;
       color: #3b2f2f;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: start;
+      padding: 2rem;
+    }
+
+    .carte {
+      background-color: #fffdf7;
+      box-shadow: 0 0 20px rgba(0, 0, 0, 0.08);
+      border-radius: 12px;
+      padding: 1.5rem;
       text-align: center;
-      padding: 2rem;
+      max-width: 400px;
+      width: 100%;
     }
-    .contenu {
-      background-color: #fffdf9;
-      padding: 2rem;
-      border-radius: 15px;
-      box-shadow: 0 6px 20px rgba(0, 0, 0, 0.08);
-      max-width: 600px;
-      margin: auto;
+
+    .carte img {
+      width: 100%;
+      max-width: 320px;
+      margin-bottom: 1.2rem;
+      border-radius: 8px;
     }
-    h1 {
-      font-size: 1.8rem;
-      margin-bottom: 1rem;
-    }
-    p {
-      font-size: 1.1rem;
+
+    .texte {
+      font-size: 1.05rem;
       margin-bottom: 1.5rem;
+      line-height: 1.6;
     }
-    .btn-pdf {
+
+    .bouton {
       background-color: #d4af37;
       color: white;
       padding: 0.8rem 1.5rem;
-      border-radius: 10px;
-      text-decoration: none;
+      border: none;
+      border-radius: 8px;
       font-weight: bold;
+      font-size: 1rem;
+      text-decoration: none;
       display: inline-block;
-      margin-top: 1rem;
+      transition: background-color 0.3s ease;
     }
-    .btn-pdf:hover {
-      background-color: #c19a2e;
+
+    .bouton:hover {
+      background-color: #b8942f;
     }
-    .symbol {
-      width: 80px;
-      margin-bottom: 1.5rem;
+
+    .signature {
+      margin-top: 2rem;
+      font-style: italic;
+      font-size: 0.9rem;
+      color: #6b4f3b;
     }
   </style>
 </head>
 <body>
-  <div class="contenu">
-    <img class="symbol" src="https://vildou.github.io/Vildame-site/signature-vildame.png" alt="Symbole Vild’âme">
-    <h1>Carte exclusive Vild’âme</h1>
-    <p><em>Merci pour ton geste lumineux.</em></p>
-    <p>Voici ta carte de guidance sacrée. Prends un moment de silence, respire, et laisse-toi imprégner de son message.</p>
-    <a class="btn-pdf" href="carte-exclusive-Vildame.pdf" download>Télécharger la carte PDF</a>
+
+  <div class="carte">
+    <h2>Carte exclusive – Merci de ton geste</h2>
+    <img src="https://vildou.github.io/Vildame-site/signature-vildame.png" alt="Carte Vild’âme">
+    <div class="texte">
+      Je m’ouvre à ma lumière intérieure.<br>
+      Dépose tes mains sur ton cœur, respire profondément et écoute une méditation douce.
+    </div>
+    <a class="bouton" href="https://vildou.github.io/Vildame-site/carte-exclusive-Vildame.pdf" target="_blank">
+      Télécharger le PDF
+    </a>
+    <div class="signature">Vild’âme te murmure : la bonne clé est celle qui vibre en toi.</div>
   </div>
+
 </body>
 </html>
