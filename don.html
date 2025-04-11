@@ -1,9 +1,8 @@
 
 <html lang="fr">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Faire un don – Vild’âme</title>
+  <meta charset="UTF-8" />
+  <title>Tirage de carte Vild’âme</title>
   <style>
     body {
       font-family: 'Georgia', serif;
@@ -11,57 +10,46 @@
       color: #3b2f2f;
       margin: 0;
       padding: 2rem;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      gap: 2rem;
-    }
-
-    h1 {
-      font-size: 2rem;
       text-align: center;
     }
-
-    p {
-      font-size: 1.2rem;
-      text-align: center;
-      max-width: 400px;
+    img.paypal-logo {
+      width: 100px;
+      margin: 2rem auto;
+      display: block;
     }
-
-    .paypal-logo {
-      width: 150px;
-    }
-
-    a.bouton {
-      display: inline-block;
-      margin-top: 1.5rem;
-      padding: 0.7rem 1.5rem;
-      background-color: #d4af37;
+    .paypal-button {
+      background-color: #c59f2f;
       color: white;
-      text-decoration: none;
+      font-size: 1.1rem;
+      padding: 1rem 2rem;
+      border: none;
       border-radius: 8px;
-      font-weight: bold;
-      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+      cursor: pointer;
+      text-decoration: none;
+      display: inline-block;
+      margin-top: 2rem;
     }
-
-    a.bouton:hover {
-      background-color: #b9982f;
+    .paypal-button:hover {
+      background-color: #b78f28;
+    }
+    .info-message {
+      font-size: 1.1rem;
+      margin-top: 2rem;
     }
   </style>
 </head>
 <body>
-
-  <h1>Tirage de carte Vild’âme</h1>
-
-  <p>Pour recevoir une carte exclusive de guidance avec rituel,<br>
-     fais un don symbolique de 2 € :</p>
+  <h1>Tirage de carte<br>Vild’âme</h1>
+  <p>Pour recevoir une carte exclusive de guidance avec rituel,<br>fais un don symbolique de 2 € :</p>
 
   <a href="https://www.paypal.me/vildame/2" target="_blank">
-    <img src="https://www.paypalobjects.com/webstatic/icon/pp258.png" alt="Faire un don via PayPal" class="paypal-logo">
+    <img src="https://www.paypalobjects.com/webstatic/icon/pp258.png" alt="Logo PayPal" class="paypal-logo">
   </a>
 
-  <a href="merci.html" class="bouton">Je veux accéder à ma carte</a>
-
+  <p class="info-message">
+    Une fois ton don validé, tu seras redirigé(e) automatiquement<br>
+    vers ta carte exclusive.
+  </p>
 </body>
 </html>
-
