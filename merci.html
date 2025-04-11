@@ -14,68 +14,42 @@
       display: flex;
       flex-direction: column;
       align-items: center;
-      text-align: center;
+      gap: 2rem;
     }
-
-    img {
-      width: 250px;
-      border-radius: 16px;
-      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
-      margin-bottom: 2rem;
-    }
-
     h1 {
       font-size: 2rem;
-      margin-bottom: 1rem;
+      text-align: center;
     }
-
     p {
-      font-size: 1.1rem;
+      font-size: 1.2rem;
+      text-align: center;
       max-width: 90%;
-      margin-bottom: 2rem;
     }
-
-    .btn-pdf {
-      background-color: #c9a433;
+    .carte-image {
+      max-width: 250px;
+      border-radius: 12px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+    }
+    .btn-telecharger {
+      background-color: #c59f2f;
       color: white;
       padding: 1rem 2rem;
-      border-radius: 10px;
+      font-size: 1.1rem;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
       text-decoration: none;
-      font-weight: bold;
       box-shadow: 0 4px 10px rgba(0,0,0,0.1);
-      transition: background-color 0.3s ease;
     }
-
-    .btn-pdf:hover {
-      background-color: #b8922f;
-    }
-
-    .retour {
-      margin-top: 2rem;
-    }
-
-    .retour a {
-      color: #3b2f2f;
-      text-decoration: underline;
-      font-size: 1rem;
+    .btn-telecharger:hover {
+      background-color: #b78f28;
     }
   </style>
 </head>
 <body>
-
-  <img src="https://vildou.github.io/Vildame-site/carte-vildame27.png" alt="Carte exclusive Vild’âme">
-
+  <img src="carte-vildame27.png" alt="Carte exclusive Vild’âme" class="carte-image">
   <h1>Merci pour ton soutien !</h1>
-  <p>
-    Voici ta carte exclusive avec rituel.<br>
-    Télécharge-la et prends un moment pour toi :
-  </p>
-
-  <a class="btn-pdf" href="carte-exclusive-Vildame.pdf" download>Télécharger ma carte PDF</a>
-
-  <div class="retour">
-    <a href="tirage.html">Retour au tirage</a>
-  </div>
-
+  <p>Voici ta carte exclusive avec rituel.<br>Télécharge-la et prends un moment pour toi :</p>
+  <a href="carte-exclusive-Vildame.pdf" class="btn-telecharger" download>Télécharger ma carte PDF</a>
 </body>
 </html>
