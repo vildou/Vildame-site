@@ -2,27 +2,35 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Carte exclusive Vild'âme</title>
+  <title>Faire un don – Carte exclusive Vild’âme</title>
   <style>
     body {
       font-family: 'Georgia', serif;
-      background-color: #fffaf7;
+      background-color: #fffaf4;
       color: #3b2f2f;
       text-align: center;
       padding: 2rem;
     }
-    .box {
-      background: #fffefb;
+
+    .container {
+      background-color: #fdfaf2;
       padding: 2rem;
-      border-radius: 15px;
+      border-radius: 1rem;
       max-width: 500px;
-      margin: 2rem auto;
+      margin: auto;
       box-shadow: 0 10px 25px rgba(0, 0, 0, 0.05);
     }
+
     h1 {
       font-size: 2rem;
       margin-bottom: 1rem;
     }
+
+    p {
+      font-size: 1.1rem;
+      margin-bottom: 1.5rem;
+    }
+
     .btn {
       background-color: #d4af37;
       color: white;
@@ -30,69 +38,37 @@
       border: none;
       border-radius: 8px;
       font-size: 1.1rem;
-      margin-top: 1.2rem;
-      cursor: pointer;
-      transition: background-color 0.3s ease;
+      text-decoration: none;
+      display: inline-block;
+      margin: 1rem 0;
+      transition: background-color 0.3s;
     }
+
     .btn:hover {
-      background-color: #c6a034;
+      background-color: #c29d2f;
     }
-    .hidden-card {
-      display: none;
-      margin-top: 2rem;
-      opacity: 0;
-      transition: opacity 1.2s ease-in-out;
-    }
-    .card-img {
-      width: 100%;
-      max-width: 300px;
-      border-radius: 12px;
-      box-shadow: 0 6px 18px rgba(0, 0, 0, 0.1);
-    }
+
     .note {
       font-size: 0.9rem;
       color: #7a6f67;
-      margin-top: 1rem;
-    }
-    .fade-in {
-      display: block;
-      animation: fadeIn 1.5s forwards;
-    }
-    @keyframes fadeIn {
-      from { opacity: 0; transform: translateY(20px); }
-      to { opacity: 1; transform: translateY(0); }
     }
   </style>
-  <script>
-    function revealCard() {
-      const card = document.getElementById('carte');
-      card.classList.add('fade-in');
-      document.getElementById('btnReveal').style.display = 'none';
-    }
-  </script>
 </head>
 <body>
-  <div class="box">
-    <h1>Tirage de carte<br> <strong>Vild'âme</strong></h1>
-    <p>
-      Pour recevoir une carte exclusive de guidance avec rituel,<br>
-      fais un don symbolique de 2&euro;
-    </p>
-    <a href="https://www.paypal.me/vildame/2" target="_blank">
-      <button class="btn">Faire un don de 2&euro;</button>
+  <div class="container">
+    <h1>Recevoir ta carte exclusive</h1>
+    <p>Fais un don symbolique de 2 € pour accéder à une carte de guidance unique.</p>
+
+    <!-- Bouton PayPal personnalisé -->
+    <a href="https://www.paypal.me/vildame/2" target="_blank" class="btn">Faire un don de 2 €</a>
+
+    <p class="note">(Paiement entre amis recommandé)</p>
+
+    <!-- Lien vers la page secrète après don -->
+    <a href="https://vildou.github.io/Vildame-site/vildame-carte/guidance-clesdelame27.html" target="_blank" class="btn">
+      J’ai fait un don : accéder à ma carte
     </a>
-    <p class="note">(Don entre amis recommandé)</p>
-
-    <button id="btnReveal" class="btn" onclick="revealCard()">
-      J'ai fait un don : voir ma carte
-    </button>
-
-    <div id="carte" class="hidden-card">
-      <p><em>Merci pour ton geste lumineux. Voici ta guidance...</em></p>
-      <a href="merci.html">
-        <img class="card-img" src="signature-vildame.png" alt="Carte exclusive Vild’âme" />
-      </a>
-    </div>
   </div>
 </body>
 </html>
+
