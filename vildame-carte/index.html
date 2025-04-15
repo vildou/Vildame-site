@@ -1,25 +1,22 @@
 
+<html lang="fr">
 <head>
   <meta charset="UTF-8">
-  <title>Vild’âme – Carte de Guidance</title>
+  <title>Vild’âme – Tirage de Carte</title>
   <style>
     body {
-      background-color: #fefbf4;
+      background-color: #fffaf7;
       font-family: 'Georgia', serif;
-      color: #3b2c23;
       text-align: center;
+      color: #3b2c23;
       padding: 2rem;
     }
 
-    .banniere {
-      margin: 2rem auto;
-    }
-
-    .banniere img {
-      max-width: 90%;
-      height: auto;
-      border-radius: 16px;
-      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+    .visuel {
+      max-width: 95%;
+      border-radius: 20px;
+      box-shadow: 0 8px 18px rgba(0,0,0,0.2);
+      margin-bottom: 2rem;
     }
 
     h1 {
@@ -30,14 +27,35 @@
     p {
       font-size: 1.2rem;
       max-width: 700px;
-      margin: 1.5rem auto;
+      margin: 0 auto 1.5rem;
+    }
+
+    .btn {
+      display: inline-block;
+      background-color: #c59f2f;
+      color: #fff;
+      padding: 15px 25px;
+      font-size: 1.2rem;
+      border-radius: 12px;
+      text-decoration: none;
+      box-shadow: 0 5px 12px rgba(0, 0, 0, 0.2);
+      transition: background 0.3s;
+    }
+
+    .btn:hover {
+      background-color: #b78f28;
     }
   </style>
 </head>
 <body>
 
-  <div class="banniere">
-    <img src="recois-ta-carte-vildame.png" alt="Carte Vild'âme avec bouton don PayPal">
+  <h1>Reçois ta Carte de Guidance Vild’âme</h1>
+  <p>Un message sacré t'attend… Pour débloquer ta guidance, fais un don de 2€.</p>
+
+  <a class="btn" href="https://www.paypal.me/vildame/2">Je fais un don</a>
+
+  <div>
+    <img src="visuel-vildame-guidance.png" alt="Carte Vild’âme avec QR code" class="visuel">
   </div>
 
 </body>
