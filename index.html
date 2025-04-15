@@ -1,95 +1,63 @@
-
 <html lang="fr">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Vild’âme – Guidance du jour</title>
+  <title>Vild’âme – Carte de guidance</title>
   <style>
     body {
-      font-family: 'Georgia', serif;
+      font-family: Georgia, serif;
       background-color: #fffaf7;
       color: #3b2f2f;
       text-align: center;
-      padding: 2rem;
+      padding: 2em;
     }
 
     img {
-      width: 200px;
-      border-radius: 16px;
-      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-    }
-
-    .message {
-      font-style: italic;
-      border: 2px dashed #decfb0;
-      padding: 1.5rem;
-      margin: 1.5rem auto;
-      width: fit-content;
-      max-width: 90%;
-      background-color: #fffaf7;
+      max-width: 100%;
+      height: auto;
       border-radius: 12px;
+      box-shadow: 0 4px 16px rgba(0,0,0,0.15);
+      margin-bottom: 2em;
     }
 
-    .button {
-      margin: 1.5rem;
-      padding: 0.7rem 1.5rem;
-      font-size: 1rem;
+    .btn-don {
+      display: inline-block;
+      background-color: #ffc439;
+      color: #3b2f2f;
+      padding: 15px 25px;
+      font-size: 1.2em;
       border: none;
-      border-radius: 8px;
-      background-color: #d4b277;
-      color: white;
-      cursor: pointer;
-      box-shadow: 0 2px 6px rgba(0,0,0,0.15);
-    }
-
-    .button:hover {
-      background-color: #b7955e;
-    }
-
-    a.special {
-      color: #5c3da1;
-      font-weight: bold;
+      border-radius: 12px;
       text-decoration: none;
+      font-weight: bold;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+      transition: background-color 0.3s ease;
     }
 
-    .paypal, .facebook {
-      margin: 1rem auto;
-      display: block;
-      width: fit-content;
+    .btn-don:hover {
+      background-color: #ffb400;
     }
 
-    footer {
-      margin-top: 3rem;
-      font-size: 0.9rem;
-      color: #5a4c3f;
+    .texte-info {
+      max-width: 600px;
+      margin: 2em auto 0;
+      font-size: 1.1em;
+      line-height: 1.6;
     }
   </style>
 </head>
 <body>
 
-  <img src="Cle-vildame.jpg" alt="Carte Vild’âme – Clé dorée avec papillon et lune">
-  
-  <div class="message">
-    Aujourd’hui, je me choisis avec douceur.
+  <img src="visuel-vildame-guidance.png" alt="Carte de Guidance Vild’âme mystique avec papillon et porte dorée">
+
+  <a class="btn-don" href="https://www.paypal.me/vildame/2" target="_blank">
+    Faire un don & découvrir ma carte
+  </a>
+
+  <div class="texte-info">
+    Une fois ton don validé, tu seras automatiquement redirigé(e)<br>
+    vers une carte exclusive de guidance avec rituel à télécharger<br>
+    pour ton bien-être intérieur.
   </div>
-
-  <button class="button" onclick="location.reload()">Tirer une autre</button>
-
-  <a class="paypal" href="https://www.paypal.me/vildame" target="_blank" style="background-color:#0070ba; color:white; padding:10px 15px; border-radius:6px; text-decoration:none;">
-    Faire un don via PayPal (paiement entre amis pour éviter les frais)
-  </a>
-
-  <a class="facebook" href="https://www.facebook.com/share/12KrwnMWqQw/" target="_blank" style="background-color:#3b5998; color:white; padding:10px 15px; border-radius:6px; text-decoration:none;">
-    Rejoindre Vild’âme sur Facebook
-  </a>
-
-  <p style="margin-top:2rem;">
-    → <a class="special" href="tirage.html">Tirage spécial : question intérieure ou guérison</a>
-  </p>
-
-  <footer>
-    Merci pour ta présence lumineuse dans l’univers Vild’âme.
-  </footer>
 
 </body>
 </html>
