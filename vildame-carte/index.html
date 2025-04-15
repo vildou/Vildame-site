@@ -2,7 +2,7 @@
 <html lang="fr">
 <head>
   <meta charset="UTF-8">
-  <title>Vild’âme – Carte de guidance</title>
+  <title>Carte Vild’âme – Guidance sacrée</title>
   <style>
     body {
       background-color: #fffaf7;
@@ -11,48 +11,52 @@
       text-align: center;
       padding: 2rem;
     }
-    img {
-      max-width: 100%;
-      height: auto;
+
+    .visuel {
+      width: 100%;
+      max-width: 400px;
+      margin: 0 auto 2rem;
+      box-shadow: 0 10px 20px rgba(0,0,0,0.1);
       border-radius: 12px;
-      box-shadow: 0 4px 12px rgba(0,0,0,0.2);
-      margin-bottom: 2rem;
     }
-    h1 {
-      font-size: 2rem;
-      margin-top: 1rem;
-    }
+
     .btn {
+      display: inline-block;
       background-color: #c59f2f;
       color: white;
-      padding: 1rem 2rem;
-      border-radius: 12px;
-      text-decoration: none;
-      font-size: 1.2rem;
-      display: inline-block;
-      margin: 1.5rem auto;
-      box-shadow: 0 5px 10px rgba(0,0,0,0.15);
-    }
-    p {
+      padding: 15px 30px;
       font-size: 1.1rem;
-      max-width: 600px;
-      margin: 0 auto;
+      border: none;
+      border-radius: 10px;
+      text-decoration: none;
+      font-weight: bold;
+      box-shadow: 0 5px 10px rgba(0,0,0,0.1);
+      transition: background-color 0.3s;
+    }
+
+    .btn:hover {
+      background-color: #b78f28;
+    }
+
+    .info {
+      margin-top: 2rem;
+      font-size: 1rem;
     }
   </style>
 </head>
 <body>
 
-  <img src="visuel-vildame-guidance.png" alt="Reçois ta Carte de Guidance Vild’âme">
+  <img src="visuel-vildame-guidance.png" alt="Carte Vild’âme" class="visuel">
 
-  <h1>Tirage de carte Vild’âme</h1>
-  <p>Une guidance sacrée t’attend…</p>
+  <h1>Reçois ta Carte de Guidance Vild’âme</h1>
+  <p>Une carte exclusive + un rituel sacré<br>à télécharger après ton don de 2 €</p>
 
-  <a class="btn" href="https://www.paypal.me/vildame/2" target="_blank">
-    Je fais un don & je découvre ma carte
-  </a>
+  <a class="btn" href="https://www.paypal.me/vildame/2" target="_blank">Je fais un don</a>
 
-  <p>Une fois ton don validé, tu seras redirigé(e) vers une carte exclusive de guidance avec rituel à télécharger pour ton bien-être intérieur.</p>
+  <div class="info">
+    <p>Après ton don, clique sur <strong>« Retour sur le site »</strong><br>
+    pour accéder à ta carte exclusive.</p>
+  </div>
 
 </body>
 </html>
-
