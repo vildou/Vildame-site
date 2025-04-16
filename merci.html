@@ -2,47 +2,32 @@
 <html lang="fr">
 <head>
   <meta charset="UTF-8">
-  <title>Merci pour ton don – Carte Vild’âme</title>
+  <title>Merci pour ton don</title>
   <style>
     body {
-      background-color: #fffaf3;
-      font-family: 'Georgia', serif;
+      background-color: #fdf8ee;
       color: #3b2f2f;
+      font-family: Georgia, serif;
       text-align: center;
       padding: 2rem;
     }
 
     h1 {
-      font-size: 2rem;
-      margin-bottom: 1rem;
+      font-size: 1.8rem;
+      margin-bottom: 0.5rem;
     }
 
     .carte {
-      max-width: 400px;
-      width: 100%;
       margin: 2rem auto;
-      box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+      max-width: 350px;
+      box-shadow: 0 8px 16px rgba(0,0,0,0.1);
       border-radius: 12px;
+      overflow: hidden;
     }
 
-    .btn-download {
-      background-color: #c59f2f;
-      color: white;
-      padding: 1rem 2rem;
-      font-size: 1rem;
-      text-decoration: none;
-      border-radius: 10px;
-      display: inline-block;
-      margin-top: 1rem;
-      box-shadow: 0 5px 10px rgba(0,0,0,0.1);
-    }
-
-    .btn-download:hover {
-      background-color: #b78f28;
-    }
-
-    p {
-      font-size: 1.1rem;
+    .carte img {
+      width: 100%;
+      display: block;
     }
   </style>
 </head>
@@ -51,12 +36,9 @@
   <h1>Merci pour ton geste de cœur</h1>
   <p>Voici ta carte de guidance Vild’âme,<br>accompagnée de sa vibration sacrée :</p>
 
-  <img src="carte-exclusive-vildame.png" alt="Carte de Guidance Vild’âme" class="carte">
-
-  <br>
-  <a href="carte-exclusive-Vildame.pdf" class="btn-download" download>
-    Télécharger la carte en PDF
-  </a>
+  <div class="carte">
+    <img src="visuel-vildame-guidance.png" alt="Carte de Guidance Vild’âme">
+  </div>
 
 </body>
 </html>
