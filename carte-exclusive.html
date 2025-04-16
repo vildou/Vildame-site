@@ -1,62 +1,55 @@
 
-<html lang="fr">
 <head>
   <meta charset="UTF-8">
-  <title>Carte exclusive – Merci de ton geste</title>
+  <title>Carte exclusive Vild'âme</title>
   <style>
     body {
       background-color: #fffaf7;
-      font-family: 'Georgia', serif;
+      font-family: Georgia, serif;
       color: #3b2f2f;
-      text-align: center;
-      margin: 0;
       padding: 2rem;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
     }
     .carte {
-      background: #fdfaf5;
+      background-color: #fffaf7;
+      border-radius: 16px;
       padding: 2rem;
-      border-radius: 12px;
-      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
-      display: inline-block;
+      box-shadow: 0 6px 20px rgba(0, 0, 0, 0.08);
+      text-align: center;
       max-width: 400px;
-      margin: auto;
     }
-    img {
+    .carte img {
       width: 100%;
-      max-width: 250px;
-      border-radius: 8px;
+      border-radius: 12px;
+      margin-bottom: 1rem;
     }
-    .logo {
-      margin-top: 2rem;
-      width: 120px;
-    }
-    .button {
-      background-color: #d4af37;
+    .bouton {
+      background-color: #d1a941;
       color: white;
-      padding: 0.8rem 1.5rem;
-      border: none;
-      border-radius: 6px;
-      font-weight: bold;
+      padding: 12px 20px;
       font-size: 1rem;
-      cursor: pointer;
-      margin-top: 1rem;
+      border: none;
+      border-radius: 8px;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
       text-decoration: none;
       display: inline-block;
+      margin-top: 1rem;
+    }
+    .signature {
+      margin-top: 2rem;
+      font-style: italic;
+      color: #a3876a;
     }
   </style>
 </head>
 <body>
-
   <div class="carte">
-    <h2>Carte exclusive – Merci de ton geste</h2>
-    <img src="signature-vildame.png" alt="Carte Vild’âme">
-    <p>Je m’ouvre à ma lumière intérieure<br>
-    Dépose tes mains sur ton cœur, respire profondément<br>
-    et écoute une méditation douce.</p>
-
-    <a class="button" href="carte-exclusive-Vildame.pdf" target="_blank">Télécharger le PDF</a>
+    <img src="Cle-vildame.jpg" alt="Carte Vildâme - Merci de ton geste">
+    <p>Télécharge ta carte :</p>
+    <a class="bouton" href="carte-exclusive-Vildame.pdf" download>Télécharger le PDF</a>
   </div>
-
+  <div class="signature">Vild’âme</div>
 </body>
 </html>
-
