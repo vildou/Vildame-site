@@ -1,44 +1,75 @@
 
 <head>
   <meta charset="UTF-8">
-  <title>Tirage Vild’âme</title>
+  <title>Ta Guidance Vild’âme</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <style>
     body {
-      margin: 0;
       background: #fdfaf6;
+      font-family: 'Georgia', serif;
       display: flex;
       flex-direction: column;
       align-items: center;
       justify-content: center;
-      height: 100vh;
-      font-family: 'Georgia', serif;
+      min-height: 100vh;
+      margin: 0;
+      padding: 20px;
+    }
+    .container {
+      background: #fff;
+      padding: 30px;
+      border-radius: 20px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+      text-align: center;
+      max-width: 600px;
+      width: 100%;
     }
     h1 {
-      font-size: 1.8em;
-      margin-bottom: 20px;
       color: #5c4033;
+      font-size: 1.8em;
+      margin-bottom: 10px;
+    }
+    p {
+      color: #5c4033;
+      font-size: 1.1em;
+      margin-bottom: 20px;
     }
     img {
-      width: 90%;
-      max-width: 400px;
-      border-radius: 12px;
+      width: 100%;
+      border-radius: 15px;
       box-shadow: 0 0 20px rgba(0,0,0,0.1);
+      margin-bottom: 20px;
+    }
+    a.button {
+      display: inline-block;
+      padding: 12px 24px;
+      margin-top: 10px;
+      background: #e8d8c3;
+      color: #5c4033;
+      border-radius: 25px;
+      text-decoration: none;
+      font-weight: bold;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+      transition: background 0.3s;
+    }
+    a.button:hover {
+      background: #dbc8b0;
+    }
+    .signature {
+      margin-top: 30px;
+      font-size: 0.9em;
+      color: #a88b75;
     }
   </style>
 </head>
 <body>
-  <h1>Voici ta guidance Vild’âme</h1>
-  <img id="carte" src="" alt="Carte Vild’âme">
-  
-  <script>
-    const cartes = [
-      "guidance-carte1.png",
-      "guidance-carte2.png"
-    ];
-    const tirage = cartes[Math.floor(Math.random() * cartes.length)];
-    document.getElementById("carte").src = tirage;
-  </script>
+  <div class="container">
+    <h1>Ta guidance Vild’âme</h1>
+    <p>Ferme les yeux, place les mains sur ton cœur et ressens une douce lumière t’envelopper.</p>
+    <img src="guidance-carte1.png" alt="Carte de guidance Vild’âme">
+    <a class="button" href="guidance-carte1.pdf" download>Télécharger cette carte en PDF</a>
+    <div class="signature">Vild’âme</div>
+  </div>
 </body>
 </html>
 
