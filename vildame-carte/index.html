@@ -1,48 +1,44 @@
 
 <head>
-  <meta charset="UTF-8" />
-  <title>Carte exclusive – Vild'âme</title>
+  <meta charset="UTF-8">
+  <title>Tirage Vild’âme</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <style>
     body {
-      font-family: Georgia, serif;
-      background-color: #fffaf7;
-      color: #3b2f2f;
-      text-align: center;
-      padding: 2rem;
+      margin: 0;
+      background: #fdfaf6;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+      font-family: 'Georgia', serif;
     }
-    .carte {
-      background-color: #fffaf7;
-      padding: 2rem;
-      border-radius: 16px;
-      max-width: 500px;
-      margin: auto;
-      box-shadow: 0 6px 20px rgba(0,0,0,0.08);
+    h1 {
+      font-size: 1.8em;
+      margin-bottom: 20px;
+      color: #5c4033;
     }
     img {
-      max-width: 100%;
-      border-radius: 8px;
-      margin-top: 1rem;
-    }
-    .btn {
-      background-color: #d1a941;
-      color: white;
-      text-decoration: none;
-      padding: 12px 20px;
-      display: inline-block;
-      margin-top: 1rem;
-      border-radius: 8px;
-      font-weight: bold;
+      width: 90%;
+      max-width: 400px;
+      border-radius: 12px;
+      box-shadow: 0 0 20px rgba(0,0,0,0.1);
     }
   </style>
 </head>
 <body>
-  <div class="carte">
-    <h2>Carte exclusive – Merci de ton geste</h2>
-    <p><em>« Je rayonne de paix et de confiance »</em></p>
-    <p><strong>Rituel</strong><br>Place tes deux mains à plat sur ton ventre et respire tranquillement</p>
-    <img src="guidance-carte1.png" alt="Carte de guidance Vild'âme" />
-    <br>
-    <a class="btn" href="guidance-carte1.png" download>Télécharger la carte</a>
-  </div>
+  <h1>Voici ta guidance Vild’âme</h1>
+  <img id="carte" src="" alt="Carte Vild’âme">
+  
+  <script>
+    const cartes = [
+      "guidance-carte1.png",
+      "guidance-carte2.png"
+    ];
+    const tirage = cartes[Math.floor(Math.random() * cartes.length)];
+    document.getElementById("carte").src = tirage;
+  </script>
 </body>
 </html>
+
